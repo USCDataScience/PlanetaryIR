@@ -1,0 +1,68 @@
+T1	Target 2805 2815	Cumberland
+T2	Target 2790 2800	John Klein
+T3	Component 2877 2888	plagioclase
+T4	Component 2891 2899	pyroxene
+T5	Component 2901 2923	trioctahedral smectite
+R1	Contains Arg1:T1 Arg2:T3	
+R2	Contains Arg1:T2 Arg2:T3	
+R3	Contains Arg1:T2 Arg2:T4	
+R4	Contains Arg1:T2 Arg2:T5	
+R5	Contains Arg1:T1 Arg2:T4	
+R6	Contains Arg1:T1 Arg2:T5	
+T6	Target 4022 4030	Windjana
+T7	Target 4140 4149	Dillinger
+T8	Component 4169 4177	pyroxene
+T9	Component 4179 4189	K-feldspar
+T10	Component 4191 4200	magnetite
+T11	Component 4202 4216	phyllosilicate
+R7	Contains Arg1:T7 Arg2:T8	
+R8	Contains Arg1:T7 Arg2:T9	
+R9	Contains Arg1:T7 Arg2:T10	
+R10	Contains Arg1:T7 Arg2:T11	
+T12	Target 4699 4707	Windjana
+T13	Component 4737 4741	FeOT
+T14	Component 4743 4746	MgO
+T15	Component 4752 4755	SO3
+T16	Component 4774 4778	SiO2
+T17	Component 4780 4785	Al2O3
+T18	Component 4787 4790	CaO
+T19	Component 4796 4800	Na2O
+R11	Contains_high Arg1:T12 Arg2:T15	
+R12	Contains_high Arg1:T12 Arg2:T14	
+R13	Contains_high Arg1:T12 Arg2:T13	
+R14	Contains_low Arg1:T12 Arg2:T19	
+R15	Contains_low Arg1:T12 Arg2:T18	
+R16	Contains_low Arg1:T12 Arg2:T17	
+R17	Contains_low Arg1:T12 Arg2:T16	
+T20	Target 5080 5096	Confidence Hills
+T21	Component 5195 5206	plagioclase
+T22	Component 5208 5216	pyroxene
+T23	Component 5218 5226	hematite
+T24	Component 5228 5242	phyllosilicate
+R18	Contains Arg1:T20 Arg2:T24	
+R19	Contains Arg1:T20 Arg2:T23	
+R20	Contains Arg1:T20 Arg2:T21	
+R21	Contains Arg1:T20 Arg2:T22	
+T25	Target 6165 6175	John Klein
+T26	Target 6180 6190	Cumberland
+T27	Component 6136 6147	Ca-sulfates
+T28	Component 6153 6161	saponite
+R22	Contains Arg1:T25 Arg2:T28	
+R23	Contains Arg1:T25 Arg2:T27	
+R24	Contains Arg1:T26 Arg2:T27	
+R25	Contains Arg1:T26 Arg2:T28	
+T29	Component 6299 6309	akaganeite
+R26	Contains Arg1:T26 Arg2:T29	
+R27	Contains Arg1:T25 Arg2:T29	
+T30	Target 6428 6436	Windjana
+T31	Component 6418 6424	illite
+T32	Component 6380 6386	K-spar
+R28	May_contain Arg1:T30 Arg2:T31	
+R29	Contains_high Arg1:T30 Arg2:T32	
+T33	Target 6633 6649	Confidence Hills
+T34	Component 6618 6629	Fe-sulfates
+R30	Contains Arg1:T33 Arg2:T34	
+T35	Component 6773 6781	hematite
+T36	Component 6786 6794	jarosite
+R31	Contains Arg1:T33 Arg2:T35	
+R32	Contains Arg1:T33 Arg2:T36	

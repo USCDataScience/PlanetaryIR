@@ -1,0 +1,42 @@
+T1	Target 3645 3652	Stephen
+T2	Target 3676 3680	Neil
+T3	Target 3696 3704	Mondooma
+T4	Component 3537 3539	Mn
+R1	Contains_high Arg1:T1 Arg2:T4	
+R2	Contains_high Arg1:T3 Arg2:T4	
+R3	Contains_high Arg1:T2 Arg2:T4	
+T5	Target 3844 3851	Stephen
+T6	Target 3853 3857	Neil
+T7	Target 3863 3871	Mondooma
+T8	Component 3886 3889	MnO
+R4	Contains Arg1:T5 Arg2:T8	
+R5	Contains Arg1:T6 Arg2:T8	
+R6	Contains Arg1:T7 Arg2:T8	
+T9	Target 4022 4029	Stephen
+T10	Component 4046 4049	MnO
+R7	Contains_high Arg1:T9 Arg2:T10	
+T11	Target 5785 5792	Stephen
+T12	Component 5874 5876	Mn
+T13	Component 5878 5880	Mg
+T14	Component 5882 5884	Cl
+T15	Component 5886 5888	Ni
+T16	Component 5890 5892	Cu
+T17	Component 5894 5896	Co
+T18	Component 5902 5904	Zn
+R8	Contains_high Arg1:T11 Arg2:T12	
+R9	Contains_high Arg1:T11 Arg2:T13	
+R10	Contains_high Arg1:T11 Arg2:T14	
+R11	Contains_high Arg1:T11 Arg2:T15	
+R12	Contains_high Arg1:T11 Arg2:T16	
+R13	Contains_high Arg1:T11 Arg2:T17	
+R14	Contains_high Arg1:T11 Arg2:T18	
+T19	Component 6039 6048	Mn-oxides
+R15	Contains Arg1:T11 Arg2:T19	
+T20	Component 5581 5583	Cl
+T21	Component 5587 5588	S
+R16	Lacks Arg1:T5 Arg2:T20	
+R18	Lacks Arg1:T6 Arg2:T20	
+R17	Lacks Arg1:T7 Arg2:T20	
+R19	Lacks Arg1:T5 Arg2:T21	
+R20	Lacks Arg1:T6 Arg2:T21	
+R21	Lacks Arg1:T7 Arg2:T21	

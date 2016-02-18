@@ -1,0 +1,13 @@
+T1	Target 4056 4063	Stephen
+T2	Target 4066 4070	Neil
+T3	Target 4076 4084	Mondooma
+T4	Target 4003 4010	Yarrada
+T5	Component 4123 4126	MnO
+R1	Contains_high Arg1:T3 Arg2:T5	
+R2	Contains_high Arg1:T2 Arg2:T5	
+R3	Contains_high Arg1:T1 Arg2:T5	
+T6	Component 3992 3995	ZnO
+R4	Contains_high Arg1:T4 Arg2:T6	
+T7	Target 5388 5397	Dillinger
+T8	Component 5424 5432	fluorine
+R5	Contains Arg1:T7 Arg2:T8	

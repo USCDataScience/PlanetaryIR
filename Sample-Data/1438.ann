@@ -1,0 +1,20 @@
+T1	Target 5036 5045	Dillinger
+T2	Target 5051 5065	Mt. Remarkable
+T5	Component 5224 5234	Na/K ratio
+T6	Target 5388 5397	Dillinger
+T7	Component 5341 5351	K-feldspar
+T8	Component 5356 5368	illite clays
+R4	Contains Arg1:T6 Arg2:T8	
+R5	Contains Arg1:T6 Arg2:T7	
+T9	Component 5148 5149	K
+R1	Contains_high Arg1:T2 Arg2:T9	
+R2	Contains_high Arg1:T1 Arg2:T9	
+T3	Target 7014 7023	Kimberley
+T10	Component 6997 6998	F
+T11	Component 7008 7010	Zn
+T12	Component 7001 7003	Mn
+R6	Contains Arg1:T3 Arg2:T11	
+R7	Contains Arg1:T3 Arg2:T10	
+R8	Contains Arg1:T3 Arg2:T12	
+T4	Target 5242 5251	Dillinger
+R3	Contains_low Arg1:T4 Arg2:T5	
