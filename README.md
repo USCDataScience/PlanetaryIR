@@ -1,5 +1,5 @@
 # PlanetaryIR
-Automatic Extraction of Planetary Science Literature Authors using Deep Dive and Tika
+Automatic Extraction of Planetary Science Literature Authors, Targets and Compositions using Deep Dive and Tika
 
 
 BACKGROUND: 
