@@ -1,0 +1,35 @@
+Authors		Affiliations
+______________ ____________
+L. Le Deit	1 
+N. Mangold	1 
+O. Forni	2 
+D. Blaney	3 
+A. Cousin	2 
+G. Dromart	4 
+C. Fabre	5 
+M. Fisk		6 
+O. Gasnault	2 
+N. Lanza	7 
+J. Lasue	2 
+S. Le Mou lic	1 
+S. Maurice	2 
+M. Nachon	1 
+W. Rapin	2 
+M. Rice		8 
+V. Sautter	9 
+S. Schr der	2 
+D. Sumner	10 
+R. C. Wiens	7 
+
+List of Affiliations
+
+1 LPG-Nantes, France (Laetitia.Ledeit@univ-nantes.fr), 
+2 IRAP, Toulouse, France, 
+3 JPL, Caltech, Pasadena, USA, 
+4 LGTPE, ENS Lyon, France, 
+5 G2R, Nancy, France, 
+6 College of Earth, Ocean, and Atmospheric Sciences, Corvallis, USA, 
+7 Los Alamos National Laboratory, USA, 
+8 Western Washington University, Bellingham, USA, 
+9 LMCM, MNHN, Paris, France, 
+10 Earth and Planetary Sciences, University of California, Davis, USA.
