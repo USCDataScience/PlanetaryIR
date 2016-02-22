@@ -1,84 +1,9 @@
 
 2038.PDF
 POTENTIAL CEMENT PHASES IN SEDIMENTARY ROCKS DRILLED BY CURIOSITY AT GALE 
-CRATER, MARS.  E. B. Rampe
-1
-, R. V. Morris
-2
-, D. L. Bish
-3
-, S. J. Chipera
-4
-, D. W. Ming
-2
-, D. F. Blake
-5
-, D. T. 
-Vaniman
-6
-, T. F. Bristow
-5
-, P. Cavanagh
-3
-, J. D. Farmer
-7
-, S. M. Morrison
-8
-, K. Siebach
-9
-, A. H. Treiman
-10
-, C. N. Achilles
-3
-, D. Blaney
-11
-, J. A. Crisp
-11
-, D. J. Des Marais
-5
-, R. T. Downs
-8
-, K. Fendrich
-8
-, J. Martin-Torres
-12
-, J. M. Morookian
-11
-, M.-P. Zorzano
-13
-, P. Sarrazin
-14
-, N. Spanovich
-11
-, A. S. Yen
-11
-, and the MSL Science Team. 
-1
-Aerodyne Industries 
-  Jacobs JETS Contract, NASA-JSC, Houston, TX 77058, elizabeth.b.rampe@nasa.gov, 2NASA-JSC, 3Indiana 
-Univ., 
-4
-CHK Energy, 
-5
-NASA-Ames, 
-6
-PSI, 
-7
-Arizona State Univ., 
-8
-Univ. Arizona, 
-9
-Caltech, 
-10
-LPI, 
-11
-JPL-Caltech, 
-12
-CSIC-UGR, 
-13
-INTA-CSIC, 
-14
-SETI. 
+CRATER, MARS.  E. B. Rampe1, R. V. Morris2, D. L. Bish3, S. J. Chipera4, D. W. Ming2, D. F. Blake5, D. T. Vaniman6, T. F. Bristow5, P. Cavanagh3, J. D. Farmer7, S. M. Morrison8, K. Siebach9, A. H. Treiman10, C. N. Achilles3, D. Blaney11, J. A. Crisp11, D. J. Des Marais5, R. T. Downs8, K. Fendrich8, J. Martin-Torres12, J. M. Morookian11, M.-P. Zorzano13, P. Sarrazin14, N. Spanovich11, A. S. Yen11, and the MSL ScienceTeam. 
+1Aerodyne Industries Jacobs JETS Contract, NASA-JSC, Houston, TX 77058, elizabeth.b.rampe@nasa.gov, 2NASA-JSC, 3Indiana Univ., 4CHK Energy, 5NASA-Ames, 6PSI, 
+7Arizona State Univ., 8Univ. Arizona, 9Caltech, 10LPI, 11JPL-Caltech, 12CSIC-UGR, 13INTA-CSIC, 14SETI. 
  
  
 Introduction:  The Mars Science Laboratory rover 

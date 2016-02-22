@@ -1,0 +1,185 @@
+11:42:43.322 [][][Slf4jLogger] INFO  Slf4jLogger started
+11:42:43.333 [main][EventStream(akka://deepdive)][EventStream] DEBUG logger log1-Slf4jLogger started
+11:42:43.336 [main][EventStream(akka://deepdive)][EventStream] DEBUG Default Loggers started
+11:42:43.338 [main][Main$(akka://deepdive)][Main$] INFO  Running pipeline with configuration from /Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/run/20160221/114242.N/deepdive.conf
+11:42:43.366 [main][SettingsParser$(akka://deepdive)][SettingsParser$] INFO  Database settings: user SnehaS, dbname deepdive_planetaryIR, host localhost, port 5432.
+11:42:43.422 [main][SettingsParser$(akka://deepdive)][SettingsParser$] INFO  {
+    "calibration" : {
+        "holdout_fraction" : 0.25,
+        "holdout_query" : null,
+        "observation_query" : null
+    },
+    "db" : {
+        "default" : {
+            "dbname" : "deepdive_planetaryIR",
+            "driver" : "org.postgresql.Driver",
+            "gphost" : "",
+            "gpload" : false,
+            "gppath" : "",
+            "gpport" : "",
+            "host" : "localhost",
+            "incremental_mode" : "ORIGINAL",
+            "password" : "",
+            "poolConnectionTimeoutMillis" : 1000,
+            "poolInitialSize" : 16,
+            "poolMaxSize" : 512,
+            "port" : "5432",
+            "url" : "jdbc:postgresql://localhost:5432/deepdive_planetaryIR",
+            "user" : "SnehaS"
+        }
+    },
+    "extraction" : {
+        "extractors" : {
+            "ext_sentences" : {
+                "after" : null,
+                "before" : null,
+                "dependencies" : [],
+                "input" : "\n      SELECT  article_id, text\n      FROM    articles\n      ORDER BY article_id ASC\n      ",
+                "input_batch_size" : 10000,
+                "loader" : "",
+                "output_batch_size" : 50000,
+                "output_relation" : "sentences",
+                "parallelism" : 1,
+                "udf" : "nlp_extractor/run.sh -k article_id -v text -l 100 -t 4"
+            }
+        },
+        "parallelism" : 1
+    },
+    "inference" : {
+        "batch_size" : null,
+        "factors" : {},
+        "parallel_grounding" : false,
+        "skip_learning" : false,
+        "weight_table" : ""
+    },
+    "pipeline" : {
+        "base_dir" : null,
+        "pipelines" : {
+            "withnlp" : [
+                "ext_sentences"
+            ]
+        },
+        "relearn_from" : null,
+        "run" : "withnlp"
+    },
+    "sampler" : {
+        "sampler_args" : "-l 300 -s 1 -i 500 --alpha 0.1",
+        "sampler_cmd" : "sampler-dw"
+    },
+    "schema" : {
+        "keys" : {},
+        "setup" : null,
+        "variables" : {}
+    }
+}
+
+11:42:43.427 [main][SettingsParser$(akka://deepdive)][SettingsParser$] INFO  Settings(SchemaSettings(Map(),None),ExtractionSettings(List(Extractor(ext_sentences,json_extractor,sentences,DatastoreInputQuery(SELECT article_id, text FROM articles ORDER BY article_id ASC ),null,nlp_extractor/run.sh -k article_id -v text -l 100 -t 4,1,10000,50000,Set(),None,None,,None,,null)),1),InferenceSettings(List(),None,false,,false),CalibrationSettings(0.25,None,None),SamplerSettings(sampler-dw,-l 300 -s 1 -i 500 --alpha 0.1),PipelineSettings(Some(withnlp),List(Pipeline(withnlp,Set(ext_sentences))),null,None),DbSettings(org.postgresql.Driver,jdbc:postgresql://localhost:5432/deepdive_planetaryIR,SnehaS,,deepdive_planetaryIR,localhost,5432,,,,false,ORIGINAL,Map()),Config(SimpleConfigObject({"calibration":{"holdout_fraction":0.25,"holdout_query":null,"observation_query":null},"db":{"default":{"dbname":"deepdive_planetaryIR","driver":"org.postgresql.Driver","gphost":"","gpload":false,"gppath":"","gpport":"","host":"localhost","incremental_mode":"ORIGINAL","password":"","poolConnectionTimeoutMillis":1000,"poolInitialSize":16,"poolMaxSize":512,"port":"5432","url":"jdbc:postgresql://localhost:5432/deepdive_planetaryIR","user":"SnehaS"}},"extraction":{"extractors":{"ext_sentences":{"after":null,"before":null,"dependencies":[],"input":"\n      SELECT  article_id, text\n      FROM    articles\n      ORDER BY article_id ASC\n      ","input_batch_size":10000,"loader":"","output_batch_size":50000,"output_relation":"sentences","parallelism":1,"udf":"nlp_extractor/run.sh -k article_id -v text -l 100 -t 4"}},"parallelism":1},"inference":{"batch_size":null,"factors":{},"parallel_grounding":false,"skip_learning":false,"weight_table":""},"pipeline":{"base_dir":null,"pipelines":{"withnlp":["ext_sentences"]},"relearn_from":null,"run":"withnlp"},"sampler":{"sampler_args":"-l 300 -s 1 -i 500 --alpha 0.1","sampler_cmd":"sampler-dw"},"schema":{"keys":{},"setup":null,"variables":{}}})))
+11:42:43.428 [main][DeepDive$(akka://deepdive)][DeepDive$] DEBUG relearnFrom=null
+11:42:43.429 [main][DeepDive$(akka://deepdive)][DeepDive$] DEBUG outputDir=/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/run/20160221/114242.N
+11:42:43.438 [main][JdbcDataStoreObject$(akka://deepdive)][JdbcDataStoreObject$] INFO  Intializing all JDBC data stores
+11:42:43.591 [default-dispatcher-3][profiler][Profiler] INFO  starting at akka://deepdive/user/profiler
+11:42:43.598 [default-dispatcher-2][taskManager][TaskManager] INFO  starting at akka://deepdive/user/taskManager
+11:42:43.600 [default-dispatcher-4][inferenceManager][InferenceManager$PostgresInferenceManager] INFO  Starting
+11:42:43.603 [default-dispatcher-3][extractionManager][ExtractionManager$PostgresExtractionManager] INFO  starting
+11:42:43.607 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Executing SQL with callback... SELECT EXISTS (
+      SELECT 1
+      FROM   pg_language
+      WHERE  lanname = 'plpgsql');
+11:42:43.610 [main][DeepDive$(akka://deepdive)][DeepDive$] DEBUG Total number of extractors: 1
+11:42:43.611 [main][DeepDive$(akka://deepdive)][DeepDive$] DEBUG Total number of factors: 0
+11:42:43.614 [main][DeepDive$(akka://deepdive)][DeepDive$] DEBUG Number of active factors: 0
+11:42:43.615 [main][DeepDive$(akka://deepdive)][DeepDive$] INFO  No active factors. Skip inference.
+11:42:43.617 [main][DeepDive$(akka://deepdive)][DeepDive$] INFO  Running pipeline=withnlp with tasks=List(ext_sentences, report, shutdown)
+11:42:43.620 [default-dispatcher-2][taskManager][TaskManager] INFO  Added task_id=ext_sentences
+11:42:43.621 [default-dispatcher-2][taskManager][TaskManager] DEBUG Sending task_id=ext_sentences to Actor[akka://deepdive/user/extractionManager#-1494420086]
+11:42:43.625 [default-dispatcher-4][profiler][Profiler] DEBUG starting report_id=ext_sentences
+11:42:43.625 [default-dispatcher-2][taskManager][TaskManager] INFO  Added task_id=report
+11:42:43.626 [default-dispatcher-2][taskManager][TaskManager] INFO  Added task_id=shutdown
+11:42:43.696 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Executing SQL with callback... SELECT version() LIKE '%Greenplum%';
+11:42:43.698 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Executing SQL with callback... SELECT version() LIKE '%Postgres-XL%';
+11:42:43.701 [default-dispatcher-3][extractionManager][ExtractionManager$PostgresExtractionManager] INFO  Adding task_name=ext_sentences
+11:42:43.703 [default-dispatcher-3][extractionManager][ExtractionManager$PostgresExtractionManager] INFO  executing extractorName=ext_sentences
+11:42:43.722 [default-dispatcher-2][extractorRunner-ext_sentences][ExtractorRunner] INFO  waiting for tasks
+11:42:43.726 [default-dispatcher-2][extractorRunner-ext_sentences][ExtractorRunner] INFO  Received task=ext_sentences. Executing
+11:42:43.726 [default-dispatcher-2][extractorRunner-ext_sentences][ExtractorRunner] INFO  Starting 1 children process workers
+11:42:43.735 [default-dispatcher-3][processExecutor1][ProcessExecutor] INFO  started
+11:42:43.736 [default-dispatcher-3][processExecutor1][ProcessExecutor] INFO  starting process with cmd="nlp_extractor/run.sh -k article_id -v text -l 100 -t 4" and batch_size=50000
+11:42:43.740 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Getting data from the data store and sending it to the workers. query='DatastoreInputQuery(SELECT article_id, text FROM articles ORDER BY article_id ASC )'
+11:42:43.768 [default-dispatcher-6][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG SELECT article_id, text FROM articles ORDER BY article_id ASC 
+11:42:43.775 [default-dispatcher-6][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG QUERY PLAN
+11:42:43.776 [default-dispatcher-6][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Sort  (cost=83.37..86.37 rows=1200 width=40)
+11:42:43.776 [default-dispatcher-6][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG   Sort Key: article_id
+11:42:43.777 [default-dispatcher-6][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG   ->  Seq Scan on articles  (cost=0.00..22.00 rows=1200 width=40)
+11:42:43.996 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] DEBUG all data was sent to workers.
+11:42:43.997 [default-dispatcher-3][processExecutor1][ProcessExecutor] DEBUG closing input stream
+11:42:44.127 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing with id_key="article_id" value_key="text" max_len=100 numThreads=4
+11:42:44.213 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator tokenize
+11:42:44.220 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator cleanxml
+11:42:44.269 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator ssplit
+11:42:44.278 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator pos
+11:42:45.205 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0.9 sec].
+11:42:45.206 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator lemma
+11:42:45.207 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator ner
+11:42:50.533 [Thread-2][processExecutor1][ProcessExecutor] INFO  Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [4.7 sec].
+11:42:52.726 [Thread-2][processExecutor1][ProcessExecutor] INFO  Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [2.2 sec].
+11:42:55.565 [Thread-2][processExecutor1][ProcessExecutor] INFO  Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [2.8 sec].
+11:42:55.700 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+11:42:55.750 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+11:42:56.093 [Thread-2][processExecutor1][ProcessExecutor] INFO  Feb 21, 2016 11:42:56 AM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+11:42:56.094 [Thread-2][processExecutor1][ProcessExecutor] INFO  INFO: Ignoring inactive rule: null
+11:42:56.094 [Thread-2][processExecutor1][ProcessExecutor] INFO  Feb 21, 2016 11:42:56 AM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+11:42:56.095 [Thread-2][processExecutor1][ProcessExecutor] INFO  INFO: Ignoring inactive rule: temporal-composite-8:ranges
+11:42:56.095 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+11:42:56.101 [Thread-2][processExecutor1][ProcessExecutor] INFO  Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+11:42:56.337 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+11:42:56.370 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+11:42:56.444 [Thread-2][processExecutor1][ProcessExecutor] INFO  Feb 21, 2016 11:42:56 AM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+11:42:56.445 [Thread-2][processExecutor1][ProcessExecutor] INFO  INFO: Ignoring inactive rule: null
+11:42:56.446 [Thread-2][processExecutor1][ProcessExecutor] INFO  Feb 21, 2016 11:42:56 AM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+11:42:56.446 [Thread-2][processExecutor1][ProcessExecutor] INFO  INFO: Ignoring inactive rule: temporal-composite-8:ranges
+11:42:56.447 [Thread-2][processExecutor1][ProcessExecutor] INFO  Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+11:42:56.451 [Thread-2][processExecutor1][ProcessExecutor] INFO  Adding annotator parse
+11:42:57.435 [Thread-2][processExecutor1][ProcessExecutor] INFO  Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... done [1.0 sec].
+11:42:57.562 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing document 1438...
+11:43:13.738 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:43:43.616 [default-dispatcher-6][taskManager][TaskManager] INFO  Memory usage: 63/245MB (max: 3641MB)
+11:43:43.735 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:44:09.500 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing document 1989...
+11:44:13.736 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:44:43.616 [default-dispatcher-6][taskManager][TaskManager] INFO  Memory usage: 63/245MB (max: 3641MB)
+11:44:43.735 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:44:53.133 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing document 2038...
+11:45:13.735 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:45:41.271 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing document 2620...
+11:45:43.616 [default-dispatcher-6][taskManager][TaskManager] INFO  Memory usage: 64/245MB (max: 3641MB)
+11:45:43.735 [default-dispatcher-7][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:46:13.734 [default-dispatcher-7][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:46:43.615 [default-dispatcher-6][taskManager][TaskManager] INFO  Memory usage: 64/245MB (max: 3641MB)
+11:46:43.734 [default-dispatcher-6][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:46:44.875 [Thread-2][processExecutor1][ProcessExecutor] INFO  Parsing document 2893...
+11:47:13.735 [default-dispatcher-7][extractorRunner-ext_sentences][ExtractorRunner] INFO  Status: 1 workers are running.
+11:47:32.514 [default-dispatcher-3][extractorRunner-ext_sentences][ExtractorRunner] DEBUG adding chunk of size=452 data store.
+11:47:32.768 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Writing data of to file=/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/run/20160221/114242.N/deepdive_sentences2677170892178088623.csv
+11:47:33.117 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Copying batch data to postgres. sql='COPY sentences(dependencies, document_id, lemma, ner_tags, pos_tags, sentence, sentence_id, sentence_offset, words) FROM STDIN CSV'file='/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/run/20160221/114242.N/deepdive_sentences2677170892178088623.csv'
+11:47:33.177 [default-dispatcher-3][PostgresDataStore(akka://deepdive)][PostgresDataStore] DEBUG Successfully copied batch data to postgres.
+11:47:33.179 [Thread-1][processExecutor1][ProcessExecutor] DEBUG closing output stream
+11:47:33.180 [default-dispatcher-6][processExecutor1][ProcessExecutor] INFO  process exited with exit_value=0
+11:47:33.186 [default-dispatcher-3][extractorRunner-ext_sentences][ExtractorRunner] DEBUG worker=processExecutor1 has terminated. Waiting for 0 others.
+11:47:33.187 [default-dispatcher-3][extractorRunner-ext_sentences][ExtractorRunner] INFO  All workers are done. Finishing up.
+11:47:33.188 [default-dispatcher-3][extractorRunner-ext_sentences][ExtractorRunner] INFO  Shutting down
+11:47:33.190 [default-dispatcher-3][profiler][Profiler] DEBUG ending report_id=ext_sentences
+11:47:33.191 [default-dispatcher-6][taskManager][TaskManager] INFO  Completed task_id=ext_sentences with Success(Done!)
+11:47:33.191 [default-dispatcher-6][taskManager][TaskManager] DEBUG 1/2 tasks eligible. Waiting tasks: Set(shutdown)
+11:47:33.192 [default-dispatcher-6][taskManager][TaskManager] DEBUG Sending task_id=report to Actor[akka://deepdive/user/profiler#1861669731]
+11:47:33.193 [default-dispatcher-3][profiler][Profiler] DEBUG starting report_id=report
+11:47:33.194 [default-dispatcher-3][profiler][Profiler] INFO  --------------------------------------------------
+11:47:33.195 [default-dispatcher-3][profiler][Profiler] INFO  Summary Report
+11:47:33.195 [default-dispatcher-3][profiler][Profiler] INFO  --------------------------------------------------
+11:47:33.195 [default-dispatcher-3][profiler][Profiler] INFO  ext_sentences SUCCESS [289569 ms]
+11:47:33.196 [default-dispatcher-3][profiler][Profiler] INFO  --------------------------------------------------
+11:47:33.196 [default-dispatcher-6][profiler][Profiler] DEBUG ending report_id=report
+11:47:33.197 [default-dispatcher-3][taskManager][TaskManager] INFO  Completed task_id=report with Success(Success(()))
+11:47:33.197 [default-dispatcher-3][taskManager][TaskManager] DEBUG 1/1 tasks eligible. Waiting tasks: Set()
+11:47:33.197 [default-dispatcher-3][taskManager][TaskManager] DEBUG Sending task_id=shutdown to Actor[akka://deepdive/user/taskManager#1125980037]
+11:47:33.198 [default-dispatcher-5][profiler][Profiler] DEBUG starting report_id=shutdown
+11:47:33.207 [default-dispatcher-2][EventStream][EventStream] DEBUG shutting down: StandardOutLogger started
