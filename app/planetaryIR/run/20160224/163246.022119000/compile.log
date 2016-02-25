@@ -1,0 +1,46 @@
+2016-02-24 16:32:46.065622 ‘run/LATEST.COMPILE’ -> ‘20160224/163246.022119000’
+2016-02-24 16:32:46.065842 ‘run/RUNNING.COMPILE’ -> ‘20160224/163246.022119000’
+2016-02-24 16:32:46.065869 Parsing DeepDive application (/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR) to generate:
+2016-02-24 16:32:46.065890  run/compiled/schema.json
+2016-02-24 16:32:46.065909   from app.ddlog
+2016-02-24 16:32:46.395116  run/compiled/deepdive.conf
+2016-02-24 16:32:46.395258   from app.ddlog
+2016-02-24 16:32:46.778703   from deepdive.conf
+2016-02-24 16:32:46.783950  run/compiled/deepdive.conf.json
+2016-02-24 16:32:47.043038 Performing sanity checks on run/compiled/deepdive.conf.json:
+2016-02-24 16:32:47.077620  checking if input_extractors_well_defined
+2016-02-24 16:32:47.077684  checking if input_schema_wellformed
+2016-02-24 16:32:47.077975 Normalizing and adding built-in processes to the data flow to compile:
+2016-02-24 16:32:47.078629  run/compiled/config-0.00-init_objects.json
+2016-02-24 16:32:47.091888  run/compiled/config-0.01-parse_calibration.json
+2016-02-24 16:32:47.102581  run/compiled/config-0.01-parse_schema.json
+2016-02-24 16:32:47.117909  run/compiled/config-0.51-add_init_app.json
+2016-02-24 16:32:47.128535  run/compiled/config-0.52-input_loader.json
+2016-02-24 16:32:47.143796  run/compiled/config-1.00-qualified_names.json
+2016-02-24 16:32:47.158043  run/compiled/config-1.01-parse_inference_rules.json
+2016-02-24 16:32:47.181327  run/compiled/config-2.01-grounding.json
+2016-02-24 16:32:47.241638  run/compiled/config-2.02-learning_inference.json
+2016-02-24 16:32:47.258770  run/compiled/config-2.03-calibration_plots.json
+2016-02-24 16:32:47.271956  run/compiled/config-9.98-ensure_init_app.json
+2016-02-24 16:32:47.287739  run/compiled/config-9.99-dependencies.json
+2016-02-24 16:32:47.300348  run/compiled/config.json
+2016-02-24 16:32:47.305537 Validating run/compiled/config.json:
+2016-02-24 16:32:47.378889  checking if compiled_base_relations_have_input_data
+2016-02-24 16:32:47.378936  checking if compiled_dependencies_correct
+2016-02-24 16:32:47.378957  checking if compiled_input_output_well_defined
+2016-02-24 16:32:47.378975  checking if compiled_output_uniquely_defined
+2016-02-24 16:32:47.379230 Compiling executable code into:
+2016-02-24 16:32:47.379528  run/compiled/code-Makefile.json
+2016-02-24 16:32:47.394020  run/compiled/code-cmd_extractor.json
+2016-02-24 16:32:47.405968  run/compiled/code-dataflow_dot.json
+2016-02-24 16:32:47.423307  run/compiled/code-sql_extractor.json
+2016-02-24 16:32:47.438123  run/compiled/code-tsv_extractor.json
+2016-02-24 16:32:47.454819 Generating files:
+2016-02-24 16:32:47.476046  run/Makefile
+2016-02-24 16:32:47.498415  run/process/init/app/run.sh
+2016-02-24 16:32:47.514924  run/process/init/relation/articles/run.sh
+2016-02-24 16:32:47.531046  run/dataflow.dot
+2016-02-24 16:32:47.544731 dyld: Library not loaded: /Profiles/netj/take1/deepdive/extern/.build/bundled.prep/graphviz/prefix/lib/libgvc.6.dylib
+2016-02-24 16:32:47.544795   Referenced from: /Users/SnehaS/local/lib/bundled/.all/bin/dot
+2016-02-24 16:32:47.544819   Reason: image not found
+2016-02-24 16:32:47.603774 /Users/SnehaS/local/util/deepdive-compile: line 157: 10909 Trace/BPT trap: 5       dot -Tsvg < dataflow.dot > dataflow.svg

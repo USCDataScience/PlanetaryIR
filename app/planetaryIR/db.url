@@ -1,1 +1,1 @@
-postgresql://localhost/deepdive_planetaryIR
+postgresql://localhost/deepdive_planetaryIR_$USER
