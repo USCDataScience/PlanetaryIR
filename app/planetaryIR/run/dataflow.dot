@@ -24,6 +24,16 @@ label=""
 ];
 
 "process/
+ext_person_mention_by_map_person_mention" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+sentences" -> "process/
+ext_person_mention_by_map_person_mention" [
+label=""
+
+];
+
+"process/
 ext_sentences_by_nlp_markup" [shape=ellipse  color="#cc2222" style=solid];
 
 "data/
@@ -39,6 +49,16 @@ articles" [shape=box3d    color="#2222cc" style=solid];
 "process/
 init/relation/articles" -> "data/
 articles" [
+label=""
+
+];
+
+"data/
+person_mention" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+ext_person_mention_by_map_person_mention" -> "data/
+person_mention" [
 label=""
 
 ];
