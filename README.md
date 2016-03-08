@@ -59,8 +59,8 @@ The path to bundled graphviz is usually /local/lib/bundled
 
 6) Run "deepdive do articles" - This will load the articles from the json file into the database
 
-7) Run "deepdive query '?- articles("5beb863f-26b1-4c2f-ba64-0c3e93e72162", content).' format=csv | grep -v '^$' | tail -n +16 | head" - This is to check whether the article text got loaded successfully
+7) Run "deepdive query '?- articles("1438", content).' format=csv | grep -v '^$' | tail -n +16 | head" - This is to check whether the article text got loaded successfully
 
 8) Run "deepdive do sentences" - This will run the NLP parser on the articles table and output into the setnences table with their NER tags
 
-9) Run "deepdive query '?- sentences("5beb863f-26b1-4c2f-ba64-0c3e93e72162", _, _, tokens, _, _, ner_tags, _, _, _).' format=csv | grep PERSON | tail" to see these NER tags
+9) Run "deepdive query '?- sentences("1438", _, _, tokens, _, _, ner_tags, _, _, _).' format=csv | grep PERSON | tail" to see these NER tags
