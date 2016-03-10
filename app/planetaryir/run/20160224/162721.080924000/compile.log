@@ -1,0 +1,14 @@
+2016-02-24 16:27:21.128402 ‘run/LATEST.COMPILE’ -> ‘20160224/162721.080924000’
+2016-02-24 16:27:21.128612 ‘run/RUNNING.COMPILE’ -> ‘20160224/162721.080924000’
+2016-02-24 16:27:21.128643 Parsing DeepDive application (/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR) to generate:
+2016-02-24 16:27:21.128668  run/compiled/schema.json
+2016-02-24 16:27:21.128691   from app.ddlog
+2016-02-24 16:27:21.486724  run/compiled/deepdive.conf
+2016-02-24 16:27:21.486823   from app.ddlog
+2016-02-24 16:27:21.878652   from deepdive.conf
+2016-02-24 16:27:21.883983  run/compiled/deepdive.conf.json
+2016-02-24 16:27:22.153471 Performing sanity checks on run/compiled/deepdive.conf.json:
+2016-02-24 16:27:22.194560  checking if input_extractors_well_defined
+2016-02-24 16:27:22.194623  jq: error (at run/20160224/162721.080924000/deepdive.conf.json:60): Cannot check whether object has a null key
+2016-02-24 16:27:22.194649  [ERROR] FAILED deepdive check input_extractors_well_defined
+2016-02-24 16:27:22.194672  checking if input_schema_wellformed

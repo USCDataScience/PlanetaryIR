@@ -1,0 +1,58 @@
+2016-02-25 10:34:56.496997 # on Snehas-MacBook-Pro.local: deepdive do sentences
+2016-02-25 10:34:56.497235 # run/20160225/103446.315406000/plan.sh
+2016-02-25 10:34:56.497259 # execution plan for data/sentences
+2016-02-25 10:34:56.497278 
+2016-02-25 10:34:56.497298 : ## process/init/app ##########################################################
+2016-02-25 10:34:56.497317 : # Done: 2016-02-24T17:00:00-0800 (17h 34m 46s ago)
+2016-02-25 10:34:56.497334 : process/init/app/run.sh
+2016-02-25 10:34:56.497350 : mark_done process/init/app
+2016-02-25 10:34:56.497367 : ##############################################################################
+2016-02-25 10:34:56.497384 
+2016-02-25 10:34:56.497400 : ## process/init/relation/articles ############################################
+2016-02-25 10:34:56.497416 : # Done: 2016-02-24T17:00:01-0800 (17h 34m 45s ago)
+2016-02-25 10:34:56.497432 : process/init/relation/articles/run.sh
+2016-02-25 10:34:56.497447 : mark_done process/init/relation/articles
+2016-02-25 10:34:56.497464 : ##############################################################################
+2016-02-25 10:34:56.497480 
+2016-02-25 10:34:56.497497 : ## data/articles #############################################################
+2016-02-25 10:34:56.497513 : # Done: 2016-02-24T17:00:01-0800 (17h 34m 45s ago)
+2016-02-25 10:34:56.497529 : # no-op
+2016-02-25 10:34:56.497545 : mark_done data/articles
+2016-02-25 10:34:56.497561 : ##############################################################################
+2016-02-25 10:34:56.497578 
+2016-02-25 10:34:56.497595 ## process/ext_sentences_by_nlp_markup #######################################
+2016-02-25 10:34:56.497612 # Done: N/A
+2016-02-25 10:34:56.497628 process/ext_sentences_by_nlp_markup/run.sh
+2016-02-25 10:34:56.497644 ++ dirname process/ext_sentences_by_nlp_markup/run.sh
+2016-02-25 10:34:56.497662 + cd process/ext_sentences_by_nlp_markup
+2016-02-25 10:34:56.497705 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_sentences_by_nlp_markup
+2016-02-25 10:34:56.497731 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_sentences_by_nlp_markup
+2016-02-25 10:34:56.497748 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-02-25 10:34:56.497766 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-02-25 10:34:56.497782 + deepdive compute execute 'input_sql= SELECT R0.id AS "articles.R0.id", R0.content AS "articles.R0.content"
+2016-02-25 10:34:56.497799 FROM articles R0
+2016-02-25 10:34:56.497816         
+2016-02-25 10:34:56.497833           ' 'command="$DEEPDIVE_APP"/udf/nlp_markup.sh' output_relation=sentences
+2016-02-25 10:34:56.542377 Executing with the following configuration:
+2016-02-25 10:34:56.542440  DEEPDIVE_NUM_PROCESSES=3
+2016-02-25 10:34:56.542464  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-02-25 10:34:56.542483  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-02-25 10:34:56.542581  output_relation_tmp=dd_tmp_sentences
+2016-02-25 10:34:56.542605 
+2016-02-25 10:34:56.737705 CREATE TABLE
+2016-02-25 10:34:56.838326 CREATE TABLE
+2016-02-25 10:34:56.966576 unloading to feed_processes-1: ' SELECT R0.id AS "articles.R0.id", R0.content AS "articles.R0.content"
+2016-02-25 10:34:56.966636 FROM articles R0
+2016-02-25 10:34:56.966664         
+2016-02-25 10:34:56.966688           '
+2016-02-25 10:34:56.989923 No Bazaar/Parser set up at: /Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/udf/bazaar/parser
+2016-02-25 10:34:56.990601 No Bazaar/Parser set up at: /Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/udf/bazaar/parser
+2016-02-25 10:34:56.990659 No Bazaar/Parser set up at: /Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryIR/udf/bazaar/parser
+2016-02-25 10:34:56.991442 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (22006) - No such process
+2016-02-25 10:34:56.991494 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (22007) - No such process
+2016-02-25 10:34:56.991515 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (22008) - No such process
+2016-02-25 10:34:57.001249 [ERROR] command='"$DEEPDIVE_APP"/udf/nlp_markup.sh': PID 22006: finished with non-zero exit status (0)
+2016-02-25 10:34:57.002208 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 22012 Terminated: 15          mkmimo process-*.output \> output_computed-*
+2016-02-25 10:34:57.002336 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 22013 Terminated: 15          deepdive-load "$output_relation_tmp" output_computed-*
+2016-02-25 10:34:57.002374 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 22020 Terminated: 15          mkmimo feed_processes-* \> process-*.input
+2016-02-25 10:34:57.002405 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 1: 22019 Terminated: 15          deepdive-db unload "$input_sql" "$DEEPDIVE_LOAD_FORMAT" feed_processes-*

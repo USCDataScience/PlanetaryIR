@@ -1,0 +1,61 @@
+{
+    "deepdive" : {
+        "calibration" : {
+            "holdout_fraction" : 0.25
+        },
+        "db" : {
+            "default" : {
+                "dbname" : "deepdive_planetaryIR_SnehaS",
+                "driver" : "org.postgresql.Driver",
+                "host" : "Snehas-MacBook-Pro.local",
+                "incremental_mode" : "ORIGINAL",
+                "password" : "",
+                "port" : "5432",
+                "url" : "jdbc:postgresql://Snehas-MacBook-Pro.local:5432/deepdive_planetaryIR_SnehaS",
+                "user" : "SnehaS"
+            }
+        },
+        "extraction" : {
+            "extractors" : {
+                "ext_sentences" : {
+                    "input" : "\n      SELECT  article_id, text\n      FROM    articles\n      ORDER BY article_id ASC\n      ",
+                    "output_relation" : "sentences",
+                    "udf" : "nlp_extractor/run.sh -k article_id -v text -l 100 -t 4"
+                }
+            }
+        },
+        "inference" : {
+            "factors" : {}
+        },
+        "pipeline" : {
+            "pipelines" : {
+                "withnlp" : [
+                    "ext_sentences"
+                ]
+            },
+            "run" : ""
+        },
+        "sampler" : {
+            "sampler_args" : "-l 1000 -s 1 -i 1000 --alpha 0.01 --sample_evidence",
+            "sampler_cmd" : "sampler-dw"
+        },
+        "schema" : {
+            "relations" : {
+                "articles" : {
+                    "columns" : {
+                        "content" : {
+                            "index" : 1,
+                            "type" : "text"
+                        },
+                        "id" : {
+                            "index" : 0,
+                            "type" : "text"
+                        }
+                    }
+                }
+            },
+            "variables" : {}
+        }
+    }
+}
+
