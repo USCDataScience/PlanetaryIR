@@ -1,11 +1,22 @@
+@source
 articles(
-    id      text,
+    @key
+    @distributed_by
+    id text,
+    @searchable
     content text
 ).
 
+@source
 sentences(
+    @key
+    @distributed_by
+    # XXX This breaks the search index.  @source should not be derived from another @source
+    #@references(relation="articles", column="id")
     doc_id         text,
+    @key
     sentence_index int,
+    @searchable
     sentence_text  text,
     tokens         text[],
     lemmas         text[],
@@ -16,13 +27,19 @@ sentences(
     dep_tokens     int[]
 ).
 
+@extraction
 person_mention(
-    mention_id     text,
-    mention_text   text,
-    doc_id         text,
+    @key
+    mention_id text,
+    @searchable
+    mention_text text,
+    @distributed_by
+    @references(relation="sentences", column="doc_id",         alias="appears_in")
+    doc_id text,
+    @references(relation="sentences", column="sentence_index", alias="appears_in")
     sentence_index int,
-    begin_index    int,
-    end_index      int
+    begin_index int,
+    end_index int
 ).
 
 function nlp_markup over (
