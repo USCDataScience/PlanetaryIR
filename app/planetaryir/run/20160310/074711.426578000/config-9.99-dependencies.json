@@ -1,0 +1,558 @@
+{
+  "deepdive": {
+    "calibration": {
+      "holdout_fraction": 0.25
+    },
+    "db": {
+      "default": {
+        "dbname": "deepdive_planetaryIR_SnehaS",
+        "driver": "org.postgresql.Driver",
+        "host": "localhost",
+        "incremental_mode": "ORIGINAL",
+        "password": "",
+        "port": "5432",
+        "url": "jdbc:postgresql://localhost:5432/deepdive_planetaryIR_SnehaS",
+        "user": "SnehaS"
+      }
+    },
+    "extraction": {
+      "extractors": {
+        "ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.tokens AS \"sentences.R0.tokens\", R0.ner_tags AS \"sentences.R0.ner_tags\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py"
+        },
+        "ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh"
+        }
+      }
+    },
+    "pipeline": {
+      "pipelines": {
+        "endtoend": [
+          "ext_sentences_by_nlp_markup",
+          "ext_person_mention_by_map_person_mention"
+        ],
+        "extraction": [
+          "ext_sentences_by_nlp_markup",
+          "ext_person_mention_by_map_person_mention"
+        ]
+      },
+      "run": ""
+    },
+    "sampler": {
+      "sampler_args": "-l 1000 -s 1 -i 1000 --alpha 0.01 --sample_evidence",
+      "sampler_cmd": "sampler-dw"
+    },
+    "schema": {
+      "relations": {
+        "articles": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "content": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "person_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "begin_index": {
+              "index": 4,
+              "type": "int"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "end_index": {
+              "index": 5,
+              "type": "int"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "sentences": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "dep_tokens": {
+              "index": 9,
+              "type": "int[]"
+            },
+            "dep_types": {
+              "index": 8,
+              "type": "text[]"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "doc_offsets": {
+              "index": 7,
+              "type": "int[]"
+            },
+            "lemmas": {
+              "index": 4,
+              "type": "text[]"
+            },
+            "ner_tags": {
+              "index": 6,
+              "type": "text[]"
+            },
+            "pos_tags": {
+              "index": 5,
+              "type": "text[]"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "int"
+            },
+            "sentence_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "tokens": {
+              "index": 3,
+              "type": "text[]"
+            }
+          }
+        }
+      },
+      "variables": {}
+    }
+  },
+  "deepdive_": {
+    "calibration": {
+      "holdout_fraction": 0.25
+    },
+    "db": {
+      "default": {
+        "dbname": "deepdive_planetaryIR_SnehaS",
+        "driver": "org.postgresql.Driver",
+        "host": "localhost",
+        "incremental_mode": "ORIGINAL",
+        "password": "",
+        "port": "5432",
+        "url": "jdbc:postgresql://localhost:5432/deepdive_planetaryIR_SnehaS",
+        "user": "SnehaS"
+      }
+    },
+    "extraction": {
+      "extractors": {
+        "process/ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.tokens AS \"sentences.R0.tokens\", R0.ner_tags AS \"sentences.R0.ner_tags\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/person_mention"
+        },
+        "process/ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh",
+          "dependencies_": [],
+          "input_": [
+            "data/articles"
+          ],
+          "output_": "data/sentences"
+        }
+      }
+    },
+    "pipeline": {
+      "pipelines": {
+        "pipeline/endtoend": [
+          "process/ext_sentences_by_nlp_markup",
+          "process/ext_person_mention_by_map_person_mention"
+        ],
+        "pipeline/extraction": [
+          "process/ext_sentences_by_nlp_markup",
+          "process/ext_person_mention_by_map_person_mention"
+        ]
+      },
+      "run": ""
+    },
+    "sampler": {
+      "sampler_args": "-l 1000 -s 1 -i 1000 --alpha 0.01 --sample_evidence",
+      "sampler_cmd": "sampler-dw"
+    },
+    "schema": {
+      "relations": {
+        "articles": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "content": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "person_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "begin_index": {
+              "index": 4,
+              "type": "int"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "end_index": {
+              "index": 5,
+              "type": "int"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "sentences": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "dep_tokens": {
+              "index": 9,
+              "type": "int[]"
+            },
+            "dep_types": {
+              "index": 8,
+              "type": "text[]"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "doc_offsets": {
+              "index": 7,
+              "type": "int[]"
+            },
+            "lemmas": {
+              "index": 4,
+              "type": "text[]"
+            },
+            "ner_tags": {
+              "index": 6,
+              "type": "text[]"
+            },
+            "pos_tags": {
+              "index": 5,
+              "type": "text[]"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "int"
+            },
+            "sentence_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "tokens": {
+              "index": 3,
+              "type": "text[]"
+            }
+          }
+        }
+      },
+      "variables": {},
+      "variables_": [],
+      "variables_byName": {}
+    },
+    "inference": {
+      "factors": {},
+      "factors_": [],
+      "factors_byName": {}
+    },
+    "execution": {
+      "processes": {
+        "process/init/app": {
+          "style": "cmd_extractor",
+          "cmd": "\n        deepdive db init\n\n        cd \"$DEEPDIVE_APP\"\n        # run legacy schema.sql\n        if [[ -r schema.sql ]]; then\n            deepdive db prompt <schema.sql\n        fi\n        # run legacy init script\n        if [[ -x input/init.sh ]]; then\n            input/init.sh\n        fi\n        "
+        },
+        "process/init/relation/articles": {
+          "style": "cmd_extractor",
+          "cmd": "deepdive create table 'articles' && deepdive load 'articles'",
+          "dependencies_": [
+            "process/init/app"
+          ],
+          "output_relation": "articles",
+          "output_": "data/articles"
+        },
+        "process/ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.tokens AS \"sentences.R0.tokens\", R0.ner_tags AS \"sentences.R0.ner_tags\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/person_mention"
+        },
+        "process/ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh",
+          "dependencies_": [],
+          "input_": [
+            "data/articles"
+          ],
+          "output_": "data/sentences"
+        }
+      },
+      "dependencies": {
+        "process/init/app": [],
+        "process/init/relation/articles": [
+          "process/init/app"
+        ],
+        "process/ext_person_mention_by_map_person_mention": [
+          "data/sentences"
+        ],
+        "process/ext_sentences_by_nlp_markup": [
+          "data/articles"
+        ],
+        "data/articles": [
+          "process/init/relation/articles"
+        ],
+        "data/person_mention": [
+          "process/ext_person_mention_by_map_person_mention"
+        ],
+        "data/sentences": [
+          "process/ext_sentences_by_nlp_markup"
+        ]
+      }
+    }
+  }
+}

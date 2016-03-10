@@ -1,5 +1,5 @@
 
-digraph "planetaryIR data flow" {
+digraph "planetaryir data flow" {
     graph[rankdir=BT  # bottom-to-top drawing (or RL/right-to-left may also make sense)
     ];
     node [shape=box
