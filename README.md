@@ -57,10 +57,17 @@ The path to bundled graphviz is usually /local/lib/bundled
 
 5) Run input/init.sh script file to install bazaar dependency which is the CoreNLP parser
 
-6) Run "deepdive do articles" - This will load the articles from the json file into the database
+6) Run deepdive compare
 
-7) Run "deepdive query '?- articles("1438", content).' format=csv | grep -v '^$' | tail -n +16 | head" - This is to check whether the article text got loaded successfully
+7) Run "deepdive do articles" - This will load the articles from the json file into the database
 
-8) Run "deepdive do sentences" - This will run the NLP parser on the articles table and output into the setnences table with their NER tags
+8) Run "deepdive query '?- articles("1438", content).' format=csv | grep -v '^$' | tail -n +16 | head" - This is to check whether the article text got loaded successfully
 
-9) Run "deepdive query '?- sentences("1438", _, _, tokens, _, _, ner_tags, _, _, _).' format=csv | grep PERSON | tail" to see these NER tags
+9) Run "deepdive do sentences" - This will run the NLP parser on the articles table and output into the setnences table with their NER tags
+
+10) Run "deepdive query '?- sentences("1438", _, _, tokens, _, _, ner_tags, _, _, _).' format=csv | grep PERSON | tail" to see these NER tags
+
+11) Run "deepdive do person_mention" or "deepdive redo person_mention" whichever the case maybe to perform author extractions
+
+12) Go to postgreSQL terminal and run "COPY person_mention TO 'path to where you want this file/authors.csv' DELIMITER ',' CSV HEADER;"
+
