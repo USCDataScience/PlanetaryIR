@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # tsv_extractor  process/ext_person_mention_by_map_person_mention
-# {"dependencies":["ext_sentences_by_nlp_markup"],"input":" SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.tokens AS \"sentences.R0.tokens\", R0.ner_tags AS \"sentences.R0.ner_tags\"\nFROM sentences R0\n        \n          ","input_batch_size":"100000","input_relations":["sentences"],"output_relation":"person_mention","parallelism":"1","style":"tsv_extractor","udf":"\"$DEEPDIVE_APP\"/udf/map_person_mention.py","dependencies_":["process/ext_sentences_by_nlp_markup"],"input_":["data/sentences"],"output_":"data/person_mention","name":"process/ext_person_mention_by_map_person_mention"}
+# {"dependencies":["ext_sentences_by_nlp_markup"],"input":" SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\"\nFROM sentences R0\n        \n          ","input_batch_size":"100000","input_relations":["sentences"],"output_relation":"person_mention","parallelism":"1","style":"tsv_extractor","udf":"\"$DEEPDIVE_APP\"/udf/map_person_mention.py","dependencies_":["process/ext_sentences_by_nlp_markup"],"input_":["data/sentences"],"output_":"data/person_mention","name":"process/ext_person_mention_by_map_person_mention"}
 set -xeuo pipefail
 cd "$(dirname "$0")"
 
@@ -10,7 +10,7 @@ export DEEPDIVE_CURRENT_PROCESS_NAME='process/ext_person_mention_by_map_person_m
 export DEEPDIVE_LOAD_FORMAT=tsv
 
 deepdive compute execute \
-    input_sql=' SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.tokens AS "sentences.R0.tokens", R0.ner_tags AS "sentences.R0.ner_tags"
+    input_sql=' SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text"
 FROM sentences R0
         
           ' \

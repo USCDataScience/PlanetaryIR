@@ -1,0 +1,10 @@
+2016-03-10 16:41:17.604039 ‘run/LATEST.COMPILE’ -> ‘20160310/164117.474956000’
+2016-03-10 16:41:17.604631 ‘run/RUNNING.COMPILE’ -> ‘20160310/164117.474956000’
+2016-03-10 16:41:17.604677 Parsing DeepDive application (/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir) to generate:
+2016-03-10 16:41:17.604699  run/compiled/schema.json
+2016-03-10 16:41:17.604719   from app.ddlog
+2016-03-10 16:41:18.128583 [error] app.ddlog[39.1] failure: string matching regex `\p{javaJavaIdentifierStart}\p{javaJavaIdentifierPart}*' expected but `)' found
+2016-03-10 16:41:18.128655 
+2016-03-10 16:41:18.128684 ).
+2016-03-10 16:41:18.128707 
+2016-03-10 16:41:18.128730 ^

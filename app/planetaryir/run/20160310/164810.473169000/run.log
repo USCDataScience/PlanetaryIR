@@ -1,0 +1,138 @@
+2016-03-10 16:48:13.095516 # on usc-secure-wireless-052-050.usc.edu: deepdive do sentences
+2016-03-10 16:48:13.095746 # run/20160310/164810.473169000/plan.sh
+2016-03-10 16:48:13.095764 # execution plan for data/sentences
+2016-03-10 16:48:13.095782 
+2016-03-10 16:48:13.095802 : ## process/init/app ##########################################################
+2016-03-10 16:48:13.095820 : # Done: 2016-02-24T17:00:00-0800 (14d 23h 48m 10s ago)
+2016-03-10 16:48:13.095838 : process/init/app/run.sh
+2016-03-10 16:48:13.095857 : mark_done process/init/app
+2016-03-10 16:48:13.095875 : ##############################################################################
+2016-03-10 16:48:13.095895 
+2016-03-10 16:48:13.095913 : ## process/init/relation/articles ############################################
+2016-03-10 16:48:13.095930 : # Done: 2016-03-10T16:47:56-0800 (14s ago)
+2016-03-10 16:48:13.095947 : process/init/relation/articles/run.sh
+2016-03-10 16:48:13.095964 : mark_done process/init/relation/articles
+2016-03-10 16:48:13.095980 : ##############################################################################
+2016-03-10 16:48:13.096001 
+2016-03-10 16:48:13.096023 : ## data/articles #############################################################
+2016-03-10 16:48:13.096040 : # Done: 2016-03-10T16:47:56-0800 (14s ago)
+2016-03-10 16:48:13.096059 : # no-op
+2016-03-10 16:48:13.096080 : mark_done data/articles
+2016-03-10 16:48:13.096100 : ##############################################################################
+2016-03-10 16:48:13.096121 
+2016-03-10 16:48:13.096142 ## process/ext_sentences_by_nlp_markup #######################################
+2016-03-10 16:48:13.096161 # Done: 2016-03-10T09:29:42-0800 (7h 18m 28s ago)
+2016-03-10 16:48:13.096198 process/ext_sentences_by_nlp_markup/run.sh
+2016-03-10 16:48:13.096222 ++ dirname process/ext_sentences_by_nlp_markup/run.sh
+2016-03-10 16:48:13.096244 + cd process/ext_sentences_by_nlp_markup
+2016-03-10 16:48:13.096266 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_sentences_by_nlp_markup
+2016-03-10 16:48:13.096286 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_sentences_by_nlp_markup
+2016-03-10 16:48:13.096307 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-03-10 16:48:13.096328 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-03-10 16:48:13.096351 + deepdive compute execute 'input_sql= SELECT R0.id AS "articles.R0.id", R0.content AS "articles.R0.content"
+2016-03-10 16:48:13.096371 FROM articles R0
+2016-03-10 16:48:13.096391         
+2016-03-10 16:48:13.096411           ' 'command="$DEEPDIVE_APP"/udf/nlp_markup.sh' output_relation=sentences
+2016-03-10 16:48:13.126401 Executing with the following configuration:
+2016-03-10 16:48:13.126453  DEEPDIVE_NUM_PROCESSES=3
+2016-03-10 16:48:13.126468  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-03-10 16:48:13.126487  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-03-10 16:48:13.126524  output_relation_tmp=dd_tmp_sentences
+2016-03-10 16:48:13.126547 
+2016-03-10 16:48:13.275376 CREATE TABLE
+2016-03-10 16:48:13.376660 CREATE TABLE
+2016-03-10 16:48:13.501730 unloading to feed_processes-1: ' SELECT R0.id AS "articles.R0.id", R0.content AS "articles.R0.content"
+2016-03-10 16:48:13.501806 FROM articles R0
+2016-03-10 16:48:13.501842         
+2016-03-10 16:48:13.501869           '
+2016-03-10 16:48:13.519625 Loading dd_tmp_sentences from output_computed-1 (tsv format)
+2016-03-10 16:48:14.311743 Parsing with max_len=100Parsing with max_len=100
+2016-03-10 16:48:14.319055 Parsing with max_len=100
+2016-03-10 16:48:14.364906 
+2016-03-10 16:48:14.568067 Adding annotator tokenize
+2016-03-10 16:48:14.572042 Adding annotator tokenize
+2016-03-10 16:48:14.573521 Adding annotator tokenize
+2016-03-10 16:48:14.577258 TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+2016-03-10 16:48:14.578288 TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+2016-03-10 16:48:14.582650 TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+2016-03-10 16:48:14.587765 Adding annotator cleanxml
+2016-03-10 16:48:14.588564 Adding annotator cleanxml
+2016-03-10 16:48:14.590691 Adding annotator cleanxml
+2016-03-10 16:48:14.630120 Adding annotator ssplit
+2016-03-10 16:48:14.630466 Adding annotator ssplit
+2016-03-10 16:48:14.631795 Adding annotator ssplit
+2016-03-10 16:48:14.634720 Adding annotator posAdding annotator pos
+2016-03-10 16:48:14.636987 
+2016-03-10 16:48:14.637971 Adding annotator pos
+2016-03-10 16:48:17.055262 Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [2.4 sec].
+2016-03-10 16:48:17.055809 Adding annotator lemma
+2016-03-10 16:48:17.061117 Adding annotator ner
+2016-03-10 16:48:17.145422 done [2.4 sec].
+2016-03-10 16:48:17.145847 Adding annotator lemma
+2016-03-10 16:48:17.146680 Adding annotator ner
+2016-03-10 16:48:18.111519 Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [3.4 sec].
+2016-03-10 16:48:18.111907 Adding annotator lemma
+2016-03-10 16:48:18.112831 Adding annotator ner
+2016-03-10 16:48:24.805236 Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [7.6 sec].
+2016-03-10 16:48:24.806068 done [7.5 sec].
+2016-03-10 16:48:25.142369 Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [6.9 sec].
+2016-03-10 16:48:30.215000 Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [5.1 sec].
+2016-03-10 16:48:30.220939 Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [5.4 sec].
+2016-03-10 16:48:30.223664 Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [5.4 sec].
+2016-03-10 16:48:34.778018 Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [4.6 sec].
+2016-03-10 16:48:34.778946 done [4.6 sec].
+2016-03-10 16:48:34.781324 sutime.binder.1.
+2016-03-10 16:48:34.781391 Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+2016-03-10 16:48:34.781651 sutime.binder.1.
+2016-03-10 16:48:34.781694 Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+2016-03-10 16:48:34.843472 done [4.6 sec].
+2016-03-10 16:48:34.846859 sutime.binder.1.
+2016-03-10 16:48:34.846998 Initializing JollyDayHoliday for sutime with classpath:edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml
+2016-03-10 16:48:35.600491 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+2016-03-10 16:48:35.622720 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+2016-03-10 16:48:35.662640 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/defs.sutime.txt
+2016-03-10 16:48:35.790303 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+2016-03-10 16:48:35.799505 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+2016-03-10 16:48:35.882358 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.sutime.txt
+2016-03-10 16:48:36.552930 Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.553016 INFO: Ignoring inactive rule: null
+2016-03-10 16:48:36.559508 Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.559579 INFO: Ignoring inactive rule: temporal-composite-8:ranges
+2016-03-10 16:48:36.560588 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+2016-03-10 16:48:36.574418 Adding annotator parse
+2016-03-10 16:48:36.618092 Loading parser from serialized file edu/stanford/nlp/models/srparser/englishSR.ser.gz ...Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.618162 INFO: Ignoring inactive rule: null
+2016-03-10 16:48:36.620033 Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.620116 INFO: Ignoring inactive rule: temporal-composite-8:ranges
+2016-03-10 16:48:36.620530 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+2016-03-10 16:48:36.627772 Adding annotator parse
+2016-03-10 16:48:36.722030 Loading parser from serialized file edu/stanford/nlp/models/srparser/englishSR.ser.gz ...Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.722094 INFO: Ignoring inactive rule: null
+2016-03-10 16:48:36.722918 Mar 10, 2016 4:48:36 PM edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor appendRules
+2016-03-10 16:48:36.722989 INFO: Ignoring inactive rule: temporal-composite-8:ranges
+2016-03-10 16:48:36.723225 Reading TokensRegex rules from edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+2016-03-10 16:48:36.731637 Adding annotator parse
+2016-03-10 16:49:00.566513 Loading parser from serialized file edu/stanford/nlp/models/srparser/englishSR.ser.gz ...done [23.9 sec].
+2016-03-10 16:49:00.957902 Parsing document 1989...
+2016-03-10 16:49:12.676016 done [36.1 sec].
+2016-03-10 16:49:13.091193 Parsing document 2038...
+2016-03-10 16:49:20.610596 done [43.9 sec].
+2016-03-10 16:49:21.081652 Parsing document 1438...
+2016-03-10 16:49:25.376490 Parsing document 2893...
+2016-03-10 16:49:33.491578 Parsing document 2620...
+2016-03-10 16:49:37.148850 COPY 448
+2016-03-10 16:49:37.161119 Replacing sentences with dd_tmp_sentences
+2016-03-10 16:49:37.243902 DROP TABLE
+2016-03-10 16:49:37.307414 ALTER TABLE
+2016-03-10 16:49:37.371175 ALTER TABLE
+2016-03-10 16:49:37.436459 DROP TABLE
+2016-03-10 16:49:37.547727 ANALYZE
+2016-03-10 16:49:37.558113 mark_done process/ext_sentences_by_nlp_markup
+2016-03-10 16:49:37.573525 ##############################################################################
+2016-03-10 16:49:37.573574 
+2016-03-10 16:49:37.573588 ## data/sentences ############################################################
+2016-03-10 16:49:37.573608 # Done: 2016-03-10T09:29:42-0800 (7h 18m 28s ago)
+2016-03-10 16:49:37.573629 # no-op
+2016-03-10 16:49:37.573648 mark_done data/sentences
+2016-03-10 16:49:37.585826 ##############################################################################
+2016-03-10 16:49:37.585898 
