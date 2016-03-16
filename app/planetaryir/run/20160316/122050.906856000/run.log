@@ -1,0 +1,25 @@
+2016-03-16 12:20:53.800854 # on Snehas-MacBook-Pro.local: deepdive do articles
+2016-03-16 12:20:53.801093 # run/20160316/122050.906856000/plan.sh
+2016-03-16 12:20:53.801111 # execution plan for data/articles
+2016-03-16 12:20:53.801128 
+2016-03-16 12:20:53.801146 : ## process/init/app ##########################################################
+2016-03-16 12:20:53.801166 : # Done: 2016-02-24T19:00:00-0600 (20d 16h 20m 51s ago)
+2016-03-16 12:20:53.801184 : process/init/app/run.sh
+2016-03-16 12:20:53.801202 : mark_done process/init/app
+2016-03-16 12:20:53.801222 : ##############################################################################
+2016-03-16 12:20:53.801240 
+2016-03-16 12:20:53.801259 ## process/init/relation/articles ############################################
+2016-03-16 12:20:53.801279 : # Done: 2016-03-10T19:00:39-0600 (5d 16h 20m 12s ago)
+2016-03-16 12:20:53.801297 # Done: 2016-03-10T19:00:39-0600 (5d 16h 20m 11s ago)
+2016-03-16 12:20:53.801316 process/init/relation/articles/run.sh
+2016-03-16 12:20:53.801334 ++ dirname process/init/relation/articles/run.sh
+2016-03-16 12:20:53.801351 + cd process/init/relation/articles
+2016-03-16 12:20:53.801368 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/init/relation/articles
+2016-03-16 12:20:53.801385 + DEEPDIVE_CURRENT_PROCESS_NAME=process/init/relation/articles
+2016-03-16 12:20:53.801402 + deepdive create table articles
+2016-03-16 12:20:53.937411 psql: could not connect to server: Connection refused
+2016-03-16 12:20:53.937458 	Is the server running on host "localhost" (::1) and accepting
+2016-03-16 12:20:53.937475 	TCP/IP connections on port 5432?
+2016-03-16 12:20:53.937493 could not connect to server: Connection refused
+2016-03-16 12:20:53.937514 	Is the server running on host "localhost" (127.0.0.1) and accepting
+2016-03-16 12:20:53.937532 	TCP/IP connections on port 5432?

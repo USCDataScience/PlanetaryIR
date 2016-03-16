@@ -1,0 +1,3150 @@
+
+Lunar domes in the Wollaston region: Morphometry and mode of formation. M. Wirths1 and R. Lena2 - Geologic 
+
+Lunar Research (GLR) Group. 1km 67 Camino Observatorio, Baja California, Mexico; mwirths@starband.net; 2 Via Cartesio 
+
+144, sc. D, 00137 Rome, Italy; r.lena@sanita.it  
+
+ 
+
+Introduction: Recent studies about lunar domes 
+
+are based on the evaluation of their spectrophotometric 
+
+and morphometric properties, rheologic parameters, 
+
+and their classification based on the spectral properties 
+
+and three dimensional shapes of the volcanic edifices 
+
+[1-3]. In this contribution we provide an analysis of 
+
+three low domes located to the north of Aristarchus 
+
+region near crater Wollaston, termed W1-3 (Fig.1 and 
+
+Table 1). The lavas of the examined mare domes are 
+
+characterized by low R415/R750 (reddish lavas) indicat-
+ing a low TiO2 content (Table 3). 
+
+ 
+Fig. 1. Telescopic image acquired on July 9, 2014, at 03:34 
+
+UT with a 450 mm aperture Starmaster driven Dobsonian 
+
+(M. Wirths). Rectified view of the telescopic CCD image. 
+
+ 
+
+     Morphometric dome properties: Based on the 
+
+telescopic CCD image (Fig. 1) we obtained a DEM of 
+
+the examined domes by applying the combined 
+
+photoclinometry and shape from shading method (sfs) 
+
+described in [1-3]. The heights of the domes W1-3 
+
+were determined to 53, 55 and 40 m, resulting in flank 
+
+slopes of 1.0°, 0.64° and 0.54°, respectively (Fig. 2 and 
+
+3). Assuming a parabolic shape the estimated edifice 
+
+volumes correspond to about 1.1, 3.2 and 1.2 km
+3
+ for 
+
+three examined domes W1-W3. We also estimated the 
+
+height of W1 based on shadow length measurements in 
+
+the oblique illumination view shown in Fig. 1, where a 
+
+value of 50 m was computed according to lunar topo-
+
+graphic orthophotomap LTO 39A1. 
+
+Dome long. [°] lat. [°] D [km] h [m] slope [°] V [km³] 
+
+W1 -49.25 30.60 6.0 53 1.00 1.1 
+
+W2 -48.57 30.35 10.4 55 0.64 3.2 
+
+W3 -48.30 30.27 8.4 40 0.54 1.2 
+
+Table 1: Morphometric properties of the examined domes in 
+
+the Wollaston region. 
+
+    GLD100 dataset: Scholten et al. present a nearly 
+
+global lunar DEM with a grid size of 100 m, the so-
+
+called GLD100 [4]. This DEM has been constructed 
+
+based on photogrammetric analysis of LROC WAC 
+
+image pairs. ACT-REACT Quick Map tool was used to 
+
+access to the GLD100 dataset, allowing to obtain the 
+
+cross-sectional profiles and the corresponding 3D view 
+
+(Fig. 4), in agreement with the results obtained with 
+
+photoclinometry and sfs applied to telescopic image.  
+
+    According to the classification scheme for lunar 
+
+domes introduced in [1, 3], and based on a principal 
+
+component analysis (PCA), the domes W2 and W3 
+
+belong to class C1. On the contrary, W1 belongs to 
+
+class E2. 
+ 
+
+Dome 
+viscosity  
+
+[Pa s] 
+
+E  
+
+[m
+3
+ s
+
+-1
+] 
+
+T  
+
+[years] 
+
+U  
+
+[m s
+-1
+
+] 
+
+W 
+
+[m] 
+
+L  
+
+[km] 
+
+W1 1.4x10
+4
+ 122 0.30 5.2x10
+
+-4
+ 9 32 
+
+W2 6.5x10
+3
+ 340 0.30 2.5x10
+
+-3
+ 4 22 
+
+W3 2.4x10
+3
+ 320 0.16 5.5x10
+
+-3
+ 3.5 16 
+
+Table 2: Modeling results for the viscosity, effusion rate (E), 
+
+effusion time (T) and magma rise speed (U), dike width (W), 
+
+dike length (L).  
+
+Dome R415 R750 R415/R750 R950/R750 
+
+W1 0.0635 0.1086 0.5851 1.0335 
+
+W2 0.0676 0.1162 0.5822 1.0186 
+
+W3 0.0675 0.1161 0.5814 1.0104 
+
+Table 3: Spectral data of the examined domes. 
+
+ 
+
+ 
+Fig. 2. Cross-sectional profile in east-west direction derived 
+
+from the telescopic image for the domes W1(top), W2 (mid-
+
+dle) and W3 (bottom). The vertical axis is 10 times exagger-
+
+ated. 
+
+     Rheologic properties: The rheologic model devel-
+
+oped in [5], which relies on the morphometric dome 
+
+properties, yelds estimates of the lava viscosity η, the 
+
+1001.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+effusion rate E, and the duration T of the effusion pro-
+
+cess for a monogenetic lava dome. Using the morpho-
+
+metric values listed in Table 1, we obtained rheologic 
+
+properties for the examined domes (Table 2). 
+
+    The dome W1 is characterised by a moderate lava 
+
+viscosity of 10
+4
+ Pa s, while for W2 and W3 we have 
+
+inferred lava viscosities of ~10
+3
+ Pa s computed based on 
+
+a lava density of 2800 kg m
+-3
+
+. The domes formed over a 
+
+period of time of about 0.3 years (W1 and W2) and 0.16 
+
+years (W3).  
+
+According to the model developed in [6], we esti-
+
+mated the magma rise speed U and the dike geometry 
+
+(width W and length L). For three domes we found 
+
+magma rise speeds of the order 10
+-3
+
+-10
+-4
+
+ m s
+-1
+
+ and dike 
+
+lengths of 16-32 km. The inferred dike widths amount to 
+
+9 m, 4 m and 3.5 m for W1, W2 and W3, respectively. 
+
+With its rheologic properties and dike dimension, W1 is 
+
+a typical representative of the rheologic group R1 intro-
+
+duced in [1, 3], while the domes W2 and W3 belongs to 
+
+group R2 due to their lower lava viscosity. 
+
+ 
+Fig. 3. 3D reconstruction based on thetelescopic CCD image 
+
+for three domes W1(top), W2 (middle) and W3 (bottom). 
+
+ 
+
+ 
+Fig. 4. 3D reconstruction and cross-sectional profile in east-west direction derived for three examined domes W1-W3 based on 
+
+GLD100 dataset. 
+
+References: [1] Wöhler et al. (2006) Icarus 183, 237-264; 
+
+[2] Wöhler & Lena (2009) Icarus 204, 381-398; [3] Lena et 
+
+al. (2013) Lunar domes: Properties and Fomation Processes. 
+
+Springer Praxis Books; [4] Scholten et al. (2012) J. Geophys. 
+
+Res. 117 (E00H17), doi:10.1029/2011JE003926; [5] Wilson 
+
+& Head (2003) J. Geophys. Res. 108(E2), 5012–5018; [6] 
+Rubin (1993) J. Geophys. Res. 98, 15919-15935. 
+
+1001.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+A Lunar Dome and associated Pyroclastic deposits north-east of the crater Schroter. R. Lena
+1
+ and Barry Fitz-
+
+Gerald
+2
+- Geologic Lunar Research (GLR) Group. 
+
+1
+Via Cartesio 144, sc. D, 00137 Rome, Italy; r.lena@sanita.it ; 
+
+2 
+79 
+
+South Court Ave, Dorchester, Dorset, DT12DA United Kingdom barryfitz_gerald@hotmail.com  
+
+ 
+
+    Introduction: To the north-east of the crater 
+
+Schroter and north of Mosting E is an oval area of 
+
+mare approximately 70 km on an east-west axis and 
+
+100 along a north-south axis. This was mapped as be-
+
+ing mostly Procellarum Group mare material overlain 
+
+in places by darker pyroclastic materials and is bound-
+
+ed to the west by a more rugged terrain mapped as be-
+
+longing to the Caley Formation [1]. This area appears 
+
+to be related to the eastern Sinus Aestuum II Dark 
+
+Mantle Deposit (DMD), reported in [2]. This feature is 
+
+however smoother less rugged surface sets it apart from 
+
+this more extensive Sinus Aestuum II DMD. In this 
+contribution we describe a large volcanic dome and 
+
+associated lunar pyroclastic deposits located at 3.43° N 
+
+and 5.10° W (Figs. 1a-1b). 
+
+Morphometric properties: The dome, termed 
+
+Sc1, has a base diameter of 35 km. Its height, deter-
+
+mined using GLD100 dataset [3], amounts to 200 m 
+
+and the average slope angle ξ corresponds to 0.65°. Its 
+
+edifice volume was estimated of 97 km
+3
+. An elongate 
+
+depression can be seen on the eastern flank of the 
+
+dome, extending approximately 7 km and 50 m depth, 
+
+the irregular shape explicable in terms of a collapse 
+
+feature due to subsurface magma migration or as a 
+
+source vent (Fig. 1c). Clementine UVVIS multispectral 
+
+mosaic displays oval spread of vent deposits associated 
+
+with graben. Note the discrete nature of several other 
+
+foci of LPD's on the dome surface (termed P to U in 
+
+Fig. 1d). 
+
+Spectral data: Clementine UVVIS multispectral 
+
+data indicate a higher titanium concentration for the 
+
+dome and associated deposits which show up bluer 
+
+than the surrounding mare (Fig. 1e). It has a R415/R750 
+
+ratio of ~0.63 and a 750 nm albedo of 0. 092, while the 
+
+nearby mare units have lower R415/R750 ratios of ~0.60-
+
+0.61 and a 750 nm albedo of about 0.11. Moreover, our 
+
+data indicate that the “relatively” higher TiO2 and FeO 
+
+value [4] is associated with the LPD if compared to 
+
+nearby mare soil not covered by the dark pyroclastic 
+
+material (Figs. 1f-g). The M
+3
+ spectral data indicate that 
+
+the absorption band of the dome and the mare surface 
+
+east of it slightly exceeds 1 µm. The 2 µm absorption is 
+
+quite flat while the 1 µm absorption is shifted towards 
+
+higher wavelengths but not broadened as expected for 
+
+olivine (Fig. 2). Thus the spectra would be attributed to 
+
+glass or also to a mixture of glass and olivine, as indi-
+
+cated in the Clementine spectral data. No spinel signa-
+
+ture was identified.  
+
+The spinel deposits, including chromite, present in 
+
+the Sinus Aestuum II region [5-6], are defined by their 
+
+strong 2 µm absorptions and extremely weak or absent 
+
+1 µm absorptions.  
+
+     Results and discussion: The environs of the dome 
+
+present a rather complicated picture (Fig. 3), with evi-
+
+dence of extensional forces in the form of faults and 
+
+graben, compression in the form of wrinkled ridges, 
+
+pyroclastic volcanic activity in the form of cone (Fig. 
+
+1) and finally subsurface magmatic activity as evi-
+
+denced by collapse features. Using the GDL100 dataset 
+
+it is possible to determine that this feature is not a sec-
+
+tion of flat LPD draped mare, but forms a low profile 
+
+dome like structure elevated above the mare surface to 
+
+the east and north. A graben that appears to cut the 
+
+dome is a narrow (approximately 400 m) trough that 
+
+extends for some 20 km extending from the Caley 
+
+Formation terrain and across the western part of the 
+
+dome, interpreted as fracture features that may occur as 
+
+a result of the flexural uplift [7], likely originated by a 
+
+magmatic intrusion associated with dikes that ascended 
+
+to shallow depths below the surface [8]. Even if the 
+
+bulk of the magma does not reach the surface but re-
+
+mains as an intrusion, it is possible that some connec-
+
+tion between volcanic products and the surface may 
+
+occur through the fractures that form to allow the 
+
+graben floor to subside. Hence, intrusive and explosive 
+
+processes, including pyroclastic material, might be 
+
+involved into the formation of the large dome Sc1 but 
+
+not necessarily simultaneously (different volcanic 
+
+phases), and the different volcanic features in the ex-
+
+amined lunar region may even have formed completely 
+
+independent of each other. The fact that the examined 
+
+dome Sc1 has a very shallow slope and a large diame-
+
+ter is evidence that it has likely originated by a mag-
+
+matic intrusion. The intrusive activity was followed by 
+
+a phase of pyroclastic activity, which was possibly re-
+
+lated to the vent identified. The laccolith model in [9] 
+
+yields intrusion depths of 3.4 km and maximum magma 
+
+pressure in the laccolith of 27 MPa so that the dome 
+
+SC1 is a typical representative of class In1 as intro-
+
+duced in [9-10].  
+      References: [1] Wilhelms (1968), USGS I-548; [2] 
+
+Weitz et al. (1998) J. Geophys. Res. 103 (El0); [3] Scholten 
+
+et al. (2012) J. Geophys. Res. 117 (E00H17); [4] Lucey et al. 
+
+(2000) J. Geophys. Res. 105 (E8), 305; [5] Sunshine et al. 
+
+(2010) LPSC XXXXI, #1508; [6] Sunshine et al. (2014) 
+
+LPSC XXXXV, #2297; [7] Nichols et al. (1974) Lun. Planet. 
+Sci. V, 550-552; [8] Wilson and Head (2002) J. Geophys. 
+
+Res. 107 (E8), 5057; [9] Wöhler & Lena (2009) Icarus 204, 
+381-398; [10] Lena et al. (2013) Lunar Domes: Properties 
+and Fomation Processes. Springer Praxis Books; [11] 
+
+Grumpe et al. (2014) Adv. Space Res. 53(12) 1735-1767. 
+
+1002.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+
+ 
+Fig. 1. Top (a) WAC 11752848ME including the examined features; (b) WAC draped on top of the global LROCWAC-derived 
+
+elevation model (GLD100). The elevation of the dome corresponds to 200 m; Bottom (c) vent as imaged by Selene; (d) 
+
+Clementine UVVIS multispectral mosaic of the dome termed Sc1 showing oval spread of vent deposits associated with graben 
+
+(circled). Note the discrete nature of several other foci of DMD's on the dome surface (P to U); (e) Clementine color image 
+
+(R750/R415 red channel, R750/R950 green channel and R415/R750 blue channel); (f) FeO map as described in [4], range 10 wt% to 20 
+
+wt%; (g) TiO2 map as described in [4], range 1 wt% to 10 wt%. Note that the derived amounts of Ti and Fe might not be appro-
+
+priate for some deposits due to the possible presence of high amounts of glasses and other unknown factors. 
+
+ 
+ Fig. 2. (Left) solid curve M3spectrum of the dome as described in [11], dashed curve mare surface east of the dome and dotted 
+
+curve highland surface northwest of the dome; (middle) dots indicate the locations of the three examined spectra M3 image 
+
+M3G20090206T010833_V03; (right) Cross-sectional profile in N-S direction of Sc1 dome based on GLD100 dataset. 
+
+ 
+Fig. 3. Geological sketch map based on LROC WAC imagery of the area. 
+
+1002.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+ON  THE  VARIATIONS  OF  GALACTIC  COSMIC  RAYS  DURING  THE  LAST  BILLION  YEARS. 
+
+V.A. Alexeev,  Vernadsky  Institute  of  Geochemistry  and  Analytical  Chemistry,  RAS,  Moscow 119991 Russia; 
+
+e-mail: AVAL37@chgnet.ru  
+
+ 
+
+ 
+
+Introduction:  In analyzing the distribution of 
+
+cosmic-ray exposure ages of iron meteorites, Shaviv 
+
+[1] concluded that the intensity of galactic cosmic rays 
+
+(GCR) varied with a period of 143 ± 10 Myr due to 
+
+periodic passages of the solar system through the spiral 
+
+arms of the Galaxy. According to more recent data, this 
+
+period is equal to 147 ± 6 Myr [2]. However, this con-
+
+clusion is questioned by other researchers ([3] and oth-
+
+er). In this work, we analyzed the distribution of the 
+
+ages of iron meteorites after more strict selection of 
+
+ages from the available data set. We compared ob-
+
+tained results with results for the model set of ages 
+
+assuming different periods of the GCR intensity varia-
+
+tions.  
+
+Calculations and modeling:  The distribution of 
+
+82 ages is shown in Fig. 1 (histogram 1). Ages were 
+
+taken from [4-6]. For correction of ages belonging to 
+
+paired meteorites (i.e., formed in a single collision), we 
+
+used the Akaike information criterion [7, 8]. Age dis-
+
+tribution of the corrected set is shown in Fig. 1 (histo-
+
+gram 2). 
+
+Further analysis of the distribution of the correct-
+
+ed values of ages was made by means of calculating 
+
+the values of phase (according to [8]) and the study of 
+
+parameters of the distribution of these values. For each 
+
+value of the age of meteorite (T), the phase (Ph) was 
+
+calculated according to the ratio: Ph = T / t - int (T / t). 
+
+Here t is presumptive period in the distribution of ages 
+
+and, accordingly, the period of changes in the intensity 
+
+of the GCR [8]. (Ph values vary in the range from 0 to 
+
+1.) Further, for the selected value of t there were calcu-
+
+lated the population characteristics of the distribution 
+
+of phase values: dispersion S
+2
+, kurtosis Ek and χ
+
+2
+. This 
+
+procedure was made for the 17 values of t: 100, 150, 
+
+200, ..., 850 and 900 Myr. Then, changes of each 
+
+characteristic as a function of t were analyzed. 
+
+Results for the χ2 are shown in Fig. 2. Here we 
+
+can see: (a) changes of χ2 for the corrected ages of iron 
+
+meteorites; (b) the same for a model set of 100 random 
+
+"true" values of ages, assuming no variations of the 
+
+GCR intensity; (c) the same on the assumption of GCR 
+
+variations with a period of 150 Myr, and (d) the same 
+
+on the assumption of GCR variations with a period of 
+
+450 Myr. Models of changes of GCR intensity with 
+
+such periods are shown in Fig. 3. For meteorites (Fig. 
+
+2a), we can see a convincing decrease of the χ2 values 
+
+for t ~ 400-500 Myr (Δ2 = -44 ± 4 %) and less con-
+
+vincing decrease for t = 150 Myr (Δ1 = -46 ± 13 %). 
+
+Also, similar deviations from the mean values were 
+
+obtained in the analysis of the distributions of the dis-
+
+persion S
+2 
+and kurtosis Ek. 
+
+Distribution of the model set of 100 values of 
+
+"true" ages is shown in Fig. 4a. Of course, the distri-
+
+bution of the "measured" values of ages will be the 
+
+same if the intensity of galactic cosmic rays during the 
+
+last billion years has not changed. Distribution of 
+
+"measured" values of ages will have the form (see Fig. 
+
+4b), if the intensity of galactic cosmic rays was varied 
+
+with a period of 150 Myr. The type of this distribution 
+
+is significantly different from the distribution of ages 
+
+of iron meteorites (cf. Fig. 4d). But, the distribution of 
+
+the "measured" ages (Fig. 4c) will be in essence the 
+
+same like the distribution of ages of iron meteorites 
+
+(Fig. 4d) in the case of an assumed period of GCR 
+
+intensity variations of 450 Myr. 
+
+Conclusions:  The obtained data suggest the ex-
+
+istence of the GCR intensity variations with a period of 
+
+~ 400-500 Myr during the last billion years. These var-
+
+iations may be due to periodic passing solar system 
+
+through the spiral arms of the Galaxy. Discussed in [1, 
+
+8], changes of the GCR intensity with a period of ~ 150 
+
+Myr are less certain. 
+
+The author is grateful to E.V. Zabalueva and I.A. 
+
+Kozhevnikova for their help in the development of the 
+
+algorithm of calculations involving the Akaike infor-
+
+mation criterion. This work was supported in part by 
+
+Fundamental Research Program no. 22 of the Russian 
+
+Academy of Sciences and by the Program no. 4 of ONZ 
+
+of Russian Academy of Science. 
+
+ 
+
+References: [1] Shaviv N.J. (2003). New Astron., 
+
+8, 39–77. [2] Scherer K. et al. (2006) Space Sci. Rev., 
+
+127, 327–465. [3] Wieler R. et al. (2011). Space Sci 
+
+Rev., 176, 351-363. [4] Voshage H. and Feldmann H. 
+
+(1979) EPSL, 45, 293-308. [5] Voshage H. et al. 
+
+(1983) Z. Naturforschg., 38a, 273-280. [6] Voshage H. 
+
+(1974) EPSL, 71, 181-194. [7] Akaike H. (1974) IEEE 
+
+T. Automat. Contr., AC-19, 716–723. [8] Strashnov I. 
+
+et al. (2013) GCA, 106, 71-83.  
+
+1003.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+  
+
+  
+
+ 
+
+Fig. 1 Distribution of the exposure ages (T) of iron meteorites. 1 - all meteorites (N = 82, according to [4-6]); 2 – the 
+
+corrected set (N = 33): after the exclusion of the paired meteorites and meteorites with a complex exposure history. 
+
+Distribution is approximated by the "best" Gaussian curve.  
+
+Fig. 2 The χ2 values calculated for the distribution of the values of phase Ph = T / t - int (T / t) depending on the as-
+
+sumed period of changes (t) in the distribution of the exposure ages of meteorites in the range of T = 0-1000 Myr. (a) 
+
+- The corrected ages of iron meteorites (N = 28); (b) the model set of random values of age (N = 100) at a constant 
+
+intensity of galactic cosmic rays; (c) and (d) are the same with changes in the intensity of GCR with a period of t = 
+
+150 and 450 Myr, respectively. Δ1 - Δ4 are deviations from the average values. 
+
+Fig. 3. Model of the GCR intensity changes (IGCR) with a period of t (a) 150 Myr and (b) 450 Myr (solid lines) dur-
+
+ing the last billion years. Dotted lines are visual approximation of variations. 
+
+Fig. 4. Distributions of: (a) the model set of "true" values of exposure ages (N = 100) which randomly are distributed 
+
+in the range of 0-1000 Myr; (b) the "measured" values of the ages for the model set; calculations are made  under the 
+
+assumption that the variations of the GCR intensity were with a period of t = 150 Myr; (c) the same for the proposed 
+
+period variations of t = 450 Myr; (d) the exposure ages of iron meteorites after excluding paired meteorites and me-
+
+teorites with a complex history of irradiation (N = 28). Dotted lines are average values. Distributions of (c) and (d) 
+
+are approximated by the "best" Gaussian curves. The arrows indicate the positions of the maxima. 
+
+1003.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+EFFECTS OF SECONDARY PROCESSING ON PRESOLAR GRAIN ABUNDANCES AND 
+COMPOSITIONS IN THE UNIQUE CARBONACEOUS CHONDRITE MILLER RANGE 07687. C. Floss1 
+and A. J. Brearley2. 1Laboratory for Space Sciences and Physics Department, Washington University, St. Louis, 
+MO, USA; 2Department of Earth and Planetary Sciences, University of New Mexico, Albuquerque, NM, USA. 
+(Email: floss@wustl.edu) 
+
+ 
+Introduction: Presolar silicates are easily altered 
+
+or isotopically re-equilibrated by relatively modest 
+degrees of thermal metamorphism and/or aqueous 
+alteration [1–3], and have been found in abundance 
+only in certain primitive extraterrestrial materials. As a 
+result, they can be useful tracers of secondary nebular 
+and parent body processes [e.g., 4, 5]. 
+
+MIL 07687 is classified as a CO3 chondrite [6], but 
+contains unique features that distinguish it from typical 
+CO chondrites [7, 8]. Specifically, the abundance of 
+refractory inclusions is lower in MIL 07687 than in CO 
+chondrites, the amount of matrix (~68%) is higher, and 
+fine-grained chondrule rims, which are common in 
+COs are essentially absent in MIL 07687 [7]. 
+However, the most unusual feature of this meteorite is 
+that it appears to have undergone a unique style of 
+highly localized aqueous alteration [7, 8]. The matrix 
+is texturally complex, consisting of irregularly-shaped 
+Fe-rich (altered) and Fe-poor (unaltered) regions 
+separated by distinct boundaries (Fig. 1).  
+
+ 
+Figure 1. Back-scattered electron image of matrix 
+from MIL 07687. 
+
+In other primitive carbonaceous chondrites, high 
+abundances of presolar silicates are typically found in 
+fine-grained matrix regions dominated by amorphous 
+silicates. We are carrying out ion imaging searches in 
+MIL 07687, with the goal of evaluating how the 
+abundances and compositions of presolar grains in the 
+matrix of this meteorite have been affected by the 
+secondary alteration it has experienced. 
+
+Experimental: We used the Cameca NanoSIMS 
+50 to carry out C and O raster ion imaging of matrix 
+areas in MIL 07687 that experienced varying degrees 
+of aqueous alteration. The total area we analyzed is 
+33,900 µm2; approximately 1/3 of this is Fe-rich 
+
+altered matrix, while the remainder is relatively 
+unaltered Fe-poor matrix. 
+
+Following isotopic identification of the grains, we 
+used Auger spectroscopy to determine the major 
+element compositions of the grains, following standard 
+procedures developed for presolar silicate analysis [9]. 
+
+Results: We found a total of 53 O-rich presolar 
+grains and 21 SiC grains. The overall abundances are 
+110 ± 15 ppm for O-rich grains and 85 ± 19 ppm for 
+SiC, in good agreement with the abundances 
+determined by [10] for the same meteorite. Most grains 
+belong to either Group 1 or Group 4, but three grains 
+have more elevated 17O/16O ratios, typically referred to 
+as extreme Group 1 grains (Fig. 2). 
+
+ 
+Figure 2. O three-isotope plot showing O-rich 
+
+presolar grains from MIL 07687 (red symbols). Other 
+data are from the Presolar Grain Database [11]. 
+
+Auger analysis of the grains shows that virtually all 
+of them are ferromagnesian silicates; only one oxide 
+grain is present. Elemental compositions are broadly 
+consistent with those of other presolar silicates, with 
+Fe+Mg/Si ratios that are close to either olivine (2.0) or 
+pyroxene (1.0) or are intermediate between these two. 
+Iron concentrations in the grains range from 6 to 32 
+at.%, with a median of 16 at.%, similar to the ranges 
+and medians observed for presolar silicates from 
+primitive meteorites such as Acfer 094, ALHA77307 
+and the CR3 chondrites QUE 99177 and MET 00426 
+[e.g., 1 and references therein]. 
+
+Discussion: The Fe-poor matrix regions of 
+MIL 07687 consist of amorphous Mg-Fe-bearing 
+silicates and Fe-sulfides, and resemble matrix from 
+
+1004.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+other highly primitive carbonaceous chondrites 
+(Fig. 3a). In contrast, the Fe-rich matrix areas are 
+extensively altered and are dominated by fibrous Fe 
+oxyhydroxides (Fig. 3b), possibly ferrihydrite or 
+akaganéite [7, 8]. 
+
+ 
+Figure 3. Back-scattered electron images of (a) Fe-
+
+poor, unaltered and (b) Fe-rich, altered matrix from 
+MIL 07687. 
+
+The results of our imaging survey indicate that 
+presolar grains are found in both the more pristine Fe-
+poor areas and in the altered Fe-rich ones. Thus, the 
+aqueous alteration experienced by MIL 07687 has not 
+resulted in complete destruction of the presolar grains. 
+However, we do see some differences in the presolar 
+grain abundances between the two types of matrix. 
+Figure 4 shows grain densities in the Fe-rich and Fe-
+poor matrix areas. Overall we observe 2.6 grains per 
+1000 µm2 in the unaltered matrix areas and only 1.7 
+grains per 1000 µm2 in the Fe-rich altered regions. 
+Considering just the presolar silicates, abundances are 
+again lower in the altered areas than in the unaltered 
+ones. However, the difference is not as large as might 
+be expected given that presolar silicates are more 
+susceptible to secondary alteration than most presolar 
+grain types. 
+
+In addition to the difference in abundance, we 
+observe compositional differences in the presolar 
+silicates from the altered and unaltered areas. Grains 
+from the altered areas have a lower median Fe content 
+than grains from the unaltered areas, 12.5 at.% vs. 17.5 
+
+at.%. This differs from the presolar silicates in the 
+ungrouped carbonaceous chondrite Adelaide, which 
+have a factor of two higher median Fe content than 
+presolar silicates from other primitive meteorites [1]. 
+In Adelaide this difference was attributed to an influx 
+of Fe into the grains due to the thermal processing 
+experienced by that meteorite. The lower median Fe 
+content observed here in grains from the Fe-rich matrix 
+areas may also be due to secondary processing. In this 
+case, loss of Fe may have occurred through leaching of 
+Fe from the grains during aqueous alteration and 
+subsequent formation of the Fe oxyhydroxides. 
+
+ 
+Figure 4. Presolar grain densities (in # of grains 
+
+per 1000 µm2) in MIL 07687. 
+Finally, there is a factor of two difference in the 
+
+SiC grain density between altered and unaltered matrix 
+areas, 0.4 vs. 0.8 grains per 1000 µm2. This difference 
+is somewhat surprising, since SiC should be more 
+resistant to secondary processing than presolar silicate 
+grains. A possible explanation is suggested by the fact 
+that Fe oxyhydroxides rather than phyllosilicates are 
+the dominant alteration product in the Fe-rich matrix 
+areas, indicating that alteration occurred under highly 
+oxidizing conditions [7]. This may have contributed to 
+the partial destruction of presolar SiC grains in those 
+matrix areas affected by aqueous alteration. 
+
+References: [1] Floss and Stadermann (2012) 
+MAPS 47, 992. [2] Floss and Stadermann (2009) GCA 
+73, 2415. [3] Leitner et al. (2012) LPSC XLIII, #1835. 
+[4] Haenecour and Floss (2012) LPSC XLIII, #1790. 
+[5] Haenecour et al. (2013) LPSC XLIV, #1150. [6] 
+Ant. Met. Newslett. (2009) 32, No. 1. [7] Brearley 
+(2012) LPSC XLIII, #1233. [8] Brearley (2013) MAPS 
+Suppl., #5206. [9] Stadermann et al. (2009) MAPS 44, 
+1033. [10] Davidson et al. (2014) LPSC XLV, #1376. 
+[11] Hynes and Gyngard (2009) LPSC XL, #1198. 
+
+This work is supported by NASA grants 
+NNX14AG25G (C.F.) and NNX11AK51G (A.J.B). 
+
+1004.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+IDENTIFICATION OF IMPACT CRATERS IN ALUMINUM FOIL FROM THE STARDUST 
+INTERSTELLAR DUST COLLECTOR: AN UPDATE. C. Floss. Laboratory for Space Sciences and Physics 
+Department, Washington University, St. Louis, MO, USA. (Email: floss@wustl.edu) 
+
+ 
+Introduction: In addition to the first unambiguous 
+
+cometary samples, from comet 81P/Wild 2 [1], 
+NASA’s Stardust mission was designed to collect the 
+first samples of contemporary interstellar dust. The 
+Stardust interstellar dust collector collected particles 
+for 229 days during two exposures prior to the 
+spacecraft encounter with Wild 2 and tracked the 
+interstellar dust stream for all but 34 days of that time. 
+The Al foils make up ~15% of the total collection 
+surface and about 12-15 particles, with 2/3 of those 
+less than ~1 µm in size, were expected to have 
+impacted the available Al foil area. 
+
+The initial investigation of these samples took 
+place under the auspices of the CAPTEM-approved 
+Stardust Interstellar Preliminary Examination (ISPE). 
+The ISPE proposed to carry out non-destructive, non-
+invasive searches for, and analyses of, interstellar dust 
+candidates in the Stardust interstellar tray and focused 
+on two parallel investigations: extraction and analysis 
+of tracks in aerogel identified through Stardust@home, 
+and search for and characterization of impact craters in 
+the aluminum foils [2].  
+
+The work of the ISPE team resulted in the 
+discovery and characterization of seven probable  
+interstellar dust particles [3], four of which were 
+identified from impact craters in the Al foil [4]. At the 
+formal conclusion of the ISPE two years ago, only 
+~5% of the available Al foil area had been measured. 
+We have continued the work of scanning Al foils from 
+the Stardust interstellar tray in order to identify 
+additional interstellar dust candidates. Here we report 
+the results of our work to date. 
+
+Experimental: Foil scanning is done in automated 
+mode using the JEOL 840a SEM at Washington 
+University. By combining our instrument control 
+software with custom written software, we are able to 
+automatically map an entire foil in a single (long) run. 
+Foils are divided into multiple grids of about 0.25 
+mm2. Manual z-axis focusing is done in the center of 
+each region, after which the grids are further divided 
+into individual images 106 x 80 µm in size. The z-axis 
+positions are interpolated from one grid center to the 
+next to ensure good focus for all individual images in a 
+grid and the x, y, and z coordinates are individually 
+stored. The images are mapped at 15 kV, 5 nA for 10 
+sec per frame, providing a resolution of ~50 nm/pixel 
+with a dwell time of 0.001 sec/µm2. The entire array is 
+imaged automatically in sequence, and each image is 
+saved with a unique label identifying its position on the 
+foil.  
+
+Images from the foils (~5000 for short foils and 
+~10,000 for long foils) are manually examined 
+independently by at least two undergraduate students, 
+and the candidate craters identified are subsequently 
+ranked. The most likely candidates are then imaged at 
+higher resolution to ascertain which are actual impact 
+craters. 
+
+Results: We have scanned a total of four long (N) 
+foils and two short (W) foils: 1010N, 1031N, 1032W, 
+1047N, 1061N and 1063W. Image examination is still 
+in progress on foil 1010N, but we have identified a 
+feature on this foil that appears to be an unusually 
+large impact crater (Fig. 1). However, additional 
+analysis (e.g., Auger spectroscopy and/or FIB/TEM) 
+will be needed to confirm the identification. A similar 
+feature found on foil 1047N during the ISPE ultimately 
+turned out to be a hole created during the foil flattening 
+process [4]. 
+
+ 
+Figure 1. Secondary electron image 314@43 from 
+
+interstellar foil 1010N,1. The impact feature is 
+approximately 4 µm in diameter. 
+
+Approximately 2700 candidate craters were 
+identified from the other foils, of which 1125 were 
+selected for higher resolution imaging. Table 1 shows 
+the resulting 19 likely impact craters. Eleven of these 
+were investigated as part of the ISPE [4]; the 
+remaining eight are shown in Fig. 2. While some are 
+clear impact craters, others are more ambiguous and, 
+like 314@43 mentioned above, will require additional 
+analysis for confirmation. 
+
+Outlook:  The number of impact craters identified 
+on individual foils is clearly highly variable and the 
+foils examined by our laboratory as part of the ISPE 
+fortuitously contained a relatively high proportion of 
+craters. Moreover, many of the potential new impact 
+
+1005.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+features shown in Fig. 2 are unconventional compared 
+to ‘traditional craters’ and it remains to be seen 
+whether compositional analyses can confirm an 
+extraterrestrial or even secondary impact origin for 
+these features. Despite these obstacles, the results of 
+the ISPE demonstrate that continued scanning and 
+examination of the Al foils on the interstellar collector 
+has the potential to provide important new information 
+about contemporary interstellar dust. 
+
+References: [1] Brownlee D. E. et al. (2006) 
+Science 314, 1711-1716. [2] Westphal A. J. et al. 
+(2008) LPSC XXXIX, #1855. [3] Westphal A. J. et al. 
+(2014) Science 345, 786-791. [4] Stroud R. M. et al. 
+(2014) MAPS 49, 1698-1719. 
+
+ 
+This work is supported by NASA grant 
+
+NNX12AF40G. 
+
+ 
+Foil Crater* Diameter (µm) Comments 
+
+1031N,1 037@02 0.24 secondary impact 
+ 158@35 0.56 secondary impact 
+ 183@23 0.31  
+ 196@04 0.64  
+ 201@14 0.55  
+ 216@45 0.65 Mg, Si; available for additional analysis 
+ 218@25 0.52  
+ 239@11 0.61 Mg, Si; available for additional analysis 
+
+1032W,1 041@32 0.79  
+1047N,1 012@04 0.28  
+
+ 272@14 0.17  
+1061N,1 022@44 0.35 Mg, Si; available for additional analysis 
+
+ 036@33 0.37 interstellar dust candidate 
+ 041@33 0.29 secondary impact 
+ 069@22 0.39 interstellar dust candidate 
+ 135@30 0.46 interstellar dust candidate 
+ 188@24 0.66 secondary impact 
+ 205@32 0.63 secondary impact 
+
+1063W1, 007@44 0.41  
+*craters in italics were investigated during the ISPE; those in bold are probable interstellar dust  [4]. 
+ 
+
+ 
+Figure 2. Secondary electron images of impact features from Stardust interstellar foils 1031N, 1; 1032W,1; 
+
+1047N,1; and 1063W,1. 
+
+1005.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+ELLESMERE ISLAND AS AN ANALOG OF KASEI VALLES, MARS: LANDSCAPES RESULTING 
+FROM LARGE-SCALE SELECTIVE LINEAR EROSION OF SUB-POLAR ICE SHEETS. 
+John D. Arfstrom, jarfstrom@gmail.com, www.JohnArfstrom.com, 904.200.2619. 
+
+Introduction: Terrestrial anastomosing glacial 
+troughs and streamlined landforms matching the ideal-
+ly formed channel systems of Mars are lacking. The 
+disparate geology and topography of Earth and Mars 
+may well have variably influenced the erosion of such 
+landforms, which are probably more ideally formed on 
+Mars due to the spatial uniformity and erodibility of 
+the wide expanses of crater scarred, pristine regolith 
+plains. Likewise, the circular ramparts that craters 
+present against the onslaught of erosion, compared to 
+the random forms typical on Earth, would be reflected 
+in the geometries of eroded forms. An important ques-
+tion to be addressed is: how would ice sheet-generated 
+landscapes on Earth appear if not influenced by pre-
+existing channeling, topography, and structure of 
+bedrock? Considering the morphology of Kasei Valles, 
+might regolith have supported the generation of its 
+ideally-shaped streamlined landforms akin to the well-
+formed islands of glacial spillways, yet through the 
+processes of large-scale glacial erosion evidenced by 
+its extant areal scour indicative of wet-based erosion? 
+
+Discussion: There are examples of terrestrial ice 
+sheet-generated landforms for which landscape consid-
+erations might explain the above mentioned disparity.  
+Fig. 1a shows Kasei Valles, an erosional landform net-
+work comprised of interconnected or anastomosing 
+channels or troughs, supposedly breached and non-
+breached streamlined landforms, and valley-wide areal 
+scour. Thought to be a flood or glacial spillway chan-
+nel system, Kasei Valles is here interpreted as a set of 
+glacial troughs and streamlined landforms, likely erod-
+ed by sub-polar ice sheets [1]. A terrestrial analog can 
+be seen in Fig. 1b. It shows a portion of eastern 
+Ellesmere Island recently exposed by the retreating ice 
+sheet where several streamlined landforms are visible 
+among a network of interconnected glacial troughs. 
+Though the landforms at Kasei Valles are more curvi-
+linear, whereas more angular at Ellesmere, this could 
+be explained by the uniform and easily eroded regolith, 
+compared to the structured and resistant bedrock. 
+
+Also, the widespread areal scour at Kasei Valles 
+(Fig. 2), which extends over most streamlined forms, is 
+more consistent with the uniform areal scour typical of 
+ice sheets than the more spatially variable and local-
+ized erosion typical of the generally more focused ero-
+sion caused by floods. This is because the pressure 
+melting point within ice sheets (see explanation below) 
+promotes sheet-like erosion, except where geologic 
+and topographic factors promote channelization.  
+
+The erosion of the exposed landscape at Ellesmere 
+Island occurred at the base of the nearby ice sheet be-
+fore it retreated. Although related to intermediate-scale 
+asymmetric and symmetric erosional landforms such 
+as roches mountennees, whalebacks, rock drumlins, 
+and crag and tails, the scale of the landforms are more 
+consistent with “large-scale selective linear erosion” 
+associated with sub-polar ice sheets, which are cold-
+based where thinner and warm-based where thick 
+enough [1]. Ice streams within the ice sheet slid across 
+the bedrock with varying velocities, both spatially and 
+temporally, to erode the anastomosing network of 
+troughs. Although inundated by the ice sheet, the 
+streamlined landforms were marked by relatively less 
+basal sliding and erosion than the troughs, having been 
+overlain by thinner, slower moving or stagnant cold-
+based ice. Similarly, “non-breached” streamlined land-
+forms at Kasei Valles may have been inundated by 
+cold-based ice, but were spared the erosion evidenced 
+by the areal scour of adjacent lower topography. 
+
+The causes of these spatial variations of erosion are 
+better understood if one imagines the pressure melting 
+point, where sliding may occur, as a dynamic, 3-di-
+mensional layer at depth, controlled by ice thickness   
+and basal and flow variations [1, 2]. Erosion principal-
+ly occurs beneath thicker ice where the pressure melt-
+ing point is met, where warmed by geothermal heat 
+flux, frictional heating, and through heat transfer by 
+water. As erosion continues, enhanced by positive 
+feedback through increasing frictional heating and ice 
+thickness, subglacial troughs lengthen, widen, deepen, 
+and even connect, influenced by parameters such as 
+topography, pre-existing channelling, and faults. Also, 
+as ice flows from a given area, the ice thins and the 
+pressure melting point may drop below the ground 
+surface, causing sliding to cease and flow velocities to 
+decrease in that area. These positive and negative 
+feedback mechanisms cause an ice sheet to maintain a 
+sheet like flow, yet erode troughs where velocities are 
+highest. Anastomosing of troughs result from long-
+term fluctuations in ice drainage patterns within an ice 
+sheet, represented by linked-flow networks or evolving 
+or switching time-transgressive flow patterns.  
+
+In line with these considerations and other morpho-
+logical interpretations, including those previously pre-
+sented elsewhere [3, 4, 5], I argue for a sub-polar ice 
+sheet-based interpretation of Kasei Valles, in which 
+variable and widespread erosion induced areal scour 
+and stripped regolith to leave behind its streamlined 
+
+1006.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+
+landform and trough system. This possible glacial ori-
+gin of Kasei Valles is related globally to other valley 
+systems on Mars in an previous abstract and an associ-
+ated poster paper, which outlines ongoing research [6]. 
+
+References: [1] Benn B.I. and Evans J.A. (1998) 
+Glaciers & Glaciation. Arnold Pub., p. 323-365. [2] 
+Arfstrom, J.D. (2004) LPSC Abstract, 35, 1105. [3] 
+Arfstrom, J.D. (2013) LPSC Abstract, 44, 1001. [4] 
+
+Arfstrom, J.D. (2013) LPSC Abstract, 44, 1002. [5] 
+Arfstrom, J.D. (2014) LPSC Abstract, 45, 1013. [6] 
+Arfstrom, J.D. (2012) Comp. Clim. Ter. Pl., Abstract 
+8001 (poster paper at scribd.com). 
+
+Figure 1a: (top): Eastern Kasei Valles, MOLA.  
+1b: (bottom): Eastern Ellesmere Island. Arrows indi-
+cate former flow direction within channels or troughs 
+and S’s indicate location of streamlined forms.
+
+1006.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+Effusive Lunar Domes Near Aristoteles N, Plana G and Plana F: Morphometry and Mode of formation. P. 
+
+Lazzarotti.1 and R. Lena2 - Geologic Lunar Research (GLR) Group. 1Via Pernice 71, 54100 Massa, Italy; paolo@lazzarotti-
+hires.com; 2Via Cartesio 144, sc. D, 00137 Rome, Italy; r.lena@sanita.it;.  
+
+      Introduction: Lunar mare domes are smooth low 
+
+features with gentle convex upward profiles. In this 
+
+contribution we provide an analysis of three effusive 
+
+domes located in the eastern lunar regions near crater 
+
+Aristoteles N, Plana G and Plana F, which have 
+
+previously not been examined in detail. The first 
+
+examined dome is located at longitude 25.44º E and 
+
+latitude 52.24º N with a base diameter of 6.0 km (Fig. 
+
+1). It is a previously unreported dome, which we 
+
+named Aristoteles 1 (Aris1). Another dome, bisected 
+
+by Rimae Daniell, located at 24.86° E and 38.45° N 
+
+and having a diameter of 9 km, has been termed Plana 
+
+G1 (P1). It displays three protrusions which probably 
+
+are pre-existing non-volcanic hills. The third examined 
+
+dome is situated to the north of P1 and to the east of 
+
+Plana F, at longitude 39.32° E and latitude 13.50° N, 
+
+and has a diameter of 7 km (Fig. 2, dome termed P2).  
+
+     Spectral properties: For both domes, Clementine  
+
+UVVIS spectral data indicate a R415/R750 ratio of about  
+
+0.56-0.57 indicating basalts of low TiO2 content and 
+
+furthermore reveal a 750 nm reflectance of R750 = 0.13 
+
+for P1-P2 and 0.16 for Aris1, and a weak mafic 
+
+absorption for two domes in Lacus Somniorum with 
+
+R950/R750 = 1.06, suggesting a high soil maturity. The 
+
+dome Aris1 has a lower R950/R750 ratio of 1.01 (Fig. 3).  
+
+ 
+Fig. 1. Aristoteles 1 dome marked with arrows. Image 
+
+acquired on August 19, 2011 at 03:40 UT (Gladius XLI 
+
+Cassegrain with aperture of 400 mm f/16 and a Baader Zeiss 
+
+2x Barlow lens). North is to the top and west to the left (for 
+
+all the images).  
+
+ 
+
+dome Slope [°] D [km] h [m] V [km3] 
+ 
+
+class 
+
+Rheolgic 
+Group 
+
+Aris1 1.6 6.0 85 1.2 B2 R1 
+
+P1 2.3 9.0 185 5.9 C2 R3 
+
+P2 2.3 7.0 145 2.7 C2 R3 
+
+Table 1: Morphometric properties of the examined domes. 
+
+ 
+
+       Morphometric dome properties: Based on the 
+
+telescopic CCD images we obtained a DEM of the 
+
+examined domes by applying the combined 
+
+photoclinometry and shape from shading method 
+
+described in [1-3]. 
+
+ 
+
+ 
+Fig. 2. Two domes near Plana G (P1) and Plana F (P2) 
+
+marked with arrows. Image acquired on August 19, 2011 at 
+
+03:40 UT (Gladius XLI Cassegrain with aperture of 400 mm 
+
+f/16 and a Baader Zeiss 2x Barlow lens). 
+
+  
+Fig. 3. Clementine colour ratio image of the examined regions 
+
+with the domes Aris1, P1 and P2. 
+
+ 
+Fig. 4. Cross-sectional profile in east-west direction derived 
+
+from the telescopic images for the domes Aris1(top), P1 
+
+(middle) and P2 (bottom). The vertical axis is 10 times 
+
+exaggerated. 
+ 
+
+     The flank slopes, diameters, heights, and edifice 
+
+volumes of these domes were extracted from the 
+
+DEMs (Table 1). The dome Aris1 belongs to class B2, 
+
+while the domes P1 and P2 are of subclass C2, as 
+
+introduced in [1, 3]. ACT-REACT Quick Map tool 
+
+1007.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+
+
+
+was used to access to the GLD100 dataset [4], 
+
+allowing to obtain the cross-sectional profiles and the 
+
+corresponding 3D view (Fig. 5), in agreement with the 
+
+results obtained with photoclinometry and sfs applied 
+
+to telescopic image. 
+dome 
+
+η [Pa s] 
+E 
+
+[m3 s-1] 
+Te 
+
+[years] 
+
+U  
+
+[m s-1] 
+W 
+
+[m] 
+
+L 
+
+[km] 
+
+Aris1 1.5 x 105 75 0.6 2.0 x 10-5 20 90 
+
+P1 3.0 x 106 75 2.5 5.9 x 10-6 65 180 
+
+P2 1.5 x 106 61 1.4 6.8 x 10-6 60 180 
+
+Table 2: Rheologic properties and dike geometries inferred 
+
+for the examined domes. 
+
+     Rheologic properties: The rheologic model 
+
+developed in [5], which depends on the morphometric 
+
+dome properties, yields estimates of the lava viscosity 
+
+η, the effusion rate E, and the duration T of the 
+effusion process for a monogenetic lava dome. Using 
+
+the morphometric values listed in Table 1, we obtained 
+
+lava viscosities between 8.8 x 10
+4
+ and 3.0 x 10
+
+6
+ Pa s, 
+
+effusion rates between 60 and 75 m
+3
+ s
+
+-1
+, and durations 
+
+of the effusion process between 0.6 and 2.5 years 
+
+(Table 2). Furthermore, we estimated the magma rise 
+
+speed U and the dike geometry (width W and length L) 
+
+according to the model developed in [6]. We found 
+
+that the magma ascended at speeds between 2.0 x 10
+- 5
+
+ 
+
+and 6.8 x 10
+-6 
+
+m s
+-1
+
+ through dikes of widths between 
+
+about 20 and 65 m (Table 2). The dome Aris1 is a 
+
+typical representative of rheologic group R1 as defined 
+
+in [1], characterised by lava viscosities of 10
+4
+-10
+
+6
+ Pa s, 
+
+magma rise speeds U of 10
+-5
+
+-10
+-3
+
+ m s
+-1
+
+, dike widths W 
+
+around 10-20 m, and dike lengths L between about 30 
+
+and 150 km. Rheologic group R2 is characterised by 
+
+low lava viscosities between 10
+2
+ and 10
+
+4
+ Pa s, fast 
+
+magma ascent (U > 10
+-3
+
+ m s
+-1
+
+), narrow (W = 1-4 m) 
+
+and short (L = 7-20 km) feeder dikes. The third group, 
+
+R3, is made up of domes which formed from highly 
+
+viscous lavas of 10
+6
+-10
+
+8
+ Pa s, ascending at very low 
+
+speeds of 10
+-6
+
+-10
+-5
+
+ m s
+-1
+
+ through broad dikes of several 
+
+tens to 200 m width and 100-200 km length. The 
+
+domes P1 and P2 are typical representatives of 
+
+rheologic group R3. Hence, for three examined domes 
+
+the magma reservoirs are located well below the lunar 
+
+crust regarding the thicknesses of the total crust of 
+
+about 55 km [7].  
+
+   References: [1] Wöhler et al. (2006), Icarus 183, 
+
+237-264; [2] Wöhler & Lena (2009), Icarus 204, 381-
+
+398; [3] Lena et al. (2013), Lunar domes: Properties 
+
+and Fomation Processes. Springer Praxis Books; [4] 
+
+Scholten et al. (2012) J. Geophys. Res. 117 (E00H17), 
+
+doi:10.1029/2011JE003926; [5] Wilson & Head 
+
+(2003) J. Geophys. Res. 108(E2), 5012–5018; [6] 
+Rubin (1993) J. Geophys. Res. 98, 15919-15935; [7] 
+
+Wieczorek et al (2006) Rev. Mineral. Geochem. 
+
+60,221-264; 
+ 
+
+ 
+
+ 
+Fig. 5. Cross-sectional profile in east-west direction derived for three examined domes based on GLD100 dataset and 3D 
+
+reconstruction. The vertical axis is 7 times exaggerated.  
+
+1007.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+GEOLOGIC MAPPING OF OLYMPUS MONS AND THE THARSIS MONTES, MARS.  W.B. Garry1, D.A. 
+
+Williams2, J.E. Bleacher1, and A.M. Dapremont1 1Planetary Geodynamics Laboratory, Code 698, NASA Goddard 
+
+Space Flight Center, Greenbelt, MD 20771, 2School of Earth and Space Exploration, Arizona State University, PO 
+
+Box 871404, Tempe, AZ 85287, brent.garry@nasa.gov. 
+
+ 
+
+Introduction: Olympus Mons and the Tharsis 
+
+Montes are some the largest volcanoes on Mars and 
+
+in our Solar System. Our team is funded by NASA’s 
+
+Mars Data Analysis Program (MDAP) to complete a 
+
+set of 1:1,000,000 geologic maps of Olympus, Arsia, 
+
+Pavonis, and Ascraeus based on the mapping style 
+
+defined by [1,2]. Figure 1 shows the area around 
+
+each volcano that we are funded to map, including 
+
+additional sections that cover the rift aprons and 
+
+small vent fields. Detailed mapping of a limited area 
+
+of these volcanoes revealed a diverse distribution of 
+
+volcanic landforms within the calderas, and along the 
+
+flanks, rift aprons, and surrounding plains [1]. Here, 
+
+we report on the progress of each map. 
+
+ 
+
+ 
+Figure 1. MOLA shaded relief map with the bounda-
+
+ries (solid lines) for each map and extensions (dashed 
+
+lines) to cover rift aprons and small vent fields. 
+
+ 
+
+Data and Methods: We are mapping each vol-
+
+cano in ArcMap 9 and 10.2 to produce digital geo-
+
+logic maps at 1:1,000,000 map scale for the USGS. A 
+
+Context Camera (CTX) mosaic serves as the primary 
+
+basemap, supplemented by High Resolution Stereo 
+
+Camera (HRSC), THEMIS daytime IR, HiRISE, and 
+
+Mars Orbiter Laser Altimeter (MOLA) data. To ad-
+
+dress our science questions we have conducted our 
+
+mapping at ~1:300,000 to ~1:100,000 on the CTX 
+
+basemap. This scale enables us to distinguish be-
+
+tween different morphologic features like sinuous 
+
+rilles, leveed channels, low shields, and surface tex-
+
+tures (hummocky, mottled, smooth), plus we are able 
+
+to determine flow margins, flow directions, and strat-
+
+igraphic relationships between different eruption 
+
+sequences. Our primary objective for each map is to 
+
+show the areal extent, distribution, and stratigraphic 
+
+relationships of the different volcanic morphologies 
+
+to better understand the changes in effusive style 
+
+across each volcano and provide insight into the 
+
+similarities and differences in their evolution. 
+
+Mapping Progress: Each map is in a different 
+
+stage of the geologic mapping process. The Ascraeus 
+
+Mons map is the most recently funded project and we 
+
+will begin preliminary mapping in 2015. The maps of 
+
+Arsia and Pavonis Montes are also nearing comple-
+
+tion and should be ready to submit for publication by 
+
+mid to late 2015 (Fig. 2). The Olympus Mons map 
+
+has complete line work and is being prepared for 
+
+submission to the USGS for publication (Fig. 3). For 
+
+the Tharsis Montes, our objective this year is to map 
+
+the contacts between different volcanic provinces on 
+
+each volcano (e.g., main shield, rift aprons, and lava 
+
+plains). We have mapped the surficial fan deposits on 
+
+Pavonis and Arsia Mons using sketch maps from [4-
+
+6] as guides for mapping similar units (e.g., smooth, 
+
+ridged, knobby). See Dapremont et al., this meeting 
+
+[Abstract #1605] for detailed mapping of the Arsia 
+
+Mons fan shaped deposit. 
+
+ 
+Figure 2. Maps of Arsia and Pavonis Montes
+
+1008.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+Discussion:  Our current progress has provided sev-
+
+eral insights into the eruption processes and evolu-
+
+tion of these volcanoes. 
+
+Geologic Units: The current mapping units have 
+
+evolved from the original proposed mapping units to 
+
+correspond with units used for the recent geologic 
+
+map of Olympus Mons [6] (Fig. 3).  Detailed image-
+
+ry from CTX has allowed us to diversify the units 
+
+based on various eruption styles. The units are dis-
+
+tinguished primarily by morphology and are grouped 
+
+for each edifice (main shield, rift apron, fan deposit, 
+
+lava plains). 
+
+General Formation Sequence: Mapping reveals a 
+
+similar sequence of events for the evolution of the 
+
+three Tharsis Montes volcanoes [1,2,8]: 1) main 
+
+shield forms, 2) eruptions from the NE/SW rifts em-
+
+place long lava flows that surround the main flank, 3) 
+
+eruptions wane and build up the rift aprons and 
+
+shield fields, 4) glaciers deposit surficial fan deposit 
+
+material [9], and 5) localized recent eruptions along 
+
+the main flanks, in the calderas, and within the fan-
+
+shaped deposits. Further mapping will reveal the 
+
+relative geologic timing of eruptive units on the main 
+
+shields and provide a more complete analysis of the 
+
+spatial distribution of tube-fed versus channel-fed 
+
+flows for each volcano and how they compare with 
+
+Olympus Mons as originally discussed by [1]. 
+
+ 
+
+References: [1] Bleacher J. E. et al. (2007) JGR, 
+
+112, E04003, doi:10.1029/2006JE002826. [2] 
+
+Bleacher J. E. et al. (2007) JGR, 112, E09005, 
+doi:10.1029/2006JE002873. [3] Shean D.E. et al. 
+
+(2005) JGR, 110, E05001, doi:10.1029/2004JE002 
+360. [4] Shean D.E. et al. (2007) JGR,112, E03004, 
+
+doi:10.1029/2006JE002761. [5] Scanlon K.E. et al. 
+
+(2014) Icarus 237, 315-339. [6] Bleacher J.E. et al., 
+
+(2013) LPSC 44, Abstract 2074. [7] Richardson P.W. 
+
+et al., (2009) LPSC 40, Abstract 1527. [8] Crumpler 
+
+L.S. and Aubele J.C. (1978) Icarus, 34, 496-511. [9] 
+
+Head J.W. and Marchant D. R. (2003) Geology, 31, 
+
+641-644.  
+
+Acknowledgements: These maps are funded by 
+
+three separate NASA Mars Data Analysis Program 
+
+(MDAP) grants NNX09AM94G (Olympus), NNX 
+
+10AO15G (Arsia/Pavonis), and NNX14AM30G 
+
+(Ascraeus) awarded to D.A. Williams (Arizona State 
+
+University). 
+
+ 
+
+Figure 3. Line work 
+
+and map units for the 
+
+Olympus Mons Geo-
+
+logic Map. Yellow 
+
+dashed lines are sin-
+
+uous that mark the 
+
+path of lava tubes on 
+
+the main flank and 
+
+rilles of questionable 
+
+origin on the plains. 
+
+Yellow circles are 
+
+rootless vents asso-
+
+ciated with lava tube 
+
+breakouts. Red 
+
+crosses represent low 
+
+shield volcanoes and 
+
+fissures and white 
+
+crosses represent 
+
+source regions for 
+
+plains channels. 
+
+1008.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+THE GEOLOGY OF INFERNO CHASM, IDAHO: A TERRESTRIAL ANALOG FOR LUNAR RILLES  
+
+W. Brent Garry1, Scott S. Hughes2, Shannon E. Kobs Nawotniak2, Catherine D. Neish3, Christopher W. Haberle4, 
+
+Jennifer L. Heldmann5, Darlene S. S. Lim5,6, and the FINESSE Team. 1Planetary Geodynamics Laboratory, Code 
+
+698, NASA Goddard Space Flight Center, Greenbelt, MD, 20771, 2Dept. of Geosciences, Stop 8072, Idaho State 
+
+University, Pocatello, ID, 83209, 3Florida Institute of Technology, Melbourne, FL, 32901, 4School of Earth and 
+
+Space Exploration, Arizona State University, Tempe, AZ, 85287, 5NASA Ames Research Center, Moffett Field, 
+
+CA, 94035. 6Bay Area Environmental Research (BAER) Institute, Petaluma, CA, 94952. 
+
+ 
+
+Introduction: Lunar sinuous rilles are thought to 
+
+have formed by thermal erosion, mechanical erosion, 
+
+construction, or a combination of these processes via 
+
+emplacement by lava tubes and/or lava channels [1-4]. 
+
+The investigation of Hadley Rille by Apollo 15 pro-
+
+vided the first field observations of a rille, including 
+
+outcrops of stratigraphic layers within the far rille wall  
+
+[5]. High-resolution remote sensing data sets from 
+
+NASA’s Lunar Reconnaissance Orbiter allow for the 
+
+identification of smaller volcanic features, outcrops, 
+
+layers, and detailed topographic measurements at the 
+
+meter-scale [6,7]. Several questions relate to layers 
+
+observed in the rille walls including: 1) What is their 
+
+stratigraphic sequence and can individual flows be 
+
+defined? 2) Are the layers a sequence of multiple, old-
+
+er eruptions that have been thermally eroded? 3) 
+
+Which layers are related to the eruption that formed 
+
+the rille? Each visible lineation that defines a layer, 
+
+may not be a surface contact between individual flows, 
+
+therefore 4) How can individual flows be distinguished 
+
+within the stratigraphic sequence? and 5) What flow 
+
+processes can be recognized based on characteristics 
+
+of the wall rock (inflated pahoehoe) [8]?      
+
+Terrestrial volcanic features with similar morphol-
+
+ogies to lunar rilles can provide insight into their for-
+
+mation on the Moon. While the scale of most lunar 
+
+rilles are much larger than their terrestrial counterparts, 
+
+there are several examples similar in scale to ones we 
+
+have documented in Idaho. The SSERVI FINESSE 
+
+team (Field Investigations to Enable Solar System Sci-
+
+ence and Exploration) [9] conducted field studies at 
+
+Craters of the Moon National Monument and Preserve 
+
+(COTM) in Idaho from July 28 – Aug. 8, 2014 to in-
+
+vestigate terrestrial analogs for lunar volcanic and im-
+
+pact features [10]. Here, we compare field observa-
+
+tions at Inferno Chasm (Figs. 1,2), a rille-like channel 
+
+in Idaho to Isis (Fig. 3), a similar sized rille on the 
+
+Moon.  
+
+Inferno Chasm (42°58’00”N, 113°11’25”W) is a 
+
+basaltic low-shield with a vent and sinuous channel 
+
+(Fig. 1). The area is overgrown with sage and desert 
+
+grasses, but it appears that the margins of the low 
+
+shield have been embayed or buried by subsequent 
+
+lava flows or loess making it difficult to define the true 
+
+extent of this volcanic feature and locate lava deposits 
+
+beyond the end of the channel. 
+
+ 
+
+ 
+Figure 1. Inferno Chasm in Idaho. (A) Location of Differen-
+
+tial GPS and LiDAR surveys [Google Earth]. (B) Morpho-
+
+logic sketch map of key flow features and structures.   
+ 
+We documented the geology and morphology of 
+
+Inferno Chasm using a Riegl Vz-400 LiDAR, a Trim-
+
+ble R8 and TopCon Hiper II Differential Global Posi-
+
+tioning Systems (DGPS) (Fig. 2), Unmanned Aerial 
+
+Vehicles (UAV), and sampling. The main vent crater 
+
+is roughly circular and is ~200 m wide, ~20 m deep 
+
+and has a small 2.5 m-high mound in the center (Fig. 
+
+2). DGPS survey D-D’ shows that the sinuous channel 
+
+extends to the west while dropping ~10 m over ~1700 
+
+m, yielding a slope of -0.005° (Fig. 2). Several over-
+
+flow channels are also visible in the remote sensing 
+
+images (Fig. 1B), but are subtle in the field. For exam-
+
+ple, DGPS profile C-C’ is 350 m long, 30 m wide, and 
+
+2-5 m deep. Outcrops of the vent walls expose massive 
+
+layers 2-3 m thick with textures that suggest highly 
+
+welded spatter overlain by a 1-2 m thick sequence of 
+
+thinner layers (overspills, shelley, gaseous blisters) 
+
+each 10s of cm thick. Field observations and samples 
+
+collected indicate low-shield development typical of 
+
+the Eastern Snake River Plains [11]. 
+
+1009.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+Lunar Rilles: Isis, a rille in Serenitatis Basin 
+
+(19°N, 27.5°E) (Fig. 3) has a similar morphology to 
+
+Inferno Chasm. The feature is ~1.3 km wide and ~60-
+
+70 m high at the vent. The channel is ~3 km long, 283 
+
+m-wide, and 25 m deep [7]. The rille is located within 
+
+high-Ti basalts and there are no identifiable deposits 
+
+extending from the end of the channel. The vent is 
+
+aligned with three other small cones along a north-
+
+west-southeast trending graben, possibly related to an 
+
+intrusive dike. There are boulders present along the 
+
+rim of the rille, but no distinct layers are visible in the 
+
+images. 
+
+ 
+Figure 2. Differential GPS profiles A-A’ across the vent 
+(North to South) and D-D’ along the channel floor (East to 
+West) of Inferno Chasm (see Fig. 1A). 
+ 
+
+Discussion: Field observations of the wall material 
+
+at Inferno Chasm suggest the feature was constructed 
+
+through a combination of thin lava overflow, rheo-
+
+morphic flow of congealed spatter, and intense weld-
+
+ing of deeper parts, with or without additional lava 
+
+injection, to form the thick, massive layers. Evidence 
+
+of thermal erosion and/or lava tube collapse along the 
+
+channel were not identified, but have not been ruled 
+
+out. Distinct levees were not identified along the chan-
+
+nel margin, but there are linear, topographic highs near 
+
+the mouth of the channel (Fig. 1B).  
+
+Isis has several similarities in both morphology and 
+
+scale to Inferno Chasm. Both are topographic highs 
+
+with a central channel ~2-3 km long. No distal depos-
+
+its are identified beyond each channel. Isis is atypical 
+
+compared to larger sinuous rilles, like the example in 
+
+Marius Hills shown in Fig. 3B. Most lunar rilles ap-
+
+pear to carve into the local terrain through thermal 
+
+erosion [7]. We suggest Isis was formed by construc-
+
+tion, from a highly gaseous, fire fountain eruption that 
+
+created spatter that collected to form the cone and spat-
+
+ter-fed flows rather than by thermal erosion. Observa-
+
+tions of flow textures in exposed layers and rocks can 
+
+help interpret the flow processes that formed the rilles 
+
+[8]. For example, the planar, vesicle horizons observed 
+
+in rocks along the rim of Hadley Rille are consistent 
+
+with inflated pahoehoe [8], whereas the tumultuous 
+
+textures observed in the boulders and wall rock at In-
+
+ferno Chasm are consistent with welded spatter. How-
+
+ever, given the much larger scale of most lunar rilles, 
+
+construction may only be a minor component of their 
+
+formation. Based on the depth of a rille, assumptions 
+
+on how much the wall represents eroded substrate ma-
+
+terial and which layers formed via construction is im-
+
+portant for determining parameters for thermal erosion 
+
+models. 
+
+ 
+Figure 3. Lunar rilles: A) Isis appears to have formed by 
+
+construction. LROC NAC M1126950375RE (1.2 m/pixel). 
+
+B) A rille in Marius Hills has a similar morphology to Infer-
+
+no Chasm, but appears to form by thermal erosion. LROC 
+
+NAC M1096815341LE (1.25 m/px). [NASA/GSFC/ASU]. 
+ 
+
+References: [1] Greeley, R. (1971) Science 172, 722-
+
+725. [2] Gornitz, V. (1973) The Moon, 6, 337–356. 
+
+[3] Hulme G. (1973) Modern Geo., 4, 107-117. [4] Spudis, 
+
+P. et al. (1988) LPSC, 18, 243-254. [5] Swann, G.A. et al. 
+
+(1972) Apollo 15 Prelim. Sci. Rep., 289, 5-1 – 5-112. 
+
+[6] Hurwitz, D.M. et al. (2012) JGR Planets, 117, 
+
+E00H14,doi:10.1029/2011JE0040 00. [7] Hurwitz, D.M. et 
+
+al. (2013) Planet. & Space Sci., 79-80, 1-38. [8] Keszthelyi, 
+
+L. (2008) LPSC, Abstract 2339. [9] Heldmann, J. L. et al. 
+
+(2013) AGU Fall Mtg. Abstract #P54B-01. [10] Carter, L.M. 
+
+et al. (2012) JGR-Planets, 117, E00H09, doi:10.1029/ 
+
+2011JE00391. [11] Greeley, R. (1982) JGR-SE, 87(B4), 
+
+2705-2712.  
+
+Acknowledgements: This research is supported by a 
+
+NASA SSERVI research grant provided to NASA Ames 
+
+Research Center. 
+
+1009.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+Dramatic Change in Jupiter’s Great Red Spot.  A. A. Simon1, M. H. Wong2, J. H. Rogers3, G. S. Orton4, I. de 
+Pater2, X. Asay-Davis5, R. W. Carlson4, P. S. Marcus2, 1NASA Goddard Space Flight Center, 2U.C. Berkeley, 
+3British Astronomical Association, 4Jet Propulsion Lab, 5Potsdam Institute for Climate Impact Research. 
+
+ 
+ 
+Introduction:  Jupiter’s Great Red Spot (GRS) is 
+
+one of its most distinct and enduring features, having 
+been continuously observed since the 1800’s.  It cur-
+rently spans the smallest latitude and longitude size 
+ever recorded.  Here we show analyses of 2014 Hubble 
+spectral imaging data to study the color, structure and 
+internal dynamics of this long-live storm. 
+
+Physical Dimensions: The GRS’s red edges have 
+contracted from a longitude length of ~21° during the 
+Voyager flybys in 1979 to ~15.5° in Hubble data ac-
+quired in 2012, shrinking on average 0.19°/year over 
+the modern era [1]. Amateur observers documented a 
+sudden decrease in longitudinal extent in early 2014, 
+faster than the average rate of contraction, and Hubble 
+Space Telescope time was granted to characterize the 
+current state of the storm.  In the 2014 Hubble data, the 
+red edges of the spot span about 14.1° in longitude, a 
+decrease of 1.4° (1760 km) in 21 months, a rate of 
+change four times greater than typical since 1979.   
+
+The GRS’s latitudinal size has been much more 
+constant, historically spanning between 10.5° and 11°, 
+and is currently 9.4°, the smallest size measured to 
+date.  There has been a slight overall trend toward lati-
+tude shrinkage of 0.04°/year, significantly slower than 
+in the longitude dimension, but the fastest change of 
+0.7° occurred between 2012 and 2014.  Though the 
+storm has a clearly diminishing length-to-width aspect 
+ratio, from 1.8 in the Voyager era (and much greater 
+historically) to 1.5 currently. 
+
+1980 1990 2000 2010
+Date
+
+5
+
+10
+
+15
+
+20
+
+25
+
+GR
+S 
+
+Si
+ze
+
+ (d
+eg
+
+re
+es
+
+)
+
+Visible Length, spacecraft
+Visible Width, spacecraft
+Visible Length, ground
+Visible Width, ground
+Dynamical Length
+Dynamical Width
+
+ 
+Figure 1. Measurements of the GRS’s size.  Visible 
+edges, which are somewhat subjective, are often used 
+to mark its size.  Amateur measurements (red) show 
+scatter, but are consistent with spacecraft data. Dynam-
+ical measures of the narrower high velocity collar also 
+show a trend towards smaller size. 
+ 
+
+ 
+Figure 2. Visual comparison of the GRS’s size in 
+
+1995, 2009, and 2014.  Colors have been arbitrarily 
+enhanced for consistency. 
+
+ 
+Spectral Analysis: Another notable characteristic 
+
+of the 2014 images is the deep red color of the GRS, 
+which is normally seen only during climatic cycles 
+when the adjacent South Equatorial Belt (SEB) “fades” 
+or whitens, such as during the Pioneer flybys in 1974 
+
+[2].  Spectroscopy was performed using Hubble imag-
+es from 1995 to 2014 to determine the visible color of 
+the darkest core of the storm, Fig. 3.  In this region, the 
+reflectance spectrum (I/F) is fairly constant [3,4].  The 
+greatest change of up to 0.08 in I/F can be seen near 
+410 nm when comparing data from 1995 and 2008.  
+The data acquired in 2014, however, show that the 
+spectrum of the GRS is depressed by 0.1 to 0.15 in I/F 
+at all wavelengths shorter than 500 nm.  In addition, 
+reflectance in the 890-nm methane gas absorption band 
+has increased by ~0.11 in I/F since 2009, using the 
+same filter, implying the altitudes and/or the concen-
+trations of upper tropospheric aerosols have increased 
+
+[5]. Spectra of other red regions on the planet do not 
+show simultaneous increases in methane-band reflec-
+
+1010.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+tivity and visible reddening, ruling out calibration is-
+sues.  Spectral change is also obvious in the core of the 
+GRS; ratio images indicate that the spectral slope from 
+630 to 500 nm has steepened in 2014 compared with 
+previous dates over most of the GRS.   
+
+  
+GRS Color Evolution
+
+300 400 500 600 700 800 900 1000
+Wavelength (nm)
+
+0.0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+
+I/F
+
+Feb. 1995
+Oct. 1996
+June 2008
+Nov. 2009
+April 2014
+
+ 
+Figure 3. Spectral Imaging from Hubble shows dra-
+matic change in brightness and slope in 2014. 
+ 
+
+Winds: The internal wind speed of the GRS can 
+top 150 m/s, in a high-velocity collar that is smaller the 
+visual diameter of the storm [1,6,7].  Automated veloc-
+ity field extraction was attempted from the 2014 data, 
+using the ACCIV method with correlations calculated 
+for box sizes of 5° in latitude/longitude, between pairs 
+of velocity field advected images [6].  The quality of 
+the extracted velocity field was insufficient to accu-
+rately constrain the location and magnitude of the 
+high-speed collar around the vortex due to limitations 
+of the imaging data, e.g., the shadow of Ganymede 
+over the western side of the vortex in the later three 
+frames resulted in only tie point pairs from short 43-
+min separations over large parts of the GRS rather than 
+10 hours.  The eastern area of later frames in both or-
+bits also suffered from reduced contrast due to proxim-
+ity to Jupiter’s limb.   We identify tangential velocities 
+in the 100–150 m/s range, with higher speeds at the 
+north-south extrema of the vortex, where it interacts 
+with zonal jets, but with larger uncertainties than typi-
+cal.  Thus, preliminary manual and automated meas-
+urements of cloud motions showed no significant in-
+crease in wind speed when compared with winds 
+measured from 1996 to 2006 [1,6,7], implying an in-
+ternal circulation period of about 3.2 days. 
+
+Wind Jet Interactions: The sudden shrinkage of 
+the GRS and its observed color change are likely to be 
+in response to changes in jet interactions. The reduc-
+tion in width is due to shifts of both the northern edge 
+(latitude mean 1979-2012, 16.8° S +/-0.3; 2014, 17.4° 
+S) and the south edge (latitude mean 1979-2012, 27.4° 
+
+S +/-0.2; 2014, 26.8° S).  This causes reduced deflec-
+tion of the jets north and south of the GRS, altering the 
+zonal wind shear environment sensed by the vortex.  
+Decreased interaction with small vortices carried by 
+those wind jets may be the reason for the intensified 
+red color in 2014.  In particular, the GRS is now suffi-
+ciently withdrawn from the westward jet at 19.5° S that 
+it does not ingest vortices carried by that jet.  Similar-
+ly, during SEB fading events there are no vortices be-
+ing carried by the jet toward the GRS and its color 
+intensifies [2,8]. 
+
+ 
+Conclusions:	   The GRS interacts with the zonal 
+
+wind jets, with energy or momentum exchange of un-
+known magnitude. It is not yet understood what colors 
+the clouds and why they can vary in spectral slope and 
+absolute brightness, though the current spectrum may 
+be indicating a change in colored-particle production.  
+Further analyses of the temperatures, winds, and size 
+of the GRS, especially in epochs of change, will pro-
+vide interesting constraints to analytic models of geo-
+strophic balance in the region.  In addition, global cir-
+culation modeling of the GRS in its flow field for dif-
+ferent dates will show which configurations are most 
+stable to decay. 
+
+Acknowledgments: 
+This work was based on observations made with 
+
+the NASA/ESA Hubble Space Telescope under pro-
+grams GO12045 and GO13631.  Support for program 
+number GO13631 was provided by NASA through a 
+grant from the Space Telescope Science Institute, 
+which is operated by the Association of Universities 
+for Research in Astronomy, Inc., under NASA contract 
+NAS5-26555.  The changes were initially identified, 
+and supporting data provided, by amateur observers, 
+especially Damian Peach, and the JUPOS team, espe-
+cially Michel Jacquesson. 
+
+References: [1] Simon-Miller et al. 2002	   Icarus 
+158 [2] Rogers 1995, [3] Sanchez-Lavega et al. 2013 
+JGR-P 118, [4] Simon et al. 2014, submitted, [5] Pe-
+rez-Hoyos et al. 2009 Icarus 203 [6] Asay-Davis et al. 
+2009	   Icarus 203 [7] Shetty and Marcus 2010	   Icarus 
+182, [8] Peek 1958. 
+
+1010.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+WET-TO-DRY HYDROLOGICAL TRANSITION ENCAPSULATED IN FLUVIAL STRATIGRAPHY OF 
+
+AEOLIS DORSA, MARS.  R. E. Jacobsen
+1
+ and D. M. Burr
+
+1
+, 
+
+1
+University of Tennessee, Knoxville, TN USA 37996 
+
+(RJacobse@vols.utk.edu and dburr1@utk.edu). 
+
+ 
+
+Background:  The geomorphology of precipita-
+
+tion-fed fluvial activity suggests a transition from 
+
+wetter conditions to drier conditions in martian history 
+
+[1 & refs. therein]. The Aeolis Dorsa (AD) region, 
+
+located between Aeolis and Zephyria Plana and south 
+
+of the Cerberus lavas [2], contains numerous sinuous 
+
+ridges and fans interpreted to be inverted fluvial 
+
+deposits [e.g., 3-8]. These deposits, when arranged 
+
+stratigraphically, are a microcosm of martian fluvial 
+
+history [cf. 7]. In addition to a rich fluvial history, the 
+
+region has experienced burial by volcanic ash and/or 
+
+aeolian deposits of the Medusae Fossae Formation 
+
+(MFF), exhumation through aeolian abrasion, forming 
+
+yardangs [9 & refs. therein], and topographic 
+
+modification by collapse or tectonic processes [5]. 
+
+The most common inverted fluvial features are flat-
+
+topped sinuous ridges and ridge networks [3]. Some 
+
+ridges have semi-concentric lineations similar to 
+
+terrestrial meander deposits, which on Earth, generally 
+
+require more steady hydrologic conditions [10]. These 
+
+deposits have been interpreted as scroll-bars [3] or 
+
+laterally aggrading channel beds of meandering rivers 
+
+[8]. Inverted fluvial features imply some inurdation [4 
+
+& refs. therein], likely by geochemical cementation, 
+
+followed by erosion of host MFF [4]. Thin sinuous 
+
+ridges, some of which appear stacked above flat-
+
+topped inverted fluvial features, have been interpreted 
+
+as inverted paleochannels from a second episode of 
+
+fluvial activity [3,4,6]. The fan-shaped features 
+
+connect to inverted paleochannels or paleochannel 
+
+networks, and have been interpreted as alluvial fans 
+
+[3,7], which on Earth have intermittent flows and 
+
+“flashy” discharges [11]. 
+
+Hypothesis:  Previous analyses [e.g., 3-8] suggest 
+
+the following sequence of events for the formation of 
+
+AD. (a) Long-duration, meandering rivers deposited 
+
+sediments within valleys at least a few kilometers 
+
+wide. (b) MFF deposits infilled these river valleys. (c) 
+
+Sinuous but narrower rivers exploited some of the 
+
+same river valleys, depositing sediment within these 
+
+(stratigraphically higher) channels. (d) Fluvial sedi-
+
+ments from both (a) and (c) were indurated. (e) River 
+
+valley walls (MFF) were eroded, resulting in topo-
+
+graphic inversion of (a) and (c). (f) Relief developed 
+
+along the interior margins of Aeolis and Zephyria Pla-
+
+na. (g) Alluvial fans formed along interior margins. (h) 
+
+Fans became indurated. (i) MFF deposits covered the 
+
+region. (j) Exhumation and erosion inverted the (indu-
+
+rated) fans and revealed the (previously inverted) flu-
+
+vial features of (a) and (c). (k) Local to sub-regional 
+
+deformation (e.g., by collapse or tectonism) occurred. 
+
+The transition from wetter to drier conditions are in-
+
+ferred from the deposits of events (a), (c), and (g). 
+
+Methods:  To test the geographical extent of this 
+
+hypothesis, stratigraphies were made and compared 
+
+among geospatially distributed locations, Area 45N 
+
+and Area 40 (Figure 1). Hypothesis testing required 
+
+images from the Context Camera (CTX) [12], High 
+
+Resolution Imaging Science Experiment (HiRISE) 
+
+[13], and topography from CTX digital terrian models, 
+
+derived from Ames Stereo Pipeline [14]. Boundaries 
+
+for geomorphological units were delinated in ArcMap 
+
+software. Interpretations of inverted fluvial features, 
+
+lava units, and yardangs were based on previous inter-
+
+pretations described in the background [2-9]. 
+
+ 
+Figure 1: Black boxes mark locations for geomorphological 
+
+and stratal observations presented here, and previously [6]. 
+
+Results: Area 45N:  Flat-topped ridges, consistent 
+
+with broad deposits of inverted fluvial channels or flu-
+
+vial valleys [3,4], are hosted within the lowest unit (fd) 
+
+(Figure 2). A superposed thin ridge, interpreted as an 
+
+inverted fluvial channel, points to later deposition of a 
+
+subsequent fluvial unit (fct). This stacked assemblage 
+
+indicates two episodes of fluvial activity. NW-SE-
+
+oriented yardangs cross-cut thin inverted channels 
+
+(unit fct), cover inverted fluvial deposits (unit fd) and 
+
+intra-ridge areas, indicating that units fct and fd were 
+
+inverted, covered by MFF, and later eroded by aeolian 
+
+abrasion. An alluvial fan grades into NW-SE yardangs 
+
+that superpose unit fd, indicating that the fan formed in 
+
+a unit (af) deposited with or after deposition of MFF. 
+
+1011.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+
+
+Area 40:  Flat ridges with interior, semi-concentric 
+
+curved ridges, consistent with inverted fluvial meander 
+
+deposits [3,4,8], are hosted within unit fm (Figure 3). 
+
+Narrower flat ridges, consistent with flat-topped in-
+
+verted fluvial channels [3,4], are hosted within unit fcf. 
+
+Unit fm cross-cuts unit fcf, indicating that unit fcf is 
+
+older than unit fm. A unit of thin inverted fluvial chan-
+
+nels (fct) superposes unit fm, indicating a third period 
+
+of fluvial activity and subsequent inversion. A mound-
+
+forming unit (mu) has many small craters, and troughs 
+
+that terminate at a unit of fans (af), indicating a fourth 
+
+period of fluvial activity. 
+
+Discussion:  The formation of Area 45N is similar 
+
+to the hypothesis. Deviations from the hypothesis oc-
+
+cur in events (a), because evidence for meandering 
+
+(i.e., semi-concentric lineations) is lacking, and event 
+
+(k), since no evidence of deformation is observed [5]. 
+
+The stratigraphic history in Area 40 differs from the 
+
+hypothesis. Older paleochannels of unit fcf indicate 
+
+that, depending on location, event (a) may consist of 
+
+one or more stratal units (i.e., members). Troughs in 
+
+unit mu that lead to fans (af) also differ from the hy-
+
+pothesis. In Area 40, relief was created along unit mu, 
+
+followed by precipitation, run-off, sediment transport, 
+
+and deposition. In many other areas of AD, including 
+
+Area 45N, the host unit for the fans (unit mu) has been 
+
+eroded, leaving inverted paleochannels and fans. 
+
+Conclusions:  The transition from wetter to drier 
+
+hydrological conditions is preserved in the stratigraphy 
+
+of Aeolis Dorsa, beginning with fluvial deposits of 
+
+greater hydrologic stability (e.g., meander deposits in 
+
+Area 40 and integrated fluvial channels or valleys in 
+
+45N) and ending with hydrologically intermittent allu-
+
+vial fans in both areas.  
+
+Measurements of paleochannel morphology by area 
+
+and stratal unit will be coupled with scaled form-
+
+discharge relationships [4,7,15 & refs. therein] to esti-
+
+mate paleodischarge through time.  
+
+References: [1] Carr (2012) Phil. Trans. Royal 
+
+Soc. 370(1966). [2] Tanaka et al. (2005) USGS Map, 
+
+SI-2888. [3] Burr et al. (2009) Icarus 200. [4]  Burr et 
+
+al. (2010) JGR: Planets 115(E7). [5] Lefort et al. 
+
+(2012) JGR: Planets 117(E3). [6] Jacobsen & Burr 
+
+(2013) Plant. Geo. Map. Meeting. [7] Kite et al. (2014) 
+
+LPS XLV, #2638. [8] Matsubara et al. (2014) 
+
+Geomorphology, in press. [9] Mandt et al. (2008) JGR: 
+
+Planets 113(E12). [10] Howard (2009) PNAS 106(41). 
+
+[11] Blair & McPherson (1994) JSR 64(3). [12] Malin 
+
+et al. (2007) JGR 112. [13] McEwen et al. (2007) JGR: 
+
+Planets 112(E5). [14] Moratto et al. (2010) LPS XLI, 
+
+#2364. [15] Jacobsen & Burr (2015) this conference.  
+
+ 
+
+ 
+Figure 2:  CTX image of part of Area 45N shows morphologi-
+
+cal units (see text for descriptions). Inset is HiRISE image, 
+
+showing unit fct above unit fd. 
+
+ 
+
+ 
+Figure 3:  CTX image of part of Area 40 shows multiple morphological unit (see text for descriptions). The left part of the image 
+
+shows the contact between fm and fcf, where the deposit of fm cross-cuts a paleochannel of fcf. 
+
+1011.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+PRELIMINARY ANALYSES OF MARTIAN-TERRESTRIAL ANALOG RIVERS TO EXAMINE THE 
+
+INFLUENCE OF SEDIMENT IN FORM-DISCHARGE RELATIONSHIPS.  R. E. Jacobsen
+1
+ and D. M. Burr
+
+1
+, 
+
+1
+University of Tennessee, Knoxville, TN USA 37996 (RJacobse@vols.utk.edu and dburr1@vols.utk.edu). 
+
+ 
+
+Background:  Empirical form-discharge relation-
+
+ships derived from terrestrial rivers [e.g., 1,2] and 
+
+scaled for difference in gravity, are commonly used to 
+
+estimate flow discharges (m
+3
+ s
+
+-1
+) of Martian pale-
+
+ochannels [e.g., 3-7]. Discharge estimates are used in 
+
+various models with implications for ancient climate 
+
+[8-9]. Regression analyses of terrestrial channel form 
+
+(e.g., width, wavelength) and discharge records pro-
+
+duce form-discharge relationships: Qn=aX
+b
+, where Q 
+
+is the discharge of a flood with a recurrence interval of 
+
+n number of years, a and b are constants, and X is a 
+
+measurement of form [1-2]. Bankfull discharge is rec-
+
+ognized as the most effective flow for moving channel 
+
+sediment over time, controlling channel form, and may 
+
+be approximated by the Q2yr [10]. 
+
+Sediment size in the channel bed and banks has 
+
+profound effect on the relationship between discharge 
+
+and channel form [1]. Form-discharge relationships not 
+
+specific to any category of sediment size (Table 1), 
+
+refered to here as “non-specific” relationships, were 
+
+derived from regression analysis of 252 channels with 
+
+various sediment sizes (clays to cobbles) in the Mis-
+
+souri River Basin [1]. Equation 1 is the most common-
+
+ly used relationship for estimating paleodischarge on 
+
+Mars [3-7] because there is a dearth of information 
+
+about fluvial channel sediments [11 & refs. therein]. 
+
+Relationships derived from channels with specific sed-
+
+iment sizes, refered to here as “sediment-specific” rela-
+
+tionships, are derived from analyses of 2 channels in 
+
+the Sand Hills, NE (Eq. 2) and 15 mud-rich channels in 
+
+the Missiour River Basin (Eq. 3) [1]. 
+
+ 
+
+Table 1: Form-Discharge Relationships [from 1] 
+Eq. Relationship Sediment Type Stand. Error 
+
+1 Q2yr=1.9W
+1.22
+
+ Non-specific 79% 
+
+2 Q2yr=0.031W
+1.86
+
+ Sand-dominated 26% 
+
+3 Q2yr=2.0W
+1.86
+
+ Mud-rich 52% 
+
+Terrestrial analogs provide helpful opportunities to 
+
+test the relationships in Table 1 among channel form, 
+
+discharge, and sediment size. The Usuktuk River on 
+
+the North Slope, Alaska and Quinn River in the Black 
+
+Rock Desert, Nevada (Figure 1) [12] have been inves-
+
+tigated as potential analogs for meandering channels in 
+
+the Aeolis Dorsa region, Mars [5,12,13], based on their 
+
+well-developed meanders in permafrost and low-
+
+vegetation floodplains, respectively. These channels in 
+
+Alaska and Nevada are sand-dominated and mud-
+
+dominated, respectively. How well do form-discharge 
+
+relationships predict discharge in these well-sorted and 
+
+possible analog channels? 
+
+Hypotheses:  Null: The influence of sediment size 
+
+on channel width for a given discharge is irrelevant 
+
+across all sediment sizes. If true, this hypothesis would 
+
+validate the common use of non-specific relationships. 
+
+Alternative: The influence of sediment size on channel 
+
+width for a given discharge is relevant across all sedi-
+
+ment sizes. If true, this hypothesis would require the 
+
+use of only sediment-specific relationships. 
+
+Methods:  Hypotheses were tested by comparing 
+
+records and/or models of Q2yr and predictions of dis-
+
+charge derived from width measurements coupled with 
+
+non-specific and sediment-specific relationships. 
+
+Although no gauge record exists for the Usuktuk 
+
+River, it is a tributary of the Meade River. The Meade 
+
+has a gauge record from 2006 to 2014 and has similar 
+
+sediment and hydrological regimes as the Usuktuk 
+
+[14]. We carried out the analysis using data from the 
+
+Meade River. Discharges of peak streamflows for the 
+
+Meade River at Atasuk, AK indicate the Q2yr is 702 m
+3
+ 
+
+s
+-1
+
+ (waterdata.usgs.gov). There is no nearby gauge sta-
+
+tion for the Quinn River, NV, but we use an in situ 
+
+estimate of bankfull discharge, 11.9 m
+3
+ s
+
+-1
+ [15], as an 
+
+approximation of the Q2yr. 
+
+Observations of aerial photographs and digital ele-
+
+vation models of the North Slope of Alaska (5-m res.)  
+
+and Quinn River (1-m res.) were made using ArcMap 
+
+software. For both rivers, samples of channel width 
+
+were made by measuring bankfull width every 500 
+
+meters of channel length. Bankfull width was meas-
+
+ured as the distance between the abrupt change in 
+
+slope, nearest to the channel, on opposite banks. Sam-
+
+ples of channel width were coupled with a non-specific 
+
+form-discharge relationship (Eq. 1) and the relevant 
+
+sediment-specific relationship (either Eq. 2 or 3) to 
+
+create distributions of predicted discharge. 
+
+Results:  Measurements of bankfull width and es-
+
+timates of Q2yr, from the outputs of form-discharge 
+
+relationships, are shown in Table 2. 
+
+ 
+
+Table 2: Average bankfull width & estimated Q2yr 
+ Meade River, AK Quinn River, NV 
+
+Bankfull width 248 m (σ=71.4 m) 15 m (σ=3.6 m) 
+
+# of widths 177 44 
+
+Q2yr 702 m
+3
+ s
+
+-1
+ 11.9 m
+
+3
+ s
+
+-1
+ 
+
+Q2yr (Eq. 1) 1600 m
+3
+ s
+
+-1
+ (σ=565) 48 m
+
+3
+ s
+
+-1
+ (σ=12) 
+
+Q2yr (Eq. 2) 936 m
+3
+ s
+
+-1
+ (σ=512) n/a 
+
+Q2yr (Eq. 3) n/a 280 m
+3
+ s
+
+-1
+ (σ=109) 
+
+1012.pdf46th Lunar and Planetary Science Conference (2015)
+
+
+
+
+
+Discussion:  For the sand-dominated Meade River, 
+
+the accuracy of discharge predictions increased when 
+
+width measurements were coupled with the sediment-
+
+specific relationship rather than the non-specific rela-
+
+tionship. In this case, the null hypothesis can be reject-
+
+ed and the alternative hypothesis can be accepted be-
+
+cause the relationship between channel form and dis-
+
+charge is influenced by the properties and abundance 
+
+of sand. Sand is the most mobile sediment, and causes 
+
+large variation in channel width for a given flood dis-
+
+charge [1]. If channels on Mars are sand-dominated, 
+
+conventional use of non-specific form-discharge rela-
+
+tionships will overestimate Q2yr. 
+
+For the mud-dominated Quinn River, the accuracy 
+
+of discharge predictions decreased by coupling width 
+
+measurements with the sediment-specific relationship 
+
+compared to the non-specific relationship. In this case, 
+
+the null hypothesis cannot be rejected. If channels on 
+
+Mars are mud-dominated, use of non-specific form-
+
+discharge relationships will also overestimate Q2yr. 
+
+Thus, in either case, these results indicate that dis-
+
+charge estimates on Mars made using non-specific 
+
+relationships are overestimates.   
+
+Future Work:  This work will be advanced by sta-
+
+tistical analyses to determine the significance of differ-
+
+ences between Q2yr and discharge predictions from 
+
+non-specific and sediment-specific relationships. New 
+
+form-discharge relationships for mud-dominated chan-
+
+nel (as opposed to mud-rich channels) may be derived 
+
+from analysis of channels in the Basin and Range, NV. 
+
+References:  [1] Osterkamp W. R. & Hedman E. 
+
+R. (1982) USGS Prof. paper 1242. [2] Williams G. P. 
+
+(1988) in Flood Geomorphology.  [3] Irwin R. P. et al. 
+
+(2005) JGR: Planets, 110. [4] Irwin R. P. et al. (2005) 
+
+Geology, 33. [5] Burr D. M. et al. (2010) JGR: Plan-
+
+ets, 115(E7). [6] Williams R. M. et al. (2013) Icarus, 
+
+225(1). [7] Williams R. M. & Weitz C. M.  (2014) 
+
+Icarus, 242. [8] Howard A. D. (2007) Geomorpholgy, 
+
+91. [9] Jerolmack D. J. et al. (2004) GRL, 31(21). [10] 
+
+Bridges S. (2003) Rivers and Floodplains p. 154. [11] 
+
+Williams R. M. et al. (2013) Science, 340. [12] 
+
+Matsubara Y. et al. (2014) Geomorphology, in press. 
+
+[13] Howard A. D. (2009) PNAS 106(41). [14] Black 
+
+R. F. (1964) USGS Prof. paper 302-C  [15] Matsubara 
+
+Y. & Howard A. D. (2014) EPSL, 39(10).
+
+ 
+Figure 1: Data and results of analysis of two channels in terrestrial analog systems, the Meade River, AK (left) and 
+
+the Quinn River, NV (right). Scale bars on each image are 1 km. An aerial image of the Meade River shows bright 
+
+sandy bedforms in the channel. The infrared signal of vegtation appears “red” as false-color. The topographic image 
+of the Meade shows scroll-bar ridges and thermokarst pounds in the surrounding floodplains. The aerial image of the 
+
+Quinn River shows sparse vegetation around the channel. The topographic images of the Meade River and Quinn 
+
+River have ~17 m and ~4 m of relief, respectively. Width measurements are shown in black. 
+
+Quinn River, NV 
+Channel Sediment: Mud-dominated 
+
+Q
+2yr 
+
+= 11.9 m
+3
+s
+
+-1
+ 
+
+Non-specific estimate: 48 m
+3
+s
+
+-1
+ 
+
+Sediment-specific estimate: 280 m
+3
+s
+
+-1
+  
+
+Meade River, AK 
+Channel Sediment: Sand-dominated 
+
+Q
+2yr 
+
+= 702 m
+3
+s
+
+-1
+ 
+
+Non-specific estimate: 1600 m
+3
+s
+
+-1
+ 
+
+Sediment-specific estimate: 936 m
+3
+s
+
+-1
+  
+
+1012.pdf46th Lunar and Planetary Science Conference (2015)
+
+
