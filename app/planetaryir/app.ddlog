@@ -38,6 +38,17 @@ person_mention(
     doc_id text
 ).
 
+@extraction
+target_mention(
+    @key
+    mention_id text,
+    @searchable
+    mention_text text,
+    @distributed_by
+    @references(relation="sentences", column="doc_id",         alias="appears_in")
+    doc_id text
+).
+
 function nlp_markup over (
         doc_id  text,
         content text
@@ -55,6 +66,18 @@ function map_person_mention over (
     implementation "udf/map_person_mention.py" handles tsv lines.
 
 person_mention += map_person_mention(
+    doc_id, sentence_index, sentence_text
+) :-
+    sentences(doc_id, sentence_index,sentence_text, _, _, _, _, _, _, _).
+
+function map_target_mention over (
+        doc_id         text,
+        sentence_index int,
+        sentence_text text
+    ) returns rows like target_mention
+    implementation "udf/map_target_mention.py" handles tsv lines.
+
+target_mention += map_target_mention(
     doc_id, sentence_index, sentence_text
 ) :-
     sentences(doc_id, sentence_index,sentence_text, _, _, _, _, _, _, _).
