@@ -1,0 +1,13 @@
+{
+  "labels" : [ "1438", "1989", "2038", "2620", "2893"],
+  "series" : [ {
+    "name" : "DeepDive UDF",
+    "value" : [ 20, 14, 23, 19, 15]
+  }, {
+    "name" : "NER",
+    "value" : [ 8, 10, 14, 0, 13]
+  }, {
+    "name" : "Actual Author Mentions",
+    "value" : [ 20, 14, 25, 19, 44]
+  } ]
+}
