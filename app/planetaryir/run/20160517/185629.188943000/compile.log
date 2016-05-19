@@ -1,0 +1,50 @@
+2016-05-17 18:56:29.231709 ‘run/LATEST.COMPILE’ -> ‘20160517/185629.188943000’
+2016-05-17 18:56:29.231932 ‘run/RUNNING.COMPILE’ -> ‘20160517/185629.188943000’
+2016-05-17 18:56:29.231961 Parsing DeepDive application (/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir) to generate:
+2016-05-17 18:56:29.231984  run/compiled/schema.json
+2016-05-17 18:56:29.232003   from app.ddlog
+2016-05-17 18:56:29.650640  run/compiled/deepdive.conf
+2016-05-17 18:56:29.650803   from app.ddlog
+2016-05-17 18:56:30.183576   from deepdive.conf
+2016-05-17 18:56:30.189275  run/compiled/deepdive.conf.json
+2016-05-17 18:56:30.474335 Performing sanity checks on run/compiled/deepdive.conf.json:
+2016-05-17 18:56:30.515213  checking if input_extractors_well_defined
+2016-05-17 18:56:30.515303  checking if input_schema_wellformed
+2016-05-17 18:56:30.515668 Normalizing and adding built-in processes to the data flow to compile:
+2016-05-17 18:56:30.516210  run/compiled/config-0.00-init_objects.json
+2016-05-17 18:56:30.530186  run/compiled/config-0.01-parse_calibration.json
+2016-05-17 18:56:30.544159  run/compiled/config-0.01-parse_schema.json
+2016-05-17 18:56:30.564014  run/compiled/config-0.51-add_init_app.json
+2016-05-17 18:56:30.577784  run/compiled/config-0.52-input_loader.json
+2016-05-17 18:56:30.593426  run/compiled/config-1.00-qualified_names.json
+2016-05-17 18:56:30.614345  run/compiled/config-1.01-parse_inference_rules.json
+2016-05-17 18:56:30.636888  run/compiled/config-2.01-grounding.json
+2016-05-17 18:56:30.699961  run/compiled/config-2.02-learning_inference.json
+2016-05-17 18:56:30.715988  run/compiled/config-2.03-calibration_plots.json
+2016-05-17 18:56:30.730502  run/compiled/config-9.98-ensure_init_app.json
+2016-05-17 18:56:30.746887  run/compiled/config-9.99-dependencies.json
+2016-05-17 18:56:30.761277  run/compiled/config.json
+2016-05-17 18:56:30.764264 Validating run/compiled/config.json:
+2016-05-17 18:56:30.838755  checking if compiled_base_relations_have_input_data
+2016-05-17 18:56:30.838807  [WARNING] input/init.sh should load all base relations: articles 
+2016-05-17 18:56:30.838830  checking if compiled_dependencies_correct
+2016-05-17 18:56:30.838852  checking if compiled_input_output_well_defined
+2016-05-17 18:56:30.838872  checking if compiled_output_uniquely_defined
+2016-05-17 18:56:30.839138 Compiling executable code into:
+2016-05-17 18:56:30.839419  run/compiled/code-Makefile.json
+2016-05-17 18:56:30.857484  run/compiled/code-cmd_extractor.json
+2016-05-17 18:56:30.870886  run/compiled/code-dataflow_dot.json
+2016-05-17 18:56:30.889175  run/compiled/code-sql_extractor.json
+2016-05-17 18:56:30.904262  run/compiled/code-tsv_extractor.json
+2016-05-17 18:56:30.922699 Generating files:
+2016-05-17 18:56:30.945372  run/Makefile
+2016-05-17 18:56:30.960899  run/process/init/app/run.sh
+2016-05-17 18:56:30.977665  run/process/init/relation/articles/run.sh
+2016-05-17 18:56:30.994194  run/dataflow.dot
+2016-05-17 18:56:31.007310  run/process/ext_person_mention_by_map_person_mention/run.sh
+2016-05-17 18:56:31.021483  run/process/ext_sentences_by_nlp_markup/run.sh
+2016-05-17 18:56:31.038121  run/process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-17 18:56:31.083324  run/dataflow.svg
+2016-05-17 18:56:31.084423   (file:///Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/run/dataflow.svg)
+2016-05-17 18:56:31.087432 ‘run/compiled’ -> ‘run/compiled~’
+2016-05-17 18:56:31.090099 ‘run/compiled’ -> ‘20160517/185629.188943000’
