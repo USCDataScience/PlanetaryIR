@@ -1,0 +1,105 @@
+2016-05-19 10:49:26.560380 # on Snehas-MacBook-Pro.local: deepdive do target_feature
+2016-05-19 10:49:26.560596 # run/20160519/104923.621894000/plan.sh
+2016-05-19 10:49:26.560613 # execution plan for data/target_feature
+2016-05-19 10:49:26.560631 
+2016-05-19 10:49:26.560652 : ## process/init/app ##########################################################
+2016-05-19 10:49:26.560670 : # Done: 2016-03-31T11:08:43-0500 (48d 23h 40m 40s ago)
+2016-05-19 10:49:26.560687 : process/init/app/run.sh
+2016-05-19 10:49:26.560703 : mark_done process/init/app
+2016-05-19 10:49:26.560743 : ##############################################################################
+2016-05-19 10:49:26.560767 
+2016-05-19 10:49:26.560785 : ## process/init/relation/articles ############################################
+2016-05-19 10:49:26.560803 : # Done: 2016-03-31T11:08:43-0500 (48d 23h 40m 40s ago)
+2016-05-19 10:49:26.560821 : process/init/relation/articles/run.sh
+2016-05-19 10:49:26.560838 : mark_done process/init/relation/articles
+2016-05-19 10:49:26.560855 : ##############################################################################
+2016-05-19 10:49:26.560874 
+2016-05-19 10:49:26.560890 : ## data/articles #############################################################
+2016-05-19 10:49:26.560902 : # Done: 2016-03-31T11:08:43-0500 (48d 23h 40m 40s ago)
+2016-05-19 10:49:26.560912 : # no-op
+2016-05-19 10:49:26.560922 : mark_done data/articles
+2016-05-19 10:49:26.560932 : ##############################################################################
+2016-05-19 10:49:26.560942 
+2016-05-19 10:49:26.560952 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-19 10:49:26.560962 : # Done: 2016-03-31T11:08:43-0500 (48d 23h 40m 40s ago)
+2016-05-19 10:49:26.560971 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-19 10:49:26.560981 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-19 10:49:26.560991 : ##############################################################################
+2016-05-19 10:49:26.561001 
+2016-05-19 10:49:26.561011 : ## data/sentences ############################################################
+2016-05-19 10:49:26.561022 : # Done: 2016-03-31T11:08:43-0500 (48d 23h 40m 40s ago)
+2016-05-19 10:49:26.561032 : # no-op
+2016-05-19 10:49:26.561042 : mark_done data/sentences
+2016-05-19 10:49:26.561052 : ##############################################################################
+2016-05-19 10:49:26.561062 
+2016-05-19 10:49:26.561072 : ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-19 10:49:26.561082 : # Done: 2016-05-19T10:06:14-0500 (43m 9s ago)
+2016-05-19 10:49:26.561092 : process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-19 10:49:26.561102 : mark_done process/ext_target_mention_by_map_target_mention
+2016-05-19 10:49:26.561112 : ##############################################################################
+2016-05-19 10:49:26.561122 
+2016-05-19 10:49:26.561131 : ## data/target_mention #######################################################
+2016-05-19 10:49:26.561142 : # Done: 2016-05-19T10:06:14-0500 (43m 9s ago)
+2016-05-19 10:49:26.561152 : # no-op
+2016-05-19 10:49:26.561161 : mark_done data/target_mention
+2016-05-19 10:49:26.561171 : ##############################################################################
+2016-05-19 10:49:26.561181 
+2016-05-19 10:49:26.561192 ## process/ext_target_feature_by_extract_target_features #####################
+2016-05-19 10:49:26.561202 # Done: N/A
+2016-05-19 10:49:26.561211 process/ext_target_feature_by_extract_target_features/run.sh
+2016-05-19 10:49:26.561221 ++ dirname process/ext_target_feature_by_extract_target_features/run.sh
+2016-05-19 10:49:26.561231 + cd process/ext_target_feature_by_extract_target_features
+2016-05-19 10:49:26.561241 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_feature_by_extract_target_features
+2016-05-19 10:49:26.561251 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_feature_by_extract_target_features
+2016-05-19 10:49:26.561261 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-19 10:49:26.561271 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-19 10:49:26.561281 + deepdive compute execute 'input_sql= SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-19 10:49:26.561293 FROM target_mention R0, sentences R1
+2016-05-19 10:49:26.561303         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-19 10:49:26.561313           ' 'command="$DEEPDIVE_APP"/udf/extract_target_features.py' output_relation=target_feature
+2016-05-19 10:49:26.591411 Executing with the following configuration:
+2016-05-19 10:49:26.591460  DEEPDIVE_NUM_PROCESSES=3
+2016-05-19 10:49:26.591475  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-19 10:49:26.591493  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-19 10:49:26.591529  output_relation_tmp=dd_tmp_target_feature
+2016-05-19 10:49:26.591552 
+2016-05-19 10:49:26.738233 NOTICE:  table "target_feature" does not exist, skipping
+2016-05-19 10:49:26.741742 CREATE TABLE
+2016-05-19 10:49:26.847726 CREATE TABLE
+2016-05-19 10:49:26.968783 unloading to feed_processes-1: ' SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-19 10:49:26.968849 FROM target_mention R0, sentences R1
+2016-05-19 10:49:26.968876         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-19 10:49:26.968898           '
+2016-05-19 10:49:27.015007 Loading dd_tmp_target_feature from output_computed-1 (tsv format)
+2016-05-19 10:49:28.980011 Traceback (most recent call last):
+2016-05-19 10:49:28.980102   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 21, in <module>
+2016-05-19 10:49:28.980148     dep_parents    = "int[]",
+2016-05-19 10:49:28.980184   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-19 10:49:28.980222     for out_row in generator(**row._asdict()):
+2016-05-19 10:49:28.980258   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 43, in extract
+2016-05-19 10:49:28.980292     for feature in ddlib.get_generic_features_relation(sent, target_span):
+2016-05-19 10:49:28.980332 TypeError: get_generic_features_relation() takes at least 3 arguments (2 given)
+2016-05-19 10:49:28.981538 Traceback (most recent call last):
+2016-05-19 10:49:28.981627   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 21, in <module>
+2016-05-19 10:49:28.981670     dep_parents    = "int[]",
+2016-05-19 10:49:28.981707   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-19 10:49:28.981745     for out_row in generator(**row._asdict()):
+2016-05-19 10:49:28.981779   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 43, in extract
+2016-05-19 10:49:28.981817     for feature in ddlib.get_generic_features_relation(sent, target_span):
+2016-05-19 10:49:28.981855 TypeError: get_generic_features_relation() takes at least 3 arguments (2 given)
+2016-05-19 10:49:28.981894 Traceback (most recent call last):
+2016-05-19 10:49:28.981931   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 21, in <module>
+2016-05-19 10:49:28.981967     dep_parents    = "int[]",
+2016-05-19 10:49:28.982003   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-19 10:49:28.982040     for out_row in generator(**row._asdict()):
+2016-05-19 10:49:28.982074   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/extract_target_features.py", line 43, in extract
+2016-05-19 10:49:28.982109     for feature in ddlib.get_generic_features_relation(sent, target_span):
+2016-05-19 10:49:28.982142 TypeError: get_generic_features_relation() takes at least 3 arguments (2 given)
+2016-05-19 10:49:28.985856 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (46779) - No such process
+2016-05-19 10:49:28.985928 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (46780) - No such process
+2016-05-19 10:49:28.985954 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (46792) - No such process
+2016-05-19 10:49:28.985975 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (46793) - No such process
+2016-05-19 10:49:28.987018 COPY 0
+2016-05-19 10:49:28.991697 [ERROR] command='"$DEEPDIVE_APP"/udf/extract_target_features.py': PID 46779: finished with non-zero exit status (0)
+2016-05-19 10:49:28.992023 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 46785 Terminated: 15          mkmimo process-*.output \> output_computed-*
+2016-05-19 10:49:28.992060 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 46786 Terminated: 15          deepdive-load "$output_relation_tmp" output_computed-*

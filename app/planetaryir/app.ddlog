@@ -27,6 +27,41 @@ sentences(
     dep_tokens     int[]
 ).
 
+## Feature Extraction #########################################################
+
+@extraction
+target_feature(
+    @key
+    @references(relation="is_target", column="target_id", alias="is_target")
+    target_id text,
+    @key
+    feature text
+).
+
+function extract_target_features over (
+        target_id text,
+        target_begin_index int,
+        target_end_index int,
+        doc_id text,
+        sent_index int,
+        tokens text[],
+        lemmas text[],
+        pos_tags text[],
+        ner_tags text[],
+        dep_types text[],
+        dep_tokens int[]
+    ) returns rows like target_feature
+    implementation "udf/extract_target_features.py" handles tsv lines.
+
+target_feature += extract_target_features(
+    target_id, target_begin_index, target_end_index, doc_id, sent_index, tokens,
+    lemmas, pos_tags, ner_tags, dep_types, dep_tokens
+) :-
+    target_mention(target_id, _, doc_id, sent_index, target_begin_index, target_end_index),
+    sentences(doc_id, sent_index, _, tokens, lemmas, pos_tags, ner_tags, _, dep_types, dep_tokens).
+
+## Feature Extraction End #########################################################
+
 @extraction
 person_mention(
     @key
