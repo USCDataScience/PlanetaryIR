@@ -1,0 +1,76 @@
+2016-05-19 09:21:52.876423 # on Snehas-MacBook-Pro.local: deepdive do target_mention
+2016-05-19 09:21:52.876690 # run/20160519/092149.970536000/plan.sh
+2016-05-19 09:21:52.876711 # execution plan for data/target_mention
+2016-05-19 09:21:52.876724 
+2016-05-19 09:21:52.876735 : ## process/init/app ##########################################################
+2016-05-19 09:21:52.876745 : # Done: 2016-03-31T11:08:43-0500 (48d 22h 13m 7s ago)
+2016-05-19 09:21:52.876755 : process/init/app/run.sh
+2016-05-19 09:21:52.876765 : mark_done process/init/app
+2016-05-19 09:21:52.876776 : ##############################################################################
+2016-05-19 09:21:52.876785 
+2016-05-19 09:21:52.876795 : ## process/init/relation/articles ############################################
+2016-05-19 09:21:52.876804 : # Done: 2016-03-31T11:08:43-0500 (48d 22h 13m 7s ago)
+2016-05-19 09:21:52.876814 : process/init/relation/articles/run.sh
+2016-05-19 09:21:52.876824 : mark_done process/init/relation/articles
+2016-05-19 09:21:52.876833 : ##############################################################################
+2016-05-19 09:21:52.876843 
+2016-05-19 09:21:52.876853 : ## data/articles #############################################################
+2016-05-19 09:21:52.876862 : # Done: 2016-03-31T11:08:43-0500 (48d 22h 13m 7s ago)
+2016-05-19 09:21:52.876871 : # no-op
+2016-05-19 09:21:52.876881 : mark_done data/articles
+2016-05-19 09:21:52.876890 : ##############################################################################
+2016-05-19 09:21:52.876900 
+2016-05-19 09:21:52.876909 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-19 09:21:52.876918 : # Done: 2016-03-31T11:08:43-0500 (48d 22h 13m 7s ago)
+2016-05-19 09:21:52.876928 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-19 09:21:52.876937 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-19 09:21:52.876946 : ##############################################################################
+2016-05-19 09:21:52.876956 
+2016-05-19 09:21:52.876965 : ## data/sentences ############################################################
+2016-05-19 09:21:52.876976 : # Done: 2016-03-31T11:08:43-0500 (48d 22h 13m 7s ago)
+2016-05-19 09:21:52.876985 : # no-op
+2016-05-19 09:21:52.876995 : mark_done data/sentences
+2016-05-19 09:21:52.877004 : ##############################################################################
+2016-05-19 09:21:52.877014 
+2016-05-19 09:21:52.877023 ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-19 09:21:52.877033 # Done: 2016-05-19T08:32:06-0500 (49m 44s ago)
+2016-05-19 09:21:52.877042 process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-19 09:21:52.877051 ++ dirname process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-19 09:21:52.877060 + cd process/ext_target_mention_by_map_target_mention
+2016-05-19 09:21:52.877070 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-19 09:21:52.877079 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-19 09:21:52.877089 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-19 09:21:52.877098 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-19 09:21:52.877107 + deepdive compute execute 'input_sql= SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-19 09:21:52.877117 FROM sentences R0
+2016-05-19 09:21:52.877126         
+2016-05-19 09:21:52.877135           ' 'command="$DEEPDIVE_APP"/udf/map_target_mention.py' output_relation=target_mention
+2016-05-19 09:21:52.906487 Executing with the following configuration:
+2016-05-19 09:21:52.906539  DEEPDIVE_NUM_PROCESSES=3
+2016-05-19 09:21:52.906566  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-19 09:21:52.906586  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-19 09:21:52.906607  output_relation_tmp=dd_tmp_target_mention
+2016-05-19 09:21:52.906626 
+2016-05-19 09:21:53.064752 CREATE TABLE
+2016-05-19 09:21:53.168755 CREATE TABLE
+2016-05-19 09:21:53.289343 unloading to feed_processes-1: ' SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-19 09:21:53.289414 FROM sentences R0
+2016-05-19 09:21:53.289444         
+2016-05-19 09:21:53.289466           '
+2016-05-19 09:21:53.322824 Loading dd_tmp_target_mention from output_computed-1 (tsv format)
+2016-05-19 09:22:13.496836 COPY 13
+2016-05-19 09:22:13.501848 Replacing target_mention with dd_tmp_target_mention
+2016-05-19 09:22:13.569337 DROP TABLE
+2016-05-19 09:22:13.640851 ALTER TABLE
+2016-05-19 09:22:13.709294 ALTER TABLE
+2016-05-19 09:22:13.779811 DROP TABLE
+2016-05-19 09:22:13.812778 ANALYZE
+2016-05-19 09:22:13.821859 mark_done process/ext_target_mention_by_map_target_mention
+2016-05-19 09:22:13.836171 ##############################################################################
+2016-05-19 09:22:13.836228 
+2016-05-19 09:22:13.836258 ## data/target_mention #######################################################
+2016-05-19 09:22:13.836281 # Done: 2016-05-19T08:32:06-0500 (49m 44s ago)
+2016-05-19 09:22:13.836324 # no-op
+2016-05-19 09:22:13.836347 mark_done data/target_mention
+2016-05-19 09:22:13.851748 ##############################################################################
+2016-05-19 09:22:13.851828 

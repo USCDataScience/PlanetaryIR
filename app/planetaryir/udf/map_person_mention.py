@@ -8,6 +8,7 @@ counter = 0
         mention_id       = "text",
         mention_text     = "text",
         doc_id           = "text",
+        sentence_index   = "int",
     :[])
 def extract(
         doc_id         = "text",
@@ -35,4 +36,5 @@ def extract(
                 mention_id,
                 mention_text,
                 doc_id,
+                sentence_index,
             ]

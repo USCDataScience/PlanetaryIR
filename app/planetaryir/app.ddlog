@@ -35,7 +35,8 @@ person_mention(
     mention_text text,
     @distributed_by
     @references(relation="sentences", column="doc_id",         alias="appears_in")
-    doc_id text
+    doc_id text,
+    sentence_index int
 ).
 
 @extraction
@@ -46,7 +47,10 @@ target_mention(
     mention_text text,
     @distributed_by
     @references(relation="sentences", column="doc_id",         alias="appears_in")
-    doc_id text
+    doc_id text,
+    sentence_index int,
+    begin_index int,
+    end_index int
 ).
 
 function nlp_markup over (
@@ -73,11 +77,12 @@ person_mention += map_person_mention(
 function map_target_mention over (
         doc_id         text,
         sentence_index int,
-        sentence_text text
+        sentence_text text,
+        tokens text[]
     ) returns rows like target_mention
     implementation "udf/map_target_mention.py" handles tsv lines.
 
 target_mention += map_target_mention(
-    doc_id, sentence_index, sentence_text
+    doc_id, sentence_index, sentence_text, tokens
 ) :-
-    sentences(doc_id, sentence_index,sentence_text, _, _, _, _, _, _, _).
+    sentences(doc_id, sentence_index,sentence_text, tokens, _, _, _, _, _, _).
