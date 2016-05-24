@@ -1,0 +1,180 @@
+2016-05-24 10:28:39.771622 # on Snehas-MacBook-Pro.local: deepdive do is_target
+2016-05-24 10:28:39.771863 # run/20160524/102835.919260000/plan.sh
+2016-05-24 10:28:39.771883 # execution plan for data/is_target
+2016-05-24 10:28:39.771902 
+2016-05-24 10:28:39.771923 : ## process/init/app ##########################################################
+2016-05-24 10:28:39.771944 : # Done: 2016-03-31T11:08:43-0500 (53d 23h 19m 53s ago)
+2016-05-24 10:28:39.771962 : process/init/app/run.sh
+2016-05-24 10:28:39.771980 : mark_done process/init/app
+2016-05-24 10:28:39.771998 : ##############################################################################
+2016-05-24 10:28:39.772016 
+2016-05-24 10:28:39.772034 : ## process/init/relation/articles ############################################
+2016-05-24 10:28:39.772055 : # Done: 2016-05-23T10:36:55-0500 (23h 51m 41s ago)
+2016-05-24 10:28:39.772073 : process/init/relation/articles/run.sh
+2016-05-24 10:28:39.772091 : mark_done process/init/relation/articles
+2016-05-24 10:28:39.772108 : ##############################################################################
+2016-05-24 10:28:39.772125 
+2016-05-24 10:28:39.772143 : ## data/articles #############################################################
+2016-05-24 10:28:39.772160 : # Done: 2016-05-23T10:36:55-0500 (23h 51m 41s ago)
+2016-05-24 10:28:39.772178 : # no-op
+2016-05-24 10:28:39.772196 : mark_done data/articles
+2016-05-24 10:28:39.772214 : ##############################################################################
+2016-05-24 10:28:39.772247 
+2016-05-24 10:28:39.772270 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-24 10:28:39.772288 : # Done: 2016-05-23T10:39:40-0500 (23h 48m 56s ago)
+2016-05-24 10:28:39.772306 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-24 10:28:39.772325 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-24 10:28:39.772345 : ##############################################################################
+2016-05-24 10:28:39.772364 
+2016-05-24 10:28:39.772383 : ## data/sentences ############################################################
+2016-05-24 10:28:39.772403 : # Done: 2016-05-23T10:39:40-0500 (23h 48m 56s ago)
+2016-05-24 10:28:39.772421 : # no-op
+2016-05-24 10:28:39.772438 : mark_done data/sentences
+2016-05-24 10:28:39.772458 : ##############################################################################
+2016-05-24 10:28:39.772478 
+2016-05-24 10:28:39.772497 : ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-24 10:28:39.772516 : # Done: 2016-05-24T10:22:55-0500 (5m 41s ago)
+2016-05-24 10:28:39.772535 : process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-24 10:28:39.772552 : mark_done process/ext_target_mention_by_map_target_mention
+2016-05-24 10:28:39.772569 : ##############################################################################
+2016-05-24 10:28:39.772589 
+2016-05-24 10:28:39.772609 : ## data/target_mention #######################################################
+2016-05-24 10:28:39.772628 : # Done: 2016-05-24T10:22:55-0500 (5m 41s ago)
+2016-05-24 10:28:39.772648 : # no-op
+2016-05-24 10:28:39.772664 : mark_done data/target_mention
+2016-05-24 10:28:39.772681 : ##############################################################################
+2016-05-24 10:28:39.772698 
+2016-05-24 10:28:39.772718 ## process/ext_target_label__0_by_supervise ##################################
+2016-05-24 10:28:39.772738 : # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:39.772758 # Done: 2016-05-23T15:54:06-0500 (18h 34m 29s ago)
+2016-05-24 10:28:39.772776 process/ext_target_label__0_by_supervise/run.sh
+2016-05-24 10:28:39.772794 ++ dirname process/ext_target_label__0_by_supervise/run.sh
+2016-05-24 10:28:39.772810 + cd process/ext_target_label__0_by_supervise
+2016-05-24 10:28:39.772830 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label__0_by_supervise
+2016-05-24 10:28:39.772850 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label__0_by_supervise
+2016-05-24 10:28:39.772869 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-24 10:28:39.772888 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-24 10:28:39.772908 + deepdive compute execute 'input_sql= SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.mention_text AS "target_mention.R0.mention_text", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.sentence_text AS "sentences.R1.sentence_text", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-24 10:28:39.772929 FROM target_mention R0, sentences R1
+2016-05-24 10:28:39.772950         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-24 10:28:39.772970           ' 'command="$DEEPDIVE_APP"/udf/supervise_targets.py' output_relation=target_label__0
+2016-05-24 10:28:39.806349 Executing with the following configuration:
+2016-05-24 10:28:39.806401  DEEPDIVE_NUM_PROCESSES=3
+2016-05-24 10:28:39.806427  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-24 10:28:39.806480  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-24 10:28:39.806506  output_relation_tmp=dd_tmp_target_label__0
+2016-05-24 10:28:39.806529 
+2016-05-24 10:28:39.971570 CREATE TABLE
+2016-05-24 10:28:40.082455 CREATE TABLE
+2016-05-24 10:28:40.209150 unloading to feed_processes-1: ' SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.mention_text AS "target_mention.R0.mention_text", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.sentence_text AS "sentences.R1.sentence_text", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-24 10:28:40.209217 FROM target_mention R0, sentences R1
+2016-05-24 10:28:40.209247         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-24 10:28:40.209274           '
+2016-05-24 10:28:40.234994 Loading dd_tmp_target_label__0 from output_computed-1 (tsv format)
+2016-05-24 10:28:43.232086 COPY 16
+2016-05-24 10:28:43.237255 Replacing target_label__0 with dd_tmp_target_label__0
+2016-05-24 10:28:43.302841 DROP TABLE
+2016-05-24 10:28:43.372084 ALTER TABLE
+2016-05-24 10:28:43.441094 ALTER TABLE
+2016-05-24 10:28:43.510622 DROP TABLE
+2016-05-24 10:28:43.542585 ANALYZE
+2016-05-24 10:28:43.551523 mark_done process/ext_target_label__0_by_supervise
+2016-05-24 10:28:43.564836 ##############################################################################
+2016-05-24 10:28:43.564896 
+2016-05-24 10:28:43.564925 ## data/target_label__0 ######################################################
+2016-05-24 10:28:43.564948 : # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:43.564968 # Done: 2016-05-23T15:54:06-0500 (18h 34m 29s ago)
+2016-05-24 10:28:43.564986 # no-op
+2016-05-24 10:28:43.565034 mark_done data/target_label__0
+2016-05-24 10:28:43.579630 ##############################################################################
+2016-05-24 10:28:43.579692 
+2016-05-24 10:28:43.579717 : ## process/init/relation/targets_chemcam_mer #################################
+2016-05-24 10:28:43.579743 : # Done: 2016-05-19T11:28:15-0500 (4d 23h 21s ago)
+2016-05-24 10:28:43.579766 : process/init/relation/targets_chemcam_mer/run.sh
+2016-05-24 10:28:43.579787 : mark_done process/init/relation/targets_chemcam_mer
+2016-05-24 10:28:43.579806 : ##############################################################################
+2016-05-24 10:28:43.579860 
+2016-05-24 10:28:43.579884 : ## data/targets_chemcam_mer ##################################################
+2016-05-24 10:28:43.579905 : # Done: 2016-05-19T11:28:15-0500 (4d 23h 21s ago)
+2016-05-24 10:28:43.580009 : # no-op
+2016-05-24 10:28:43.580030 : mark_done data/targets_chemcam_mer
+2016-05-24 10:28:43.580048 : ##############################################################################
+2016-05-24 10:28:43.580066 
+2016-05-24 10:28:43.580085 ## process/ext_target_label ##################################################
+2016-05-24 10:28:43.580106 # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:43.580126 process/ext_target_label/run.sh
+2016-05-24 10:28:43.584742 ++ dirname process/ext_target_label/run.sh
+2016-05-24 10:28:43.587056 + cd process/ext_target_label
+2016-05-24 10:28:43.587136 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label
+2016-05-24 10:28:43.587187 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label
+2016-05-24 10:28:43.587226 + deepdive create table target_label
+2016-05-24 10:28:43.692766 NOTICE:  drop cascades to view target_label_resolved
+2016-05-24 10:28:43.698101 CREATE TABLE
+2016-05-24 10:28:43.699123 + deepdive sql 'INSERT INTO target_label SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.mention_text AS "target_mention.R0.mention_text", 1 AS column_2, '\''from_Chemcam_MER'\'' AS column_3
+2016-05-24 10:28:43.699186 FROM target_mention R0, targets_chemcam_mer R1
+2016-05-24 10:28:43.699211         WHERE lower(R1.target_name) = lower(R0.mention_text)
+2016-05-24 10:28:43.699234 UNION ALL
+2016-05-24 10:28:43.699256 SELECT R0.target_id AS "target_label__0.R0.target_id", R0.target_name AS "target_label__0.R0.target_name", R0.label AS "target_label__0.R0.label", R0.rule_id AS "target_label__0.R0.rule_id"
+2016-05-24 10:28:43.699278 FROM target_label__0 R0
+2016-05-24 10:28:43.699299         '
+2016-05-24 10:28:43.773527 INSERT 0 24
+2016-05-24 10:28:43.774788 mark_done process/ext_target_label
+2016-05-24 10:28:43.786421 ##############################################################################
+2016-05-24 10:28:43.786474 
+2016-05-24 10:28:43.786492 ## data/target_label #########################################################
+2016-05-24 10:28:43.786511 # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:43.786604 # no-op
+2016-05-24 10:28:43.786630 mark_done data/target_label
+2016-05-24 10:28:43.798046 ##############################################################################
+2016-05-24 10:28:43.798111 
+2016-05-24 10:28:43.798140 ## process/ext_target_label_resolved #########################################
+2016-05-24 10:28:43.798167 # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:43.798188 process/ext_target_label_resolved/run.sh
+2016-05-24 10:28:43.802736 ++ dirname process/ext_target_label_resolved/run.sh
+2016-05-24 10:28:43.805016 + cd process/ext_target_label_resolved
+2016-05-24 10:28:43.805110 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label_resolved
+2016-05-24 10:28:43.805148 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label_resolved
+2016-05-24 10:28:43.805210 + deepdive create view target_label_resolved as 'SELECT R0.target_id AS column_0, R0.target_name AS column_1, SUM(R0.label) AS column_2
+2016-05-24 10:28:43.805239 FROM target_label R0
+2016-05-24 10:28:43.805262         
+2016-05-24 10:28:43.805284         GROUP BY R0.target_id, R0.target_name'
+2016-05-24 10:28:43.935883 CREATE VIEW
+2016-05-24 10:28:43.937154 mark_done process/ext_target_label_resolved
+2016-05-24 10:28:43.948576 ##############################################################################
+2016-05-24 10:28:43.948635 
+2016-05-24 10:28:43.948664 ## data/target_label_resolved ################################################
+2016-05-24 10:28:43.948687 # Done: 2016-05-23T15:54:06-0500 (18h 34m 30s ago)
+2016-05-24 10:28:43.948708 # no-op
+2016-05-24 10:28:43.948728 mark_done data/target_label_resolved
+2016-05-24 10:28:43.961137 ##############################################################################
+2016-05-24 10:28:43.961192 
+2016-05-24 10:28:43.961216 ## process/ext_is_target #####################################################
+2016-05-24 10:28:43.961239 # Done: 2016-05-24T10:21:51-0500 (6m 45s ago)
+2016-05-24 10:28:43.961260 process/ext_is_target/run.sh
+2016-05-24 10:28:43.965807 ++ dirname process/ext_is_target/run.sh
+2016-05-24 10:28:43.968121 + cd process/ext_is_target
+2016-05-24 10:28:43.968195 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_is_target
+2016-05-24 10:28:43.968249 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_is_target
+2016-05-24 10:28:43.968295 + deepdive create view is_target as 'SELECT DISTINCT R0.column_0, R0.column_1, 0 AS id, 
+2016-05-24 10:28:43.968322 CASE WHEN R0.column_2 > 0 THEN true
+2016-05-24 10:28:43.968343      WHEN R0.column_2 < 0 THEN false
+2016-05-24 10:28:43.968364      ELSE NULL
+2016-05-24 10:28:43.968384 END AS label
+2016-05-24 10:28:43.968402           FROM target_label_resolved R0
+2016-05-24 10:28:43.968419         
+2016-05-24 10:28:43.968437           
+2016-05-24 10:28:43.968457 UNION ALL
+2016-05-24 10:28:43.968476 SELECT DISTINCT R0.mention_id, R0.mention_text, 0 AS id, (NULL :: BOOLEAN) AS label
+2016-05-24 10:28:43.968494           FROM target_mention R0
+2016-05-24 10:28:43.968512         
+2016-05-24 10:28:43.968532           '
+2016-05-24 10:28:44.104229 CREATE VIEW
+2016-05-24 10:28:44.105530 mark_done process/ext_is_target
+2016-05-24 10:28:44.117479 ##############################################################################
+2016-05-24 10:28:44.117533 
+2016-05-24 10:28:44.117556 ## data/is_target ############################################################
+2016-05-24 10:28:44.117580 # Done: 2016-05-24T10:21:51-0500 (6m 45s ago)
+2016-05-24 10:28:44.117631 # no-op
+2016-05-24 10:28:44.117660 mark_done data/is_target
+2016-05-24 10:28:44.129894 ##############################################################################
+2016-05-24 10:28:44.129964 

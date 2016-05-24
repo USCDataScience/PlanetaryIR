@@ -1,0 +1,13 @@
+2016-05-19 11:27:52.291126 ‘run/LATEST.COMPILE’ -> ‘20160519/112752.247732000’
+2016-05-19 11:27:52.291340 ‘run/RUNNING.COMPILE’ -> ‘20160519/112752.247732000’
+2016-05-19 11:27:52.291367 Parsing DeepDive application (/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir) to generate:
+2016-05-19 11:27:52.291390  run/compiled/schema.json
+2016-05-19 11:27:52.291408   from app.ddlog
+2016-05-19 11:27:52.789262  run/compiled/deepdive.conf
+2016-05-19 11:27:52.789372   from app.ddlog
+2016-05-19 11:27:53.322741 [error] relation "targets_chemcam_ner" is not defined
+2016-05-19 11:27:53.322789 target_label(t_id, t_name, 1, "from_Chemcam") :-
+2016-05-19 11:27:53.322803     target_mention(t_id, t_name, _, _, _, _),
+2016-05-19 11:27:53.322820     targets_chemcam_ner(n1),
+2016-05-19 11:27:53.322838     lower(n1) = lower(t_name).
+2016-05-19 11:27:53.322860 

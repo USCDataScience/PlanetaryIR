@@ -1,0 +1,104 @@
+2016-05-23 15:53:24.524485 # on Snehas-MacBook-Pro.local: deepdive do is_target
+2016-05-23 15:53:24.524712 # run/20160523/155322.015789000/plan.sh
+2016-05-23 15:53:24.524730 # execution plan for data/is_target
+2016-05-23 15:53:24.524749 
+2016-05-23 15:53:24.524770 : ## process/init/app ##########################################################
+2016-05-23 15:53:24.524789 : # Done: 2016-03-31T11:08:43-0500 (53d 4h 44m 39s ago)
+2016-05-23 15:53:24.524807 : process/init/app/run.sh
+2016-05-23 15:53:24.524825 : mark_done process/init/app
+2016-05-23 15:53:24.524843 : ##############################################################################
+2016-05-23 15:53:24.524862 
+2016-05-23 15:53:24.524880 : ## process/init/relation/articles ############################################
+2016-05-23 15:53:24.524900 : # Done: 2016-05-23T10:36:55-0500 (5h 16m 27s ago)
+2016-05-23 15:53:24.524918 : process/init/relation/articles/run.sh
+2016-05-23 15:53:24.524935 : mark_done process/init/relation/articles
+2016-05-23 15:53:24.524953 : ##############################################################################
+2016-05-23 15:53:24.524970 
+2016-05-23 15:53:24.524987 : ## data/articles #############################################################
+2016-05-23 15:53:24.525006 : # Done: 2016-05-23T10:36:55-0500 (5h 16m 27s ago)
+2016-05-23 15:53:24.525026 : # no-op
+2016-05-23 15:53:24.525045 : mark_done data/articles
+2016-05-23 15:53:24.525064 : ##############################################################################
+2016-05-23 15:53:24.525082 
+2016-05-23 15:53:24.525101 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-23 15:53:24.525119 : # Done: 2016-05-23T10:39:40-0500 (5h 13m 42s ago)
+2016-05-23 15:53:24.525136 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-23 15:53:24.525153 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-23 15:53:24.525174 : ##############################################################################
+2016-05-23 15:53:24.525193 
+2016-05-23 15:53:24.525212 : ## data/sentences ############################################################
+2016-05-23 15:53:24.525231 : # Done: 2016-05-23T10:39:40-0500 (5h 13m 42s ago)
+2016-05-23 15:53:24.525249 : # no-op
+2016-05-23 15:53:24.525266 : mark_done data/sentences
+2016-05-23 15:53:24.525286 : ##############################################################################
+2016-05-23 15:53:24.525305 
+2016-05-23 15:53:24.525324 : ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-23 15:53:24.525343 : # Done: 2016-05-23T11:43:36-0500 (4h 9m 46s ago)
+2016-05-23 15:53:24.525361 : process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-23 15:53:24.525379 : mark_done process/ext_target_mention_by_map_target_mention
+2016-05-23 15:53:24.525400 : ##############################################################################
+2016-05-23 15:53:24.525419 
+2016-05-23 15:53:24.525438 : ## data/target_mention #######################################################
+2016-05-23 15:53:24.525458 : # Done: 2016-05-23T11:43:36-0500 (4h 9m 46s ago)
+2016-05-23 15:53:24.525476 : # no-op
+2016-05-23 15:53:24.525496 : mark_done data/target_mention
+2016-05-23 15:53:24.525515 : ##############################################################################
+2016-05-23 15:53:24.525534 
+2016-05-23 15:53:24.525553 ## process/ext_target_label__0_by_supervise ##################################
+2016-05-23 15:53:24.525571 # Done: N/A
+2016-05-23 15:53:24.525588 process/ext_target_label__0_by_supervise/run.sh
+2016-05-23 15:53:24.525609 ++ dirname process/ext_target_label__0_by_supervise/run.sh
+2016-05-23 15:53:24.525628 + cd process/ext_target_label__0_by_supervise
+2016-05-23 15:53:24.525647 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label__0_by_supervise
+2016-05-23 15:53:24.525667 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_label__0_by_supervise
+2016-05-23 15:53:24.525685 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-23 15:53:24.525703 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-23 15:53:24.525722 + deepdive compute execute 'input_sql= SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.mention_text AS "target_mention.R0.mention_text", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.sentence_text AS "sentences.R1.sentence_text", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-23 15:53:24.525743 FROM target_mention R0, sentences R1
+2016-05-23 15:53:24.525762         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-23 15:53:24.525782           ' 'command="$DEEPDIVE_APP"/udf/supervise_targets.py' output_relation=target_label__0
+2016-05-23 15:53:24.557117 Executing with the following configuration:
+2016-05-23 15:53:24.557170  DEEPDIVE_NUM_PROCESSES=3
+2016-05-23 15:53:24.557200  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-23 15:53:24.557223  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-23 15:53:24.557245  output_relation_tmp=dd_tmp_target_label__0
+2016-05-23 15:53:24.557264 
+2016-05-23 15:53:24.711798 CREATE TABLE
+2016-05-23 15:53:24.818038 CREATE TABLE
+2016-05-23 15:53:24.943914 unloading to feed_processes-1: ' SELECT R0.mention_id AS "target_mention.R0.mention_id", R0.mention_text AS "target_mention.R0.mention_text", R0.begin_index AS "target_mention.R0.begin_index", R0.end_index AS "target_mention.R0.end_index", R0.doc_id AS "target_mention.R0.doc_id", R0.sentence_index AS "target_mention.R0.sentence_index", R1.sentence_text AS "sentences.R1.sentence_text", R1.tokens AS "sentences.R1.tokens", R1.lemmas AS "sentences.R1.lemmas", R1.pos_tags AS "sentences.R1.pos_tags", R1.ner_tags AS "sentences.R1.ner_tags", R1.dep_types AS "sentences.R1.dep_types", R1.dep_tokens AS "sentences.R1.dep_tokens"
+2016-05-23 15:53:24.943985 FROM target_mention R0, sentences R1
+2016-05-23 15:53:24.944016         WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index 
+2016-05-23 15:53:24.944042           '
+2016-05-23 15:53:24.994514 Loading dd_tmp_target_label__0 from output_computed-1 (tsv format)
+2016-05-23 15:53:26.947441 Traceback (most recent call last):
+2016-05-23 15:53:26.947544   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 20, in <module>
+2016-05-23 15:53:26.947589     dep_types="text[]", dep_token_indexes="int[]",
+2016-05-23 15:53:26.947628   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-23 15:53:26.947668     for out_row in generator(**row._asdict()):
+2016-05-23 15:53:26.947708   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 30, in supervise
+2016-05-23 15:53:26.947747     target_candidate = TargetLabel(target_id=target_id, target_name=target_name, label=None, type=None)
+2016-05-23 15:53:26.947787 TypeError: __new__() got an unexpected keyword argument 'target_name'
+2016-05-23 15:53:26.948322 Traceback (most recent call last):
+2016-05-23 15:53:26.948394   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 20, in <module>
+2016-05-23 15:53:26.948436     dep_types="text[]", dep_token_indexes="int[]",
+2016-05-23 15:53:26.948475   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-23 15:53:26.948512     for out_row in generator(**row._asdict()):
+2016-05-23 15:53:26.948549   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 30, in supervise
+2016-05-23 15:53:26.948584     target_candidate = TargetLabel(target_id=target_id, target_name=target_name, label=None, type=None)
+2016-05-23 15:53:26.948619 TypeError: __new__() got an unexpected keyword argument 'target_name'
+2016-05-23 15:53:26.948658 Traceback (most recent call last):
+2016-05-23 15:53:26.948694   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 20, in <module>
+2016-05-23 15:53:26.948732     dep_types="text[]", dep_token_indexes="int[]",
+2016-05-23 15:53:26.948765   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-23 15:53:26.948800     for out_row in generator(**row._asdict()):
+2016-05-23 15:53:26.948834   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/supervise_targets.py", line 30, in supervise
+2016-05-23 15:53:26.948867     target_candidate = TargetLabel(target_id=target_id, target_name=target_name, label=None, type=None)
+2016-05-23 15:53:26.948902 TypeError: __new__() got an unexpected keyword argument 'target_name'
+2016-05-23 15:53:26.953150 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (80553) - No such process
+2016-05-23 15:53:26.953219 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (80555) - No such process
+2016-05-23 15:53:26.953248 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (80566) - No such process
+2016-05-23 15:53:26.953272 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (80567) - No such process
+2016-05-23 15:53:26.954413 COPY 0
+2016-05-23 15:53:26.959001 [ERROR] command='"$DEEPDIVE_APP"/udf/supervise_targets.py': PID 80553: finished with non-zero exit status (0)
+2016-05-23 15:53:26.959350 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 80559 Terminated: 15          mkmimo process-*.output \> output_computed-*
+2016-05-23 15:53:26.959394 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 80560 Terminated: 15          deepdive-load "$output_relation_tmp" output_computed-*

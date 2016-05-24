@@ -1,3 +1,17 @@
+## Random variable to predict #################################################
+
+# This application's goal is to predict whether a target extraction is a target or not
+@extraction
+is_target?(
+    @key
+    @references(relation="target_mention", column="mention_id", alias="t")
+    target_id text,
+    @key
+    @references(relation="target_mention", column="mention_text", alias="tname")
+    target_name text
+).
+
+## Input Data #################################################################
 @source
 articles(
     @key
@@ -6,6 +20,15 @@ articles(
     @searchable
     content text
 ).
+
+@source
+targets_chemcam_mer(
+    @key
+    target_name text
+).
+
+
+## NLP markup #################################################################
 
 @source
 sentences(
@@ -26,6 +49,70 @@ sentences(
     dep_types      text[],
     dep_tokens     int[]
 ).
+
+function nlp_markup over (
+        doc_id  text,
+        content text
+    ) returns rows like sentences
+    implementation "udf/nlp_markup.sh" handles tsv lines.
+    
+sentences += nlp_markup(doc_id, content) :-
+    articles(doc_id, content).
+
+## Author and Target Mapping #########################################################
+
+@extraction
+person_mention(
+    @key
+    mention_id text,
+    @searchable
+    mention_text text,
+    @distributed_by
+    @references(relation="sentences", column="doc_id",         alias="appears_in")
+    doc_id text,
+    @references(relation="sentences", column="sentence_index", alias="appears_in")
+    sentence_index int
+).
+
+@extraction
+target_mention(
+    @key
+    mention_id text,
+    @searchable
+    mention_text text,
+    @distributed_by
+    @references(relation="sentences", column="doc_id",         alias="appears_in")
+    doc_id text,
+    @references(relation="sentences", column="sentence_index", alias="appears_in")
+    sentence_index int,
+    begin_index int,
+    end_index int
+).
+
+function map_person_mention over (
+        doc_id         text,
+        sentence_index int,
+        sentence_text text
+    ) returns rows like person_mention
+    implementation "udf/map_person_mention.py" handles tsv lines.
+
+person_mention += map_person_mention(
+    doc_id, sentence_index, sentence_text
+) :-
+    sentences(doc_id, sentence_index,sentence_text, _, _, _, _, _, _, _).
+
+function map_target_mention over (
+        doc_id         text,
+        sentence_index int,
+        sentence_text text,
+        tokens text[]
+    ) returns rows like target_mention
+    implementation "udf/map_target_mention.py" handles tsv lines.
+
+target_mention += map_target_mention(
+    doc_id, sentence_index, sentence_text, tokens
+) :-
+    sentences(doc_id, sentence_index,sentence_text, tokens, _, _, _, _, _, _).
 
 ## Feature Extraction #########################################################
 
@@ -60,64 +147,71 @@ target_feature += extract_target_features(
     target_mention(target_id, _, doc_id, sent_index, target_begin_index, target_end_index),
     sentences(doc_id, sent_index, _, tokens, lemmas, pos_tags, ner_tags, _, dep_types, dep_tokens).
 
-## Feature Extraction End #########################################################
-
+## Distant Supervision ########################################################
 @extraction
-person_mention(
+target_label(
     @key
-    mention_id text,
+    @references(relation="is_target", column="target_id", alias="is_target")
+    target_id text,
     @searchable
-    mention_text text,
-    @distributed_by
-    @references(relation="sentences", column="doc_id",         alias="appears_in")
-    doc_id text,
-    sentence_index int
+    @references(relation="is_target", column="target_name", alias="is_target")
+    target_name text,
+    @navigable
+    label int,
+    @navigable
+    rule_id text
 ).
 
-@extraction
-target_mention(
-    @key
-    mention_id text,
-    @searchable
-    mention_text text,
-    @distributed_by
-    @references(relation="sentences", column="doc_id",         alias="appears_in")
-    doc_id text,
-    sentence_index int,
-    begin_index int,
-    end_index int
-).
+# distant supervision using data from Chemcam
+target_label(t, tname, 1, "from_Chemcam_MER") :-
+    target_mention(t, tname, _, _, _, _),
+    targets_chemcam_mer(n1),
+    [ lower(n1) = lower(tname)].
 
-function nlp_markup over (
-        doc_id  text,
-        content text
-    ) returns rows like sentences
-    implementation "udf/nlp_markup.sh" handles tsv lines.
-    
-sentences += nlp_markup(doc_id, content) :-
-    articles(doc_id, content).
-
-function map_person_mention over (
+# supervision by heuristic rules in a UDF
+function supervise over (
+        target_id text, target_name text, target_begin int, target_end int,
         doc_id         text,
         sentence_index int,
-        sentence_text text
-    ) returns rows like person_mention
-    implementation "udf/map_person_mention.py" handles tsv lines.
+        sentence_text  text,
+        tokens         text[],
+        lemmas         text[],
+        pos_tags       text[],
+        ner_tags       text[],
+        dep_types      text[],
+        dep_tokens    int[]
+    ) returns (
+        target_id text, target_name text, label int, rule_id text
+    )
+    implementation "udf/supervise_targets.py" handles tsv lines.
 
-person_mention += map_person_mention(
-    doc_id, sentence_index, sentence_text
-) :-
-    sentences(doc_id, sentence_index,sentence_text, _, _, _, _, _, _, _).
+target_label += supervise(
+    target_id, target_name, target_begin, target_end,
+    doc_id, sentence_index, sentence_text,
+    tokens, lemmas, pos_tags, ner_tags, dep_types, dep_token_indexes
+) :-target_mention(target_id, target_name, doc_id, sentence_index, target_begin, target_end),
+    sentences(
+        doc_id, sentence_index, sentence_text,
+        tokens, lemmas, pos_tags, ner_tags, _, dep_types, dep_token_indexes
+    ).
 
-function map_target_mention over (
-        doc_id         text,
-        sentence_index int,
-        sentence_text text,
-        tokens text[]
-    ) returns rows like target_mention
-    implementation "udf/map_target_mention.py" handles tsv lines.
+# resolve multiple labels by majority vote (summing the labels in {-1,0,1})
+target_label_resolved(target_id, target_name, SUM(vote)) :- target_label(target_id, target_name, vote, rule_id).
 
-target_mention += map_target_mention(
-    doc_id, sentence_index, sentence_text, tokens
-) :-
-    sentences(doc_id, sentence_index,sentence_text, tokens, _, _, _, _, _, _).
+# assign the resolved labels for the spouse relation
+is_target(target_id, target_name) = if l > 0 then TRUE
+                      else if l < 0 then FALSE
+                      else NULL end :- target_label_resolved(target_id, target_name, l).
+
+# make sure all pairs in spouse_candidate are considered as unsupervised examples
+is_target(t, tname) = NULL::BOOLEAN :- target_mention(t, tname, _, _, _, _).
+
+###############################################################################
+
+## Inference Rules ############################################################
+
+# Features
+@weight(f)
+is_target(target_id, target_name) :-
+    target_mention(target_id, target_name, _, _, _, _),
+    target_feature(target_id, f).

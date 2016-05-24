@@ -1,0 +1,32 @@
+2016-05-19 11:28:15.011206 # on Snehas-MacBook-Pro.local: deepdive do targets_chemcam_mer
+2016-05-19 11:28:15.011429 # run/20160519/112811.970985000/plan.sh
+2016-05-19 11:28:15.011448 # execution plan for data/targets_chemcam_mer
+2016-05-19 11:28:15.011468 
+2016-05-19 11:28:15.011489 : ## process/init/app ##########################################################
+2016-05-19 11:28:15.011508 : # Done: 2016-03-31T11:08:43-0500 (49d 19m 29s ago)
+2016-05-19 11:28:15.011527 : process/init/app/run.sh
+2016-05-19 11:28:15.011547 : mark_done process/init/app
+2016-05-19 11:28:15.011567 : ##############################################################################
+2016-05-19 11:28:15.011588 
+2016-05-19 11:28:15.011606 ## process/init/relation/targets_chemcam_mer #################################
+2016-05-19 11:28:15.011624 # Done: N/A
+2016-05-19 11:28:15.011642 process/init/relation/targets_chemcam_mer/run.sh
+2016-05-19 11:28:15.011660 ++ dirname process/init/relation/targets_chemcam_mer/run.sh
+2016-05-19 11:28:15.011677 + cd process/init/relation/targets_chemcam_mer
+2016-05-19 11:28:15.011699 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/init/relation/targets_chemcam_mer
+2016-05-19 11:28:15.011718 + DEEPDIVE_CURRENT_PROCESS_NAME=process/init/relation/targets_chemcam_mer
+2016-05-19 11:28:15.011737 + deepdive create table targets_chemcam_mer
+2016-05-19 11:28:15.093624 NOTICE:  table "targets_chemcam_mer" does not exist, skipping
+2016-05-19 11:28:15.097868 CREATE TABLE
+2016-05-19 11:28:15.098845 + deepdive load targets_chemcam_mer
+2016-05-19 11:28:15.173431 Loading targets_chemcam_mer from input/targets_chemcam_mer.csv (csv format)
+2016-05-19 11:28:15.213508 COPY 2825
+2016-05-19 11:28:15.220941 mark_done process/init/relation/targets_chemcam_mer
+2016-05-19 11:28:15.238176 ##############################################################################
+2016-05-19 11:28:15.238233 
+2016-05-19 11:28:15.238262 ## data/targets_chemcam_mer ##################################################
+2016-05-19 11:28:15.238412 # Done: N/A
+2016-05-19 11:28:15.238445 # no-op
+2016-05-19 11:28:15.238467 mark_done data/targets_chemcam_mer
+2016-05-19 11:28:15.251443 ##############################################################################
+2016-05-19 11:28:15.251500 

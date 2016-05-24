@@ -1,0 +1,1561 @@
+{
+  "deepdive": {
+    "calibration": {
+      "holdout_fraction": 0.25
+    },
+    "db": {
+      "default": {
+        "dbname": "deepdive_planetaryIR_SnehaS",
+        "driver": "org.postgresql.Driver",
+        "host": "localhost",
+        "incremental_mode": "ORIGINAL",
+        "password": "",
+        "port": "5432",
+        "url": "jdbc:postgresql://localhost:5432/deepdive_planetaryIR_SnehaS",
+        "user": "SnehaS"
+      }
+    },
+    "extraction": {
+      "extractors": {
+        "ext_is_target": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"is_target\"\n\tdeepdive sql 'INSERT INTO is_target SELECT DISTINCT R0.column_0, R0.column_1, 0 AS id, \nCASE WHEN R0.column_2 > 0 THEN true\n     WHEN R0.column_2 < 0 THEN false\n     ELSE NULL\nEND AS label\n          FROM target_label_resolved R0\n        \n          \nUNION ALL\nSELECT DISTINCT R0.mention_id, R0.mention_text, 0 AS id, (NULL :: BOOLEAN) AS label\n          FROM target_mention R0\n        \n          '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_label_resolved",
+            "ext_target_mention_by_map_target_mention"
+          ],
+          "input_relations": [
+            "target_label_resolved",
+            "target_mention"
+          ],
+          "output_relation": "is_target",
+          "style": "cmd_extractor"
+        },
+        "ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py"
+        },
+        "ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh"
+        },
+        "ext_target_feature_by_extract_target_features": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_feature",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/extract_target_features.py"
+        },
+        "ext_target_label": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"target_label\"\n\tdeepdive sql 'INSERT INTO target_label SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", 1 AS column_2, '\\''from_Chemcam_MER'\\'' AS column_3\nFROM target_mention R0, targets_chemcam_mer R1\n        WHERE lower(R1.target_name) = lower(R0.mention_text)\nUNION ALL\nSELECT R0.target_id AS \"target_label__0.R0.target_id\", R0.target_name AS \"target_label__0.R0.target_name\", R0.label AS \"target_label__0.R0.label\", R0.rule_id AS \"target_label__0.R0.rule_id\"\nFROM target_label__0 R0\n        '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_target_label__0_by_supervise"
+          ],
+          "input_relations": [
+            "target_mention",
+            "targets_chemcam_mer",
+            "target_label__0"
+          ],
+          "output_relation": "target_label",
+          "style": "cmd_extractor"
+        },
+        "ext_target_label__0_by_supervise": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.sentence_text AS \"sentences.R1.sentence_text\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_label__0",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/supervise_targets.py"
+        },
+        "ext_target_label_resolved": {
+          "cmd": "\n\n\tdeepdive create view target_label_resolved as 'SELECT R0.target_id AS column_0, R0.target_name AS column_1, SUM(R0.label) AS column_2\nFROM target_label R0\n        \n        GROUP BY R0.target_id, R0.target_name'\n\t\n        ",
+          "dependencies": [
+            "ext_target_label"
+          ],
+          "input_relations": [
+            "target_label"
+          ],
+          "output_relation": "target_label_resolved",
+          "style": "cmd_extractor"
+        },
+        "ext_target_mention_by_map_target_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\", R0.tokens AS \"sentences.R0.tokens\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "target_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_target_mention.py"
+        }
+      }
+    },
+    "inference": {
+      "factors": {
+        "inf_istrue_is_target": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_target_feature_by_extract_target_features"
+          ],
+          "function": "Imply(is_target.R0.label)",
+          "input_query": "\n          SELECT R0.id AS \"is_target.R0.id\" , R2.feature AS \"dd_weight_column_0\" \n          FROM is_target R0, target_mention R1, target_feature R2\n        WHERE R1.mention_id = R0.target_id  AND R1.mention_text = R0.target_name  AND R2.target_id = R0.target_id ",
+          "input_relations": [
+            "is_target",
+            "target_mention",
+            "target_feature"
+          ],
+          "weight": "?(dd_weight_column_0)"
+        }
+      }
+    },
+    "pipeline": {
+      "pipelines": {
+        "endtoend": [
+          "ext_target_mention_by_map_target_mention",
+          "ext_person_mention_by_map_person_mention",
+          "ext_target_feature_by_extract_target_features",
+          "ext_target_label_resolved",
+          "ext_target_label",
+          "ext_sentences_by_nlp_markup",
+          "ext_is_target",
+          "ext_target_label__0_by_supervise",
+          "inf_istrue_is_target"
+        ],
+        "extraction": [
+          "ext_target_mention_by_map_target_mention",
+          "ext_person_mention_by_map_person_mention",
+          "ext_target_feature_by_extract_target_features",
+          "ext_target_label_resolved",
+          "ext_target_label",
+          "ext_sentences_by_nlp_markup",
+          "ext_is_target",
+          "ext_target_label__0_by_supervise"
+        ],
+        "inference": [
+          "inf_istrue_is_target"
+        ]
+      },
+      "run": ""
+    },
+    "sampler": {
+      "sampler_args": "-l 1000 -s 1 -i 1000 --alpha 0.01 --sample_evidence",
+      "sampler_cmd": "sampler-dw"
+    },
+    "schema": {
+      "relations": {
+        "articles": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "content": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "is_target": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "target_id",
+                    "column": "mention_id",
+                    "relation": "target_mention"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "target_name",
+                    "column": "mention_text",
+                    "relation": "target_mention"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          },
+          "variable_cardinality": 2,
+          "variable_type": "boolean"
+        },
+        "person_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "sentences": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "dep_tokens": {
+              "index": 9,
+              "type": "int[]"
+            },
+            "dep_types": {
+              "index": 8,
+              "type": "text[]"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "doc_offsets": {
+              "index": 7,
+              "type": "int[]"
+            },
+            "lemmas": {
+              "index": 4,
+              "type": "text[]"
+            },
+            "ner_tags": {
+              "index": 6,
+              "type": "text[]"
+            },
+            "pos_tags": {
+              "index": 5,
+              "type": "text[]"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "int"
+            },
+            "sentence_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "tokens": {
+              "index": 3,
+              "type": "text[]"
+            }
+          }
+        },
+        "target_feature": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "feature": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "target_label": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "label": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 2,
+              "type": "int"
+            },
+            "rule_id": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 3,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          }
+        },
+        "target_label__0": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "label": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 2,
+              "type": "int"
+            },
+            "rule_id": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 3,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          }
+        },
+        "target_label_resolved": {
+          "columns": {
+            "column_0": {
+              "index": 0,
+              "type": "UNKNOWN"
+            },
+            "column_1": {
+              "index": 1,
+              "type": "UNKNOWN"
+            },
+            "column_2": {
+              "index": 2,
+              "type": "UNKNOWN"
+            }
+          },
+          "type": "view"
+        },
+        "target_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "begin_index": {
+              "index": 4,
+              "type": "int"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "end_index": {
+              "index": 5,
+              "type": "int"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "targets_chemcam_mer": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        }
+      },
+      "variables": {
+        "is_target": {
+          "label": "Boolean"
+        }
+      }
+    }
+  },
+  "deepdive_": {
+    "calibration": {
+      "holdout_fraction": 0.25
+    },
+    "db": {
+      "default": {
+        "dbname": "deepdive_planetaryIR_SnehaS",
+        "driver": "org.postgresql.Driver",
+        "host": "localhost",
+        "incremental_mode": "ORIGINAL",
+        "password": "",
+        "port": "5432",
+        "url": "jdbc:postgresql://localhost:5432/deepdive_planetaryIR_SnehaS",
+        "user": "SnehaS"
+      }
+    },
+    "extraction": {
+      "extractors": {
+        "process/ext_is_target": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"is_target\"\n\tdeepdive sql 'INSERT INTO is_target SELECT DISTINCT R0.column_0, R0.column_1, 0 AS id, \nCASE WHEN R0.column_2 > 0 THEN true\n     WHEN R0.column_2 < 0 THEN false\n     ELSE NULL\nEND AS label\n          FROM target_label_resolved R0\n        \n          \nUNION ALL\nSELECT DISTINCT R0.mention_id, R0.mention_text, 0 AS id, (NULL :: BOOLEAN) AS label\n          FROM target_mention R0\n        \n          '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_label_resolved",
+            "ext_target_mention_by_map_target_mention"
+          ],
+          "input_relations": [
+            "target_label_resolved",
+            "target_mention"
+          ],
+          "output_relation": "is_target",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_label_resolved",
+            "process/ext_target_mention_by_map_target_mention"
+          ],
+          "input_": [
+            "data/target_label_resolved",
+            "data/target_mention"
+          ],
+          "output_": "data/is_target"
+        },
+        "process/ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/person_mention"
+        },
+        "process/ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh",
+          "dependencies_": [],
+          "input_": [
+            "data/articles"
+          ],
+          "output_": "data/sentences"
+        },
+        "process/ext_target_feature_by_extract_target_features": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_feature",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/extract_target_features.py",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/sentences"
+          ],
+          "output_": "data/target_feature"
+        },
+        "process/ext_target_label": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"target_label\"\n\tdeepdive sql 'INSERT INTO target_label SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", 1 AS column_2, '\\''from_Chemcam_MER'\\'' AS column_3\nFROM target_mention R0, targets_chemcam_mer R1\n        WHERE lower(R1.target_name) = lower(R0.mention_text)\nUNION ALL\nSELECT R0.target_id AS \"target_label__0.R0.target_id\", R0.target_name AS \"target_label__0.R0.target_name\", R0.label AS \"target_label__0.R0.label\", R0.rule_id AS \"target_label__0.R0.rule_id\"\nFROM target_label__0 R0\n        '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_target_label__0_by_supervise"
+          ],
+          "input_relations": [
+            "target_mention",
+            "targets_chemcam_mer",
+            "target_label__0"
+          ],
+          "output_relation": "target_label",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_target_label__0_by_supervise"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/targets_chemcam_mer",
+            "data/target_label__0"
+          ],
+          "output_": "data/target_label"
+        },
+        "process/ext_target_label__0_by_supervise": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.sentence_text AS \"sentences.R1.sentence_text\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_label__0",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/supervise_targets.py",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/sentences"
+          ],
+          "output_": "data/target_label__0"
+        },
+        "process/ext_target_label_resolved": {
+          "cmd": "\n\n\tdeepdive create view target_label_resolved as 'SELECT R0.target_id AS column_0, R0.target_name AS column_1, SUM(R0.label) AS column_2\nFROM target_label R0\n        \n        GROUP BY R0.target_id, R0.target_name'\n\t\n        ",
+          "dependencies": [
+            "ext_target_label"
+          ],
+          "input_relations": [
+            "target_label"
+          ],
+          "output_relation": "target_label_resolved",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_label"
+          ],
+          "input_": [
+            "data/target_label"
+          ],
+          "output_": "data/target_label_resolved"
+        },
+        "process/ext_target_mention_by_map_target_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\", R0.tokens AS \"sentences.R0.tokens\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "target_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_target_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/target_mention"
+        }
+      }
+    },
+    "inference": {
+      "factors": {
+        "factor/inf_istrue_is_target": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_target_feature_by_extract_target_features"
+          ],
+          "function": "Imply(is_target.R0.label)",
+          "input_query": "\n          SELECT R0.id AS \"is_target.R0.id\" , R2.feature AS \"dd_weight_column_0\" \n          FROM is_target R0, target_mention R1, target_feature R2\n        WHERE R1.mention_id = R0.target_id  AND R1.mention_text = R0.target_name  AND R2.target_id = R0.target_id ",
+          "input_relations": [
+            "is_target",
+            "target_mention",
+            "target_feature"
+          ],
+          "weight": "?(dd_weight_column_0)",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_target_feature_by_extract_target_features"
+          ],
+          "input_": [
+            "data/is_target",
+            "data/target_mention",
+            "data/target_feature"
+          ],
+          "output_": null
+        }
+      }
+    },
+    "pipeline": {
+      "pipelines": {
+        "pipeline/endtoend": [
+          "process/ext_target_mention_by_map_target_mention",
+          "process/ext_person_mention_by_map_person_mention",
+          "process/ext_target_feature_by_extract_target_features",
+          "process/ext_target_label_resolved",
+          "process/ext_target_label",
+          "process/ext_sentences_by_nlp_markup",
+          "process/ext_is_target",
+          "process/ext_target_label__0_by_supervise",
+          "factor/inf_istrue_is_target"
+        ],
+        "pipeline/extraction": [
+          "process/ext_target_mention_by_map_target_mention",
+          "process/ext_person_mention_by_map_person_mention",
+          "process/ext_target_feature_by_extract_target_features",
+          "process/ext_target_label_resolved",
+          "process/ext_target_label",
+          "process/ext_sentences_by_nlp_markup",
+          "process/ext_is_target",
+          "process/ext_target_label__0_by_supervise"
+        ],
+        "pipeline/inference": [
+          "factor/inf_istrue_is_target"
+        ]
+      },
+      "run": ""
+    },
+    "sampler": {
+      "sampler_args": "-l 1000 -s 1 -i 1000 --alpha 0.01 --sample_evidence",
+      "sampler_cmd": "sampler-dw"
+    },
+    "schema": {
+      "relations": {
+        "articles": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "content": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "is_target": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "target_id",
+                    "column": "mention_id",
+                    "relation": "target_mention"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "target_name",
+                    "column": "mention_text",
+                    "relation": "target_mention"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          },
+          "variable_cardinality": 2,
+          "variable_type": "boolean"
+        },
+        "person_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "sentences": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "dep_tokens": {
+              "index": 9,
+              "type": "int[]"
+            },
+            "dep_types": {
+              "index": 8,
+              "type": "text[]"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "distributed_by"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "doc_offsets": {
+              "index": 7,
+              "type": "int[]"
+            },
+            "lemmas": {
+              "index": 4,
+              "type": "text[]"
+            },
+            "ner_tags": {
+              "index": 6,
+              "type": "text[]"
+            },
+            "pos_tags": {
+              "index": 5,
+              "type": "text[]"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "int"
+            },
+            "sentence_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "tokens": {
+              "index": 3,
+              "type": "text[]"
+            }
+          }
+        },
+        "target_feature": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "feature": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        },
+        "target_label": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "label": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 2,
+              "type": "int"
+            },
+            "rule_id": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 3,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          }
+        },
+        "target_label__0": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "label": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 2,
+              "type": "int"
+            },
+            "rule_id": {
+              "annotations": [
+                {
+                  "name": "navigable"
+                }
+              ],
+              "index": 3,
+              "type": "text"
+            },
+            "target_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                },
+                {
+                  "args": {
+                    "alias": "is_target",
+                    "column": "target_id",
+                    "relation": "is_target"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            }
+          }
+        },
+        "target_label_resolved": {
+          "columns": {
+            "column_0": {
+              "index": 0,
+              "type": "UNKNOWN"
+            },
+            "column_1": {
+              "index": 1,
+              "type": "UNKNOWN"
+            },
+            "column_2": {
+              "index": 2,
+              "type": "UNKNOWN"
+            }
+          },
+          "type": "view"
+        },
+        "target_mention": {
+          "annotations": [
+            {
+              "name": "extraction"
+            }
+          ],
+          "columns": {
+            "begin_index": {
+              "index": 4,
+              "type": "int"
+            },
+            "doc_id": {
+              "annotations": [
+                {
+                  "name": "distributed_by"
+                },
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "doc_id",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 2,
+              "type": "text"
+            },
+            "end_index": {
+              "index": 5,
+              "type": "int"
+            },
+            "mention_id": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            },
+            "mention_text": {
+              "annotations": [
+                {
+                  "name": "searchable"
+                }
+              ],
+              "index": 1,
+              "type": "text"
+            },
+            "sentence_index": {
+              "annotations": [
+                {
+                  "args": {
+                    "alias": "appears_in",
+                    "column": "sentence_index",
+                    "relation": "sentences"
+                  },
+                  "name": "references"
+                }
+              ],
+              "index": 3,
+              "type": "int"
+            }
+          }
+        },
+        "targets_chemcam_mer": {
+          "annotations": [
+            {
+              "name": "source"
+            }
+          ],
+          "columns": {
+            "target_name": {
+              "annotations": [
+                {
+                  "name": "key"
+                }
+              ],
+              "index": 0,
+              "type": "text"
+            }
+          }
+        }
+      },
+      "variables": {
+        "is_target": {
+          "label": "Boolean"
+        }
+      },
+      "variables_": [
+        {
+          "variableName": "is_target",
+          "variablesTable": "is_target",
+          "variablesLabelColumn": "label",
+          "variableCategoriesTable": "dd_categories_is_target",
+          "isBooleanType": true,
+          "isCategoricalType": false,
+          "variableCardinality": 2,
+          "variableType": "boolean"
+        }
+      ],
+      "variables_byName": {
+        "is_target": {
+          "variableName": "is_target",
+          "variablesTable": "is_target",
+          "variablesLabelColumn": "label",
+          "variableCategoriesTable": "dd_categories_is_target",
+          "isBooleanType": true,
+          "isCategoricalType": false,
+          "variableCardinality": 2,
+          "variableType": "boolean"
+        }
+      }
+    },
+    "execution": {
+      "processes": {
+        "process/init/app": {
+          "style": "cmd_extractor",
+          "cmd": "\n        deepdive db init\n\n        cd \"$DEEPDIVE_APP\"\n        # run legacy schema.sql\n        if [[ -r schema.sql ]]; then\n            deepdive db prompt <schema.sql\n        fi\n        # run legacy init script\n        if [[ -x input/init.sh ]]; then\n            input/init.sh\n        fi\n        "
+        },
+        "process/init/relation/articles": {
+          "style": "cmd_extractor",
+          "cmd": "deepdive create table 'articles' && deepdive load 'articles'",
+          "dependencies_": [
+            "process/init/app"
+          ],
+          "output_relation": "articles",
+          "output_": "data/articles"
+        },
+        "process/init/relation/targets_chemcam_mer": {
+          "style": "cmd_extractor",
+          "cmd": "deepdive create table 'targets_chemcam_mer' && deepdive load 'targets_chemcam_mer'",
+          "dependencies_": [
+            "process/init/app"
+          ],
+          "output_relation": "targets_chemcam_mer",
+          "output_": "data/targets_chemcam_mer"
+        },
+        "process/ext_is_target": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"is_target\"\n\tdeepdive sql 'INSERT INTO is_target SELECT DISTINCT R0.column_0, R0.column_1, 0 AS id, \nCASE WHEN R0.column_2 > 0 THEN true\n     WHEN R0.column_2 < 0 THEN false\n     ELSE NULL\nEND AS label\n          FROM target_label_resolved R0\n        \n          \nUNION ALL\nSELECT DISTINCT R0.mention_id, R0.mention_text, 0 AS id, (NULL :: BOOLEAN) AS label\n          FROM target_mention R0\n        \n          '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_label_resolved",
+            "ext_target_mention_by_map_target_mention"
+          ],
+          "input_relations": [
+            "target_label_resolved",
+            "target_mention"
+          ],
+          "output_relation": "is_target",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_label_resolved",
+            "process/ext_target_mention_by_map_target_mention"
+          ],
+          "input_": [
+            "data/target_label_resolved",
+            "data/target_mention"
+          ],
+          "output_": "data/is_target"
+        },
+        "process/ext_person_mention_by_map_person_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "person_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_person_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/person_mention"
+        },
+        "process/ext_sentences_by_nlp_markup": {
+          "input": " SELECT R0.id AS \"articles.R0.id\", R0.content AS \"articles.R0.content\"\nFROM articles R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "articles"
+          ],
+          "output_relation": "sentences",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/nlp_markup.sh",
+          "dependencies_": [],
+          "input_": [
+            "data/articles"
+          ],
+          "output_": "data/sentences"
+        },
+        "process/ext_target_feature_by_extract_target_features": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_feature",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/extract_target_features.py",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/sentences"
+          ],
+          "output_": "data/target_feature"
+        },
+        "process/ext_target_label": {
+          "cmd": "\n\n\t# TODO use temporary table\n\tdeepdive create table \"target_label\"\n\tdeepdive sql 'INSERT INTO target_label SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", 1 AS column_2, '\\''from_Chemcam_MER'\\'' AS column_3\nFROM target_mention R0, targets_chemcam_mer R1\n        WHERE lower(R1.target_name) = lower(R0.mention_text)\nUNION ALL\nSELECT R0.target_id AS \"target_label__0.R0.target_id\", R0.target_name AS \"target_label__0.R0.target_name\", R0.label AS \"target_label__0.R0.label\", R0.rule_id AS \"target_label__0.R0.rule_id\"\nFROM target_label__0 R0\n        '\n\t# TODO rename temporary table to replace output_relation\n\t\n        ",
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_target_label__0_by_supervise"
+          ],
+          "input_relations": [
+            "target_mention",
+            "targets_chemcam_mer",
+            "target_label__0"
+          ],
+          "output_relation": "target_label",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_target_label__0_by_supervise"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/targets_chemcam_mer",
+            "data/target_label__0"
+          ],
+          "output_": "data/target_label"
+        },
+        "process/ext_target_label__0_by_supervise": {
+          "dependencies": [
+            "ext_target_mention_by_map_target_mention",
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.mention_id AS \"target_mention.R0.mention_id\", R0.mention_text AS \"target_mention.R0.mention_text\", R0.begin_index AS \"target_mention.R0.begin_index\", R0.end_index AS \"target_mention.R0.end_index\", R0.doc_id AS \"target_mention.R0.doc_id\", R0.sentence_index AS \"target_mention.R0.sentence_index\", R1.sentence_text AS \"sentences.R1.sentence_text\", R1.tokens AS \"sentences.R1.tokens\", R1.lemmas AS \"sentences.R1.lemmas\", R1.pos_tags AS \"sentences.R1.pos_tags\", R1.ner_tags AS \"sentences.R1.ner_tags\", R1.dep_types AS \"sentences.R1.dep_types\", R1.dep_tokens AS \"sentences.R1.dep_tokens\"\nFROM target_mention R0, sentences R1\n        WHERE R1.doc_id = R0.doc_id  AND R1.sentence_index = R0.sentence_index \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "target_mention",
+            "sentences"
+          ],
+          "output_relation": "target_label__0",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/supervise_targets.py",
+          "dependencies_": [
+            "process/ext_target_mention_by_map_target_mention",
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/target_mention",
+            "data/sentences"
+          ],
+          "output_": "data/target_label__0"
+        },
+        "process/ext_target_label_resolved": {
+          "cmd": "\n\n\tdeepdive create view target_label_resolved as 'SELECT R0.target_id AS column_0, R0.target_name AS column_1, SUM(R0.label) AS column_2\nFROM target_label R0\n        \n        GROUP BY R0.target_id, R0.target_name'\n\t\n        ",
+          "dependencies": [
+            "ext_target_label"
+          ],
+          "input_relations": [
+            "target_label"
+          ],
+          "output_relation": "target_label_resolved",
+          "style": "cmd_extractor",
+          "dependencies_": [
+            "process/ext_target_label"
+          ],
+          "input_": [
+            "data/target_label"
+          ],
+          "output_": "data/target_label_resolved"
+        },
+        "process/ext_target_mention_by_map_target_mention": {
+          "dependencies": [
+            "ext_sentences_by_nlp_markup"
+          ],
+          "input": " SELECT R0.doc_id AS \"sentences.R0.doc_id\", R0.sentence_index AS \"sentences.R0.sentence_index\", R0.sentence_text AS \"sentences.R0.sentence_text\", R0.tokens AS \"sentences.R0.tokens\"\nFROM sentences R0\n        \n          ",
+          "input_batch_size": "100000",
+          "input_relations": [
+            "sentences"
+          ],
+          "output_relation": "target_mention",
+          "parallelism": "1",
+          "style": "tsv_extractor",
+          "udf": "\"$DEEPDIVE_APP\"/udf/map_target_mention.py",
+          "dependencies_": [
+            "process/ext_sentences_by_nlp_markup"
+          ],
+          "input_": [
+            "data/sentences"
+          ],
+          "output_": "data/target_mention"
+        }
+      }
+    }
+  }
+}

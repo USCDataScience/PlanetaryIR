@@ -24,6 +24,33 @@ label=""
 ];
 
 "process/
+init/relation/targets_chemcam_mer" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+init/app" -> "process/
+init/relation/targets_chemcam_mer" [
+label=""
+
+];
+
+"process/
+ext_is_target" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+target_label_resolved" -> "process/
+ext_is_target" [
+label=""
+
+];
+
+"data/
+target_mention" -> "process/
+ext_is_target" [
+label=""
+
+];
+
+"process/
 ext_person_mention_by_map_person_mention" [shape=ellipse  color="#cc2222" style=solid];
 
 "data/
@@ -61,11 +88,264 @@ label=""
 ];
 
 "process/
+ext_target_label" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+target_label__0" -> "process/
+ext_target_label" [
+label=""
+
+];
+
+"data/
+target_mention" -> "process/
+ext_target_label" [
+label=""
+
+];
+
+"data/
+targets_chemcam_mer" -> "process/
+ext_target_label" [
+label=""
+
+];
+
+"process/
+ext_target_label__0_by_supervise" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+sentences" -> "process/
+ext_target_label__0_by_supervise" [
+label=""
+
+];
+
+"data/
+target_mention" -> "process/
+ext_target_label__0_by_supervise" [
+label=""
+
+];
+
+"process/
+ext_target_label_resolved" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+target_label" -> "process/
+ext_target_label_resolved" [
+label=""
+
+];
+
+"process/
 ext_target_mention_by_map_target_mention" [shape=ellipse  color="#cc2222" style=solid];
 
 "data/
 sentences" -> "process/
 ext_target_mention_by_map_target_mention" [
+label=""
+
+];
+
+"process/
+grounding/variable_id_partition" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+is_target" -> "process/
+grounding/variable_id_partition" [
+label=""
+
+];
+
+"process/
+grounding/variable/is_target/assign_id" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/variable_id_partition" -> "process/
+grounding/variable/is_target/assign_id" [
+label=""
+
+];
+
+"process/
+grounding/variable_holdout" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/variable/is_target/assign_id" -> "process/
+grounding/variable_holdout" [
+label=""
+
+];
+
+"process/
+grounding/variable/is_target/dump" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/variable_holdout" -> "process/
+grounding/variable/is_target/dump" [
+label=""
+
+];
+
+"process/
+grounding/factor/inf_istrue_is_target/materialize" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+target_feature" -> "process/
+grounding/factor/inf_istrue_is_target/materialize" [
+label=""
+
+];
+
+"data/
+target_mention" -> "process/
+grounding/factor/inf_istrue_is_target/materialize" [
+label=""
+
+];
+
+"process/
+grounding/variable/is_target/assign_id" -> "process/
+grounding/factor/inf_istrue_is_target/materialize" [
+label=""
+
+];
+
+"process/
+grounding/weight_id_partition" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/factor/inf_istrue_is_target/materialize" -> "process/
+grounding/weight_id_partition" [
+label=""
+
+];
+
+"process/
+grounding/global_weight_table" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/factor/inf_istrue_is_target/materialize" -> "process/
+grounding/global_weight_table" [
+label=""
+
+];
+
+"process/
+grounding/factor/inf_istrue_is_target/assign_weight_id" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/weight_id_partition" -> "process/
+grounding/factor/inf_istrue_is_target/assign_weight_id" [
+label=""
+
+];
+
+"process/
+grounding/factor/inf_istrue_is_target/dump" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/factor/inf_istrue_is_target/assign_weight_id" -> "process/
+grounding/factor/inf_istrue_is_target/dump" [
+label=""
+
+];
+
+"process/
+grounding/factor/inf_istrue_is_target/dump_weights" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/factor/inf_istrue_is_target/assign_weight_id" -> "process/
+grounding/factor/inf_istrue_is_target/dump_weights" [
+label=""
+
+];
+
+"process/
+grounding/combine_factorgraph" [shape=ellipse  color="#cc2222" style=solid];
+
+"process/
+grounding/factor/inf_istrue_is_target/dump" -> "process/
+grounding/combine_factorgraph" [
+label=""
+
+];
+
+"process/
+grounding/factor/inf_istrue_is_target/dump_weights" -> "process/
+grounding/combine_factorgraph" [
+label=""
+
+];
+
+"process/
+grounding/global_weight_table" -> "process/
+grounding/combine_factorgraph" [
+label=""
+
+];
+
+"process/
+grounding/variable/is_target/dump" -> "process/
+grounding/combine_factorgraph" [
+label=""
+
+];
+
+"process/
+model/learning" [shape=ellipse  color="#cc2222" style=solid];
+
+"model/
+factorgraph" -> "process/
+model/learning" [
+label=""
+
+];
+
+"process/
+model/inference" [shape=ellipse  color="#cc2222" style=solid];
+
+"model/
+factorgraph" -> "process/
+model/inference" [
+label=""
+
+];
+
+"model/
+weights" -> "process/
+model/inference" [
+label=""
+
+];
+
+"process/
+model/load_weights" [shape=ellipse  color="#cc2222" style=solid];
+
+"model/
+weights" -> "process/
+model/load_weights" [
+label=""
+
+];
+
+"process/
+model/load_probabilities" [shape=ellipse  color="#cc2222" style=solid];
+
+"model/
+probabilities" -> "process/
+model/load_probabilities" [
+label=""
+
+];
+
+"process/
+model/calibration" [shape=ellipse  color="#cc2222" style=solid];
+
+"data/
+model/probabilities" -> "process/
+model/calibration" [
 label=""
 
 ];
@@ -76,6 +356,36 @@ articles" [shape=box3d    color="#2222cc" style=solid];
 "process/
 init/relation/articles" -> "data/
 articles" [
+label=""
+
+];
+
+"data/
+is_target" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+ext_is_target" -> "data/
+is_target" [
+label=""
+
+];
+
+"data/
+model/probabilities" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+model/load_probabilities" -> "data/
+model/probabilities" [
+label=""
+
+];
+
+"data/
+model/weights" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+model/load_weights" -> "data/
+model/weights" [
 label=""
 
 ];
@@ -111,11 +421,91 @@ label=""
 ];
 
 "data/
+target_label" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+ext_target_label" -> "data/
+target_label" [
+label=""
+
+];
+
+"data/
+target_label__0" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+ext_target_label__0_by_supervise" -> "data/
+target_label__0" [
+label=""
+
+];
+
+"data/
+target_label_resolved" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+ext_target_label_resolved" -> "data/
+target_label_resolved" [
+label=""
+
+];
+
+"data/
 target_mention" [shape=box3d    color="#2222cc" style=solid];
 
 "process/
 ext_target_mention_by_map_target_mention" -> "data/
 target_mention" [
+label=""
+
+];
+
+"data/
+targets_chemcam_mer" [shape=box3d    color="#2222cc" style=solid];
+
+"process/
+init/relation/targets_chemcam_mer" -> "data/
+targets_chemcam_mer" [
+label=""
+
+];
+
+"model/
+calibration-plots" [shape=septagon color="#ffffff" style=filled fillcolor="#cc22cc"];
+
+"process/
+model/calibration" -> "model/
+calibration-plots" [
+label=""
+
+];
+
+"model/
+factorgraph" [shape=septagon color="#ffffff" style=filled fillcolor="#cc22cc"];
+
+"process/
+grounding/combine_factorgraph" -> "model/
+factorgraph" [
+label=""
+
+];
+
+"model/
+probabilities" [shape=septagon color="#ffffff" style=filled fillcolor="#cc22cc"];
+
+"process/
+model/inference" -> "model/
+probabilities" [
+label=""
+
+];
+
+"model/
+weights" [shape=septagon color="#ffffff" style=filled fillcolor="#cc22cc"];
+
+"process/
+model/learning" -> "model/
+weights" [
 label=""
 
 ];

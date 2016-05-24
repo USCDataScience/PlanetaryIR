@@ -1,0 +1,86 @@
+2016-05-23 11:04:31.116744 # on Snehas-MacBook-Pro.local: deepdive do target_mention
+2016-05-23 11:04:31.116962 # run/20160523/110428.542794000/plan.sh
+2016-05-23 11:04:31.116982 # execution plan for data/target_mention
+2016-05-23 11:04:31.117001 
+2016-05-23 11:04:31.117021 : ## process/init/app ##########################################################
+2016-05-23 11:04:31.117040 : # Done: 2016-03-31T11:08:43-0500 (52d 23h 55m 45s ago)
+2016-05-23 11:04:31.117059 : process/init/app/run.sh
+2016-05-23 11:04:31.117077 : mark_done process/init/app
+2016-05-23 11:04:31.117096 : ##############################################################################
+2016-05-23 11:04:31.117115 
+2016-05-23 11:04:31.117135 : ## process/init/relation/articles ############################################
+2016-05-23 11:04:31.117153 : # Done: 2016-05-23T10:36:55-0500 (27m 33s ago)
+2016-05-23 11:04:31.117171 : process/init/relation/articles/run.sh
+2016-05-23 11:04:31.117189 : mark_done process/init/relation/articles
+2016-05-23 11:04:31.117206 : ##############################################################################
+2016-05-23 11:04:31.117227 
+2016-05-23 11:04:31.117246 : ## data/articles #############################################################
+2016-05-23 11:04:31.117266 : # Done: 2016-05-23T10:36:55-0500 (27m 33s ago)
+2016-05-23 11:04:31.117286 : # no-op
+2016-05-23 11:04:31.117306 : mark_done data/articles
+2016-05-23 11:04:31.117326 : ##############################################################################
+2016-05-23 11:04:31.117347 
+2016-05-23 11:04:31.117367 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-23 11:04:31.117388 : # Done: 2016-05-23T10:39:40-0500 (24m 48s ago)
+2016-05-23 11:04:31.117407 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-23 11:04:31.117441 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-23 11:04:31.117467 : ##############################################################################
+2016-05-23 11:04:31.117489 
+2016-05-23 11:04:31.117511 : ## data/sentences ############################################################
+2016-05-23 11:04:31.117532 : # Done: 2016-05-23T10:39:40-0500 (24m 48s ago)
+2016-05-23 11:04:31.117553 : # no-op
+2016-05-23 11:04:31.117575 : mark_done data/sentences
+2016-05-23 11:04:31.117597 : ##############################################################################
+2016-05-23 11:04:31.117619 
+2016-05-23 11:04:31.117639 ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-23 11:04:31.117662 # Done: 2016-05-23T10:51:27-0500 (13m 1s ago)
+2016-05-23 11:04:31.117684 process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-23 11:04:31.117705 ++ dirname process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-23 11:04:31.117726 + cd process/ext_target_mention_by_map_target_mention
+2016-05-23 11:04:31.117747 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-23 11:04:31.117769 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-23 11:04:31.117789 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-23 11:04:31.117808 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-23 11:04:31.117830 + deepdive compute execute 'input_sql= SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-23 11:04:31.117852 FROM sentences R0
+2016-05-23 11:04:31.117873         
+2016-05-23 11:04:31.117894           ' 'command="$DEEPDIVE_APP"/udf/map_target_mention.py' output_relation=target_mention
+2016-05-23 11:04:31.147462 Executing with the following configuration:
+2016-05-23 11:04:31.147531  DEEPDIVE_NUM_PROCESSES=3
+2016-05-23 11:04:31.147564  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-23 11:04:31.147591  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-23 11:04:31.147741  output_relation_tmp=dd_tmp_target_mention
+2016-05-23 11:04:31.147784 
+2016-05-23 11:04:31.301327 CREATE TABLE
+2016-05-23 11:04:31.405900 CREATE TABLE
+2016-05-23 11:04:31.530683 unloading to feed_processes-1: ' SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-23 11:04:31.530755 FROM sentences R0
+2016-05-23 11:04:31.530785         
+2016-05-23 11:04:31.530807           '
+2016-05-23 11:04:31.578340 Loading dd_tmp_target_mention from output_computed-1 (tsv format)
+2016-05-23 11:04:39.645073 Traceback (most recent call last):
+2016-05-23 11:04:39.645136   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 19, in <module>
+2016-05-23 11:04:39.645163     tokens         = "text[]",
+2016-05-23 11:04:39.645188   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-23 11:04:39.645442     for out_row in generator(**row._asdict()):
+2016-05-23 11:04:39.645476   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 44, in extract
+2016-05-23 11:04:39.645498     begin_index = tokens.index(target_split[0])
+2016-05-23 11:04:39.645517 ValueError: 'i' is not in list
+2016-05-23 11:04:39.647899 Traceback (most recent call last):
+2016-05-23 11:04:39.647984   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 19, in <module>
+2016-05-23 11:04:39.648025     tokens         = "text[]",
+2016-05-23 11:04:39.648051   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-23 11:04:39.648073     for out_row in generator(**row._asdict()):
+2016-05-23 11:04:39.648092   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 44, in extract
+2016-05-23 11:04:39.648114     begin_index = tokens.index(target_split[0])
+2016-05-23 11:04:39.648137 ValueError: 'a' is not in list
+2016-05-23 11:04:39.648561 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (69582) - No such process
+2016-05-23 11:04:39.651244 ERROR:  missing data for column "mention_text"
+2016-05-23 11:04:39.651305 CONTEXT:  COPY dd_tmp_target_mention, line 1: "************************************"
+2016-05-23 11:04:39.655940 [ERROR] command='"$DEEPDIVE_APP"/udf/map_target_mention.py': PID 69582: finished with non-zero exit status (0)
+2016-05-23 11:04:39.656346 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69583 Terminated: 15          DEEPDIVE_CURRENT_PROCESS_INDEX=$i "$SHELL" -c "$command" < process-$i.input > process-$i.output
+2016-05-23 11:04:39.656400 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69584 Terminated: 15          DEEPDIVE_CURRENT_PROCESS_INDEX=$i "$SHELL" -c "$command" < process-$i.input > process-$i.output
+2016-05-23 11:04:39.656439 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69588 Terminated: 15          mkmimo process-*.output \> output_computed-*
+2016-05-23 11:04:39.656463 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69589 Terminated: 15          deepdive-load "$output_relation_tmp" output_computed-*
+2016-05-23 11:04:39.656485 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69595 Terminated: 15          deepdive-db unload "$input_sql" "$DEEPDIVE_LOAD_FORMAT" feed_processes-*
+2016-05-23 11:04:39.656507 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 69596 Terminated: 15          mkmimo feed_processes-* \> process-*.input
