@@ -71,28 +71,11 @@ function refreshHzBarChart() {
             .attr("height", barHeight - 1);
 
         console.log(barHeight - 1);
-        bar.append('rect')
-            .attr("x", function (d) {
-                if (x(d) < 80) return x(d) + 5;
-                else if (x(d) < 300) return x(d);
-                else return x(d) - 65;
-            })
-            .attr("y", 1)
-            .attr('width', 65)
-            .attr('height', barHeight - 2)
-            .attr('fill', 'white')
 
         // Add text label in bar
         bar.append("text")
             .attr("x", function (d) {
-                i = 0;
-                while (i != Math.floor(x(d))) {
-                    i++
-                };
-                if (x(d) < 80) return x(d) + 80;
-                else if (x(d) < 160) return x(d) + i - 50;
-                else if (x(d) < 300) return x(d) + i;
-                else return x(d) - 3;
+                return x(d) + 5;
             })
             .attr("y", barHeight / 2)
             .attr("fill", function (d, i) {
