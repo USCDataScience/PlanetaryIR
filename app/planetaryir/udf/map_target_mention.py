@@ -22,7 +22,7 @@ def extract(
     """
     # generate a mention identifier
     num_tokens = len(tokens)
-    list_of_stopwords = ['target', 'targets', 'Target', 'Targets']
+    list_of_stopwords = ['target', 'targets', 'Target', 'Targets','The', 'the']
     list_of_targets = re.findall(r'(?:[A-Z]{1}[a-z]+\s)+and?\s?(?:[A-Z]{1}[a-z]+)?\stargets?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+\s)+target', sentence_text) + re.findall(r'targets(?:\s\w+)?,?(?:\s\w+)?\sand?(?:\s\w+)?', sentence_text) + re.findall(r'targets?(?:\s\w+){ 1 }', sentence_text)
     list_of_targets += re.findall(r'Targets(?:\s\w+)?,?(?:\s\w+)?,?\sand?(?:\s\w+)?', sentence_text)
     refined_list_of_targets = list()
