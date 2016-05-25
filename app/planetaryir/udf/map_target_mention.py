@@ -24,7 +24,12 @@ def extract(
     num_tokens = len(tokens)
     list_of_stopwords = ['target', 'targets', 'Target', 'Targets']
     list_of_targets = re.findall(r'(?:[A-Z]{1}[a-z]+\s)+and?\s?(?:[A-Z]{1}[a-z]+)?\stargets?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+\s)+target', sentence_text) + re.findall(r'targets(?:\s\w+)?,?(?:\s\w+)?\sand?(?:\s\w+)?', sentence_text) + re.findall(r'targets?(?:\s\w+){ 1 }', sentence_text)
-    for target_str in list_of_targets:
+    list_of_targets += re.findall(r'Targets(?:\s\w+)?,?(?:\s\w+)?,?\sand?(?:\s\w+)?', sentence_text)
+    refined_list_of_targets = list()
+    for string in list_of_targets:
+    	split_string = string.split(",")
+    	refined_list_of_targets += ( i for i in split_string)
+    for target_str in refined_list_of_targets:
     	target_list = target_str.split()
     	for target in target_list:
     		if target in list_of_stopwords:
