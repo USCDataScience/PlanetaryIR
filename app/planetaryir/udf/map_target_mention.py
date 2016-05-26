@@ -24,7 +24,7 @@ def extract(
     num_tokens = len(tokens)
     list_of_stopwords = ['target', 'targets', 'Target', 'Targets','The', 'the', 'member', 'members', 'Member', 'Members']
     list_of_targets = re.findall(r'(?:[A-Z]{1}[a-z]+_?\s?)+and?\s?(?:[A-Z]{1}[a-z]+_?\s?)?targets?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+_?\s?)+target', sentence_text) + re.findall(r'targets\s(?:\w+_?\s?)?,?\s?(?:\w+_?\s?)?and?\s(?:\w+_?\s?)?', sentence_text) + re.findall(r'targets?\s(?:\w+_?\s?){ 1 }', sentence_text)
-    list_of_targets += re.findall(r'Targets\s(?:\w+_?\s?)?,?\s?(?:\w+_?\s?)?,?\s?and?(?:\w+_?\s?)?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+_?)+\smember', sentence_text)
+    list_of_targets += re.findall(r'Targets\s(?:\w+_?\s?)?,?\s?(?:\w+_?\s?)?,?\s?and?(?:\w+_?\s?)?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+_?\.?\s?)+member', sentence_text)
     refined_list_of_targets = list()
     for string in list_of_targets:
     	split_string = string.split(",")
@@ -40,7 +40,7 @@ def extract(
 	        mention_text = item
 	        begin_index = 1
 	        end_index = 1
-	        target_split = re.findall(r"[\w']+", item)
+	        target_split = item.split()
 	        begin_index = tokens.index(target_split[0])
 	        if len(target_split) == 1:
 	        	end_index = begin_index
