@@ -1,0 +1,93 @@
+2016-05-26 08:18:25.994909 # on Snehas-MacBook-Pro.local: deepdive do target_mention
+2016-05-26 08:18:25.995463 # run/20160526/081823.176275000/plan.sh
+2016-05-26 08:18:25.995485 # execution plan for data/target_mention
+2016-05-26 08:18:25.995497 
+2016-05-26 08:18:25.995508 : ## process/init/app ##########################################################
+2016-05-26 08:18:25.995519 : # Done: 2016-03-31T11:08:43-0500 (55d 21h 9m 40s ago)
+2016-05-26 08:18:25.995529 : process/init/app/run.sh
+2016-05-26 08:18:25.995540 : mark_done process/init/app
+2016-05-26 08:18:25.995551 : ##############################################################################
+2016-05-26 08:18:25.995561 
+2016-05-26 08:18:25.995571 : ## process/init/relation/articles ############################################
+2016-05-26 08:18:25.995581 : # Done: 2016-05-23T10:36:55-0500 (2d 21h 41m 28s ago)
+2016-05-26 08:18:25.995591 : process/init/relation/articles/run.sh
+2016-05-26 08:18:25.995602 : mark_done process/init/relation/articles
+2016-05-26 08:18:25.995612 : ##############################################################################
+2016-05-26 08:18:25.995622 
+2016-05-26 08:18:25.995632 : ## data/articles #############################################################
+2016-05-26 08:18:25.995642 : # Done: 2016-05-23T10:36:55-0500 (2d 21h 41m 28s ago)
+2016-05-26 08:18:25.995652 : # no-op
+2016-05-26 08:18:25.995662 : mark_done data/articles
+2016-05-26 08:18:25.995672 : ##############################################################################
+2016-05-26 08:18:25.995682 
+2016-05-26 08:18:25.995692 : ## process/ext_sentences_by_nlp_markup #######################################
+2016-05-26 08:18:25.995701 : # Done: 2016-05-23T10:39:40-0500 (2d 21h 38m 43s ago)
+2016-05-26 08:18:25.995711 : process/ext_sentences_by_nlp_markup/run.sh
+2016-05-26 08:18:25.995721 : mark_done process/ext_sentences_by_nlp_markup
+2016-05-26 08:18:25.995731 : ##############################################################################
+2016-05-26 08:18:25.995741 
+2016-05-26 08:18:25.995751 : ## data/sentences ############################################################
+2016-05-26 08:18:25.995762 : # Done: 2016-05-23T10:39:40-0500 (2d 21h 38m 43s ago)
+2016-05-26 08:18:25.995772 : # no-op
+2016-05-26 08:18:25.995782 : mark_done data/sentences
+2016-05-26 08:18:25.995792 : ##############################################################################
+2016-05-26 08:18:25.995802 
+2016-05-26 08:18:25.995812 ## process/ext_target_mention_by_map_target_mention ##########################
+2016-05-26 08:18:25.995822 # Done: 2016-05-25T13:22:05-0500 (18h 56m 18s ago)
+2016-05-26 08:18:25.995831 process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-26 08:18:25.995841 ++ dirname process/ext_target_mention_by_map_target_mention/run.sh
+2016-05-26 08:18:25.995851 + cd process/ext_target_mention_by_map_target_mention
+2016-05-26 08:18:25.995861 + export DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-26 08:18:25.995871 + DEEPDIVE_CURRENT_PROCESS_NAME=process/ext_target_mention_by_map_target_mention
+2016-05-26 08:18:25.995881 + export DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-26 08:18:25.995891 + DEEPDIVE_LOAD_FORMAT=tsv
+2016-05-26 08:18:25.995901 + deepdive compute execute 'input_sql= SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-26 08:18:25.995911 FROM sentences R0
+2016-05-26 08:18:25.995921         
+2016-05-26 08:18:25.995931           ' 'command="$DEEPDIVE_APP"/udf/map_target_mention.py' output_relation=target_mention
+2016-05-26 08:18:25.995941 Executing with the following configuration:
+2016-05-26 08:18:25.995951  DEEPDIVE_NUM_PROCESSES=3
+2016-05-26 08:18:25.995961  DEEPDIVE_NUM_PARALLEL_UNLOADS=1
+2016-05-26 08:18:25.995970  DEEPDIVE_NUM_PARALLEL_LOADS=1
+2016-05-26 08:18:25.995980  output_relation_tmp=dd_tmp_target_mention
+2016-05-26 08:18:25.995990 
+2016-05-26 08:18:26.177460 CREATE TABLE
+2016-05-26 08:18:26.280746 CREATE TABLE
+2016-05-26 08:18:26.411805 unloading to feed_processes-1: ' SELECT R0.doc_id AS "sentences.R0.doc_id", R0.sentence_index AS "sentences.R0.sentence_index", R0.sentence_text AS "sentences.R0.sentence_text", R0.tokens AS "sentences.R0.tokens"
+2016-05-26 08:18:26.411879 FROM sentences R0
+2016-05-26 08:18:26.411908         
+2016-05-26 08:18:26.411933           '
+2016-05-26 08:18:26.444202 Loading dd_tmp_target_mention from output_computed-1 (tsv format)
+2016-05-26 08:18:36.536063 Traceback (most recent call last):
+2016-05-26 08:18:36.536128   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 18, in <module>
+2016-05-26 08:18:36.536156     tokens         = "text[]",
+2016-05-26 08:18:36.536180   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-26 08:18:36.537339     for out_row in generator(**row._asdict()):
+2016-05-26 08:18:36.537379   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 44, in extract
+2016-05-26 08:18:36.537405     begin_index = tokens.index(target_split[0])
+2016-05-26 08:18:36.537426 ValueError: 'Plains' is not in list
+2016-05-26 08:18:37.540791 Traceback (most recent call last):
+2016-05-26 08:18:37.540888   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 18, in <module>
+2016-05-26 08:18:37.540932     tokens         = "text[]",
+2016-05-26 08:18:37.540972   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-26 08:18:37.541011     for out_row in generator(**row._asdict()):
+2016-05-26 08:18:37.541049   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 44, in extract
+2016-05-26 08:18:37.541085     begin_index = tokens.index(target_split[0])
+2016-05-26 08:18:37.541122 ValueError: 'Top' is not in list
+2016-05-26 08:18:37.541884 Traceback (most recent call last):
+2016-05-26 08:18:37.541946   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 18, in <module>
+2016-05-26 08:18:37.541969     tokens         = "text[]",
+2016-05-26 08:18:37.541991   File "/Users/SnehaS/local/lib/python/ddlib/util.py", line 232, in tsv_extractor
+2016-05-26 08:18:37.542013     for out_row in generator(**row._asdict()):
+2016-05-26 08:18:37.542034   File "/Users/SnehaS/Desktop/DR/planetaryIR-Repo/app/planetaryir/udf/map_target_mention.py", line 44, in extract
+2016-05-26 08:18:37.542055     begin_index = tokens.index(target_split[0])
+2016-05-26 08:18:37.542077 ValueError: 'Coulomb' is not in list
+2016-05-26 08:18:37.544826 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (13983) - No such process
+2016-05-26 08:18:37.544894 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (13984) - No such process
+2016-05-26 08:18:37.544919 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 140: kill: (13997) - No such process
+2016-05-26 08:18:37.547864 COPY 2
+2016-05-26 08:18:37.553082 [ERROR] command='"$DEEPDIVE_APP"/udf/map_target_mention.py': PID 13983: finished with non-zero exit status (0)
+2016-05-26 08:18:37.553670 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 13985 Terminated: 15          DEEPDIVE_CURRENT_PROCESS_INDEX=$i "$SHELL" -c "$command" < process-$i.input > process-$i.output
+2016-05-26 08:18:37.553743 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 13989 Terminated: 15          mkmimo process-*.output \> output_computed-*
+2016-05-26 08:18:37.553767 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 13990 Terminated: 15          deepdive-load "$output_relation_tmp" output_computed-*
+2016-05-26 08:18:37.553786 /Users/SnehaS/local/util/compute-driver/local/compute-execute: line 138: 13996 Terminated: 15          deepdive-db unload "$input_sql" "$DEEPDIVE_LOAD_FORMAT" feed_processes-*

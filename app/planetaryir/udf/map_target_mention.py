@@ -22,9 +22,9 @@ def extract(
     """
     # generate a mention identifier
     num_tokens = len(tokens)
-    list_of_stopwords = ['target', 'targets', 'Target', 'Targets','The', 'the']
-    list_of_targets = re.findall(r'(?:[A-Z]{1}[a-z]+\s)+and?\s?(?:[A-Z]{1}[a-z]+)?\stargets?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+\s)+target', sentence_text) + re.findall(r'targets(?:\s\w+)?,?(?:\s\w+)?\sand?(?:\s\w+)?', sentence_text) + re.findall(r'targets?(?:\s\w+){ 1 }', sentence_text)
-    list_of_targets += re.findall(r'Targets(?:\s\w+)?,?(?:\s\w+)?,?\sand?(?:\s\w+)?', sentence_text)
+    list_of_stopwords = ['target', 'targets', 'Target', 'Targets','The', 'the', 'member', 'members', 'Member', 'Members']
+    list_of_targets = re.findall(r'(?:[A-Z]{1}[a-z]+_?\s?)+and?\s?(?:[A-Z]{1}[a-z]+_?\s?)?targets?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+_?\s?)+target', sentence_text) + re.findall(r'targets\s(?:\w+_?\s?)?,?\s?(?:\w+_?\s?)?and?\s(?:\w+_?\s?)?', sentence_text) + re.findall(r'targets?\s(?:\w+_?\s?){ 1 }', sentence_text)
+    list_of_targets += re.findall(r'Targets\s(?:\w+_?\s?)?,?\s?(?:\w+_?\s?)?,?\s?and?(?:\w+_?\s?)?', sentence_text) + re.findall(r'(?:[A-Z]{1}[a-z]+_?)+\smember', sentence_text)
     refined_list_of_targets = list()
     for string in list_of_targets:
     	split_string = string.split(",")
