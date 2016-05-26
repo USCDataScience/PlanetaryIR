@@ -17,37 +17,70 @@
 }
 */
         
-        #hzBarChart .panel-body .legend {
+        #hzBarChartAuthors .panel-body .legend {
             fill: black;
             font: 14px sans-serif;
             text-anchor: start;
             font-size: 12px;
         }
         
-        #hzBarChart .panel-body text {
+        #hzBarChartAuthors .panel-body text {
             font: 12px sans-serif;
             text-anchor: start;
         }
         
-        #hzBarChart .panel-body .label {
+        #hzBarChartAuthors .panel-body .label {
             fill: black;
             font: 14px sans-serif;
             text-anchor: end;
         }
         
-        #hzBarChart .panel-body .bar:hover {
+        #hzBarChartAuthors .panel-body .bar:hover {
             fill: cyan;
         }
         
-        #hzBarChart .panel-body .axis path,
-        #hzBarChart .panel-body .axis line {
+        #hzBarChartAuthors .panel-body .axis path,
+        #hzBarChartAuthors .panel-body .axis line {
             fill: none;
             stroke: #000;
             shape-rendering: crispEdges;
         }
         
-        #hzBarChart .panel-body .legend {
+        #hzBarChartAuthors .panel-body .legend {
             position: fixed;
+        }
+
+        #hzBarChartTargets .panel-body .legend {
+            fill: black;
+            font: 14px sans-serif;
+            text-anchor: start;
+            font-size: 12px;
+        }
+        
+        #hzBarChartTargets .panel-body text {
+            font: 12px sans-serif;
+            text-anchor: start;
+        }
+        
+        #hzBarChartTargets .panel-body .label {
+            fill: black;
+            font: 14px sans-serif;
+            text-anchor: end;
+        }
+        
+        #hzBarChartTargets .panel-body .bar:hover {
+            fill: cyan;
+        }
+        
+        #hzBarChartTargets .panel-body .axis path,
+        #hzBarChartTargets .panel-body .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        
+        #hzBarChartTargets .panel-body .legend {
+            position: relative;
         }
 
     </style>
@@ -71,9 +104,16 @@
             </ul>
         </header>
         <section>
-            <div id="hzBarChart" class="panel panel-info text-center">
+            <div id="hzBarChartAuthors" class="panel panel-info text-center">
                 <div class="panel-heading">
                     <h3 class="panel-title">Comparison of author extraction using different techniques</h3></div>
+                <div class="panel-body"></div>
+            </div>
+        </section>
+         <section>
+            <div id="hzBarChartTargets" class="panel panel-info text-center">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Comparison of target extraction with reference to known ChemCam and MER pruned lists</h3></div>
                 <div class="panel-body"></div>
             </div>
         </section>
@@ -85,7 +125,8 @@
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     <script src="javascripts/jquery-2.2.2.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
-    <script src="javascripts/deepdive_vs_ner.js"></script>
+    <script src="javascripts/author_extraction.js"></script>
+    <script src="javascripts/target_extraction.js"></script>
     <script>
         $(document).ready(function() {
             console.log("will call search");
@@ -94,7 +135,8 @@
 
         function search() {
             console.log("will call refreshHzBarChart");
-            refreshHzBarChart();
+            refreshHzBarChartAuthors();
+            refreshHzBarChartTargets();
 
         }
 

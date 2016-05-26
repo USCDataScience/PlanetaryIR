@@ -1,7 +1,7 @@
-function refreshHzBarChart() {
+function refreshHzBarChartTargets() {
 
     console.log("entered refreshHzBarChart");
-    d3.json('json/deepdive_vs_ner.json', function (error, data) {
+    d3.json('json/target_extraction.json', function (error, data) {
 
         if (error) throw error;
         console.log(data.labels);
@@ -25,7 +25,7 @@ function refreshHzBarChart() {
 
         // Color scale
         // var color = d3.scale.category10();
-        var mylabels = ["DeepDive", "NER", "Actual"];
+        var mylabels = ["DeepDive", "ChemCam & MER", "Overlap"];
 
         var color = d3.scale.quantize()
             .domain([0, data.series.length])
@@ -49,7 +49,7 @@ function refreshHzBarChart() {
             .orient("left");
 
         // Specify the chart area and dimensions
-        var chart = d3.select("#hzBarChart .panel-body").append("svg")
+        var chart = d3.select("#hzBarChartTargets .panel-body").append("svg")
             .attr("width", spaceForLabels + chartWidth + spaceForLegend)
             .attr("height", chartHeight);
 
