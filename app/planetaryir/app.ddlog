@@ -198,7 +198,7 @@ target_label += supervise(
 # resolve multiple labels by majority vote (summing the labels in {-1,0,1})
 target_label_resolved(target_id, target_name, SUM(vote)) :- target_label(target_id, target_name, vote, rule_id).
 
-# assign the resolved labels for the spouse relation
+# assign the resolved labels for the target mentions
 is_target(target_id, target_name) = if l > 0 then TRUE
                       else if l < 0 then FALSE
                       else NULL end :- target_label_resolved(target_id, target_name, l).

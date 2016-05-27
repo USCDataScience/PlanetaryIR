@@ -19,7 +19,7 @@ def extract(
     Finds phrases that are continuous words tagged with PERSON.
     """
     # generate a mention identifier
-    list_of_authors = re.findall(r'\s*([a-zA-Z\s.]+)[0-9]{1}', sentence_text)
+    list_of_authors = re.findall(r'\s*([a-zA-Z\s.]+)[0-9]{1}[0-9]?,?\s?[0-9]?[0-9]?', sentence_text)
     for author in list_of_authors:
         if sentence_index > 4 or len(author) == 1:
             break
@@ -31,7 +31,7 @@ def extract(
             if not pos:
                 break
             mention_text = author
-            # Output a tuple for each PERSON phrase
+            # Output a tuple for each AUTHOR phrase
             yield [
                 mention_id,
                 mention_text,

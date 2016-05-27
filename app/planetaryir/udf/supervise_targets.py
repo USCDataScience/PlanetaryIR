@@ -12,7 +12,7 @@ TargetLabel = namedtuple('TargetLabel', 'target_id, target_name, label, type')
         label   = "int",
         rule_id = "text",
     :[])
-# heuristic rules for finding positive/negative examples of spouse relationship mentions
+# heuristic rules for finding positive/negative examples of target mentions
 def supervise(
         target_id="text", target_name="text", target_begin="int", target_end="int",
         doc_id="text", sentence_index="int", sentence_text="text",

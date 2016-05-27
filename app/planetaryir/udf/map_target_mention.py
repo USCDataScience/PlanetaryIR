@@ -37,23 +37,24 @@ def extract(
     	target_str = " ".join(target_list)
     	split_by_and = target_str.split(" and ")
     	for item in split_by_and:
-	        mention_text = item
-	        begin_index = 1
-	        end_index = 1
-	        target_split = item.split()
-	        begin_index = tokens.index(target_split[0])
-	        if len(target_split) == 1:
-	        	end_index = begin_index
-	        else:
-	        	num_of_chunks = len(target_split)
-	        	end_index = begin_index + num_of_chunks - 1
-	        mention_id = "%s_%d_%d_%d" % (doc_id, sentence_index, begin_index, end_index)
-	        # Output a tuple for each PERSON phrase
-	        yield [
-	            mention_id,
-	            mention_text,
-	            doc_id,
-	            sentence_index,
-	            begin_index,
-	            end_index,
-	        ]
+    		if item != "and":
+		        mention_text = item
+		        begin_index = 1
+		        end_index = 1
+		        target_split = item.split()
+		        begin_index = tokens.index(target_split[0])
+		        if len(target_split) == 1:
+		        	end_index = begin_index
+		        else:
+		        	num_of_chunks = len(target_split)
+		        	end_index = begin_index + num_of_chunks - 1
+		        mention_id = "%s_%d_%d_%d" % (doc_id, sentence_index, begin_index, end_index)
+		        # Output a tuple for each TARGET phrase
+		        yield [
+		            mention_id,
+		            mention_text,
+		            doc_id,
+		            sentence_index,
+		            begin_index,
+		            end_index,
+		        ]
