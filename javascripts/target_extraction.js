@@ -25,7 +25,7 @@ function refreshHzBarChartTargets() {
 
         // Color scale
         // var color = d3.scale.category10();
-        var mylabels = ["DeepDive", "ChemCam & MER", "Overlap"];
+        var mylabels = ["DeepDive", "CC & MER", "Overlap"];
 
         var color = d3.scale.quantize()
             .domain([0, data.series.length])
