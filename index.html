@@ -83,6 +83,10 @@
             position: relative;
         }
 
+        #summary{
+            color: #000000;
+        }
+
     </style>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <!--[if lt IE 9]>
@@ -108,7 +112,7 @@
                     <h3 class="panel-title">Comparison of author extraction using different techniques</h3></div>
                 <div class="panel-body"></div>
             </div>
-            <div>
+            <div id="summary">
             The author extraction was performed on various documents and a subset of them are represented above. The graph shows the number of authors extracted using DeepDive and Stanford's NER which is compared to the actual number of authors which was scanned for and extracted manually. The numbers for each of these are plotted with the documents on the Y-axis and the number of extractions using various methods on the X-axis. The legend indicates the colors for each of the methods used. We see that in all the cases, DeepDive's UDF performs better than NER. UDF is a User Defined function which is a python based script whereas NER uses PERSON tags to perform extractions. In fact, it extract 100% of the authors in all cases.
             </div>
         </section>
@@ -119,7 +123,7 @@
                     <h3 class="panel-title">Comparison of target extraction with reference to known ChemCam and MER pruned lists</h3></div>
                 <div class="panel-body"></div>
             </div>
-            <div>
+            <div id="summary">
             The target extraction was performed on the same set of documents as the author extractions. The graph shows the number of targets extracted using DeepDive's UDF which is compared to the actual number of targets which was scanned for and extracted using a python script that checks each word in the text against a gold standard ChemCam and MER pruned target lists. The numbers for each of these are plotted with the documents on the Y-axis and the number of extractions using various methods on the X-axis. The legend indicates the colors for each of the methods used. In most cases, the number of targets discovered by DeepDive is significantly close to the ones in the expected list obtained from ChemCam and MER. However, in case 2620 we see that there are 0 extractions and this is because of missed features/other ways in which targets are described within these documents. Altough not perfect, I believe that this application has a good start and can be improved by observing the missed features and plugging them back in to the script to improve extractions.
             </div>
         </section>
