@@ -13,7 +13,7 @@ function refreshHzBarChartTargets() {
             spaceForLabels = 400,
             spaceForLegend = 100;
 
-        var colors = ['#0000b4', '#33a02c', '#dd1c77'];
+        var colors = ['#0000b4', '#dd1c77','#FFA500'];
 
         // Zip the series data together (first values, second values, etc.)
         var zippedData = [];
@@ -25,7 +25,7 @@ function refreshHzBarChartTargets() {
 
         // Color scale
         // var color = d3.scale.category10();
-        var mylabels = ["DeepDive", "CC & MER", "Overlap"];
+        var mylabels = ["DeepDive", "Target List(Actual)", "Overlapping Targets"];
 
         var color = d3.scale.quantize()
             .domain([0, data.series.length])
