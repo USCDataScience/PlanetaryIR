@@ -41,33 +41,6 @@ DELIVERABLES:
 1)	By the start of 7th week, working model for content extraction of the literature and text
 2)	For the final demo, connected core components with a system that uses Deep Dive to map authors to planetary science literature from the parsed text.
 
-STEPS TO INSTALL:
+STEPS TO INSTALL: 
 
-1) Install DeepDive and postgreSQL according to the instructions at http://deepdive.stanford.edu/installation
-
-You should now be able to see Deep Dive and its dependencies installed at /local under your home directory
-
-2) Do "brew install graphviz" and remove deepdive installation's bundled one with rm -rf $(path to bundled graphviz in DeepDive)
-
-The path to bundled graphviz is usually /local/lib/bundled
-
-3) Clone repo into your machine and note the path where you have cloned the project into 
-
-4) Launch terminal and switch to app/planetaryIR directory under the cloned repo
-
-5) Run input/init.sh script file to install bazaar dependency which is the CoreNLP parser
-
-6) Run deepdive compare
-
-7) Run "deepdive do articles" - This will load the articles from the json file into the database
-
-8) Run "deepdive query '?- articles("1438", content).' format=csv | grep -v '^$' | tail -n +16 | head" - This is to check whether the article text got loaded successfully
-
-9) Run "deepdive do sentences" - This will run the NLP parser on the articles table and output into the setnences table with their NER tags
-
-10) Run "deepdive query '?- sentences("1438", _, _, tokens, _, _, ner_tags, _, _, _).' format=csv | grep PERSON | tail" to see these NER tags
-
-11) Run "deepdive do person_mention" or "deepdive redo person_mention" whichever the case maybe to perform author extractions
-
-12) Go to postgreSQL terminal and run "COPY person_mention TO 'path to where you want this file/authors.csv' DELIMITER ',' CSV HEADER;"
-
+This is included in the Wiki for this project 
