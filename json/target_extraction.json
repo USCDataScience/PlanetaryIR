@@ -5,7 +5,7 @@
     "value" : [ 8, 5, 4, 0, 5]
   },{
     "name" : "Targets from ChemCam and MER",
-    "value" : [ 5, 8, 5, 6, 6]
+    "value" : [ 5, 8, 5, 4, 5]
   },{
     "name" : "Overl8pping targets between the two methods",
     "value" : [ 3, 5, 3, 0, 4]
